@@ -1,0 +1,61 @@
+.stock-chart-container {
+    height:60vh !important;
+    width:70% !important;
+    margin:0 auto;
+    margin-bottom:4rem;
+}
+
+.stock-financials-table {
+    width:80%;
+    margin:0 auto;
+    justify-content: center;
+    text-align: left;
+    padding:0rem 2rem;
+    /* border:1px solid white; */
+    border-collapse: collapse; /* Merge border styles for adjacent cells */
+    border-radius: 20px;
+}
+
+.stock-financials-table th,
+.stock-financials-table td {
+  border: 1px solid #787878; /* Add a border to table cells */
+  padding: 14px; /* Add padding inside table cells (you can adjust as needed) */
+  /* border-radius: 20px; */
+}
+
+.stock-financials-table td {
+    text-align: center;
+}
+
+.stock-financials-table thead tr th {
+    text-align: center;
+}
+
+.stock-financials-table thead {
+    background-color: rgba(0, 166, 255, 0.262);
+}
+
+.stock-financials-table th {
+    font-weight: bold; /* Make the table headers bold (you can customize as needed) */
+  }
+
+.stock-financials-table > tbody > tr >th {
+    font-weight:400;
+    font-size:0.9rem;
+}
+.stock-financial-side-header {
+    font-weight:700 !important;
+    font-size:1.2rem !important;
+    font-style: italic;
+}
+.stock-financial-side-header-row {
+    margin-bottom:2rem !important;
+}
+
+@media (max-width: 500px) {
+        .stock-chart-container {
+            width:100% !important;
+            margin:0 !important;
+            font-size:0.5rem !important;
+        }
+}

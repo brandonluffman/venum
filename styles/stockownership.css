@@ -1,0 +1,36 @@
+.institutional-ownership-table, .mf-ownership-table {
+    width:100%;
+    text-align: center;
+}
+
+.institutional-ownership-header {
+    text-align: center;
+    margin-bottom:2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+table.institutional-ownership-table, table.mf-ownership-table {
+  width: 80%;
+  margin:0 auto;
+  border-collapse: collapse;
+}
+
+/* Apply styles to table header cells */
+table.institutional-ownership-table th, table.mf-ownership-table th {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #1d1d1d;
+}
+
+/* Apply styles to table body cells */
+table.institutional-ownership-table td, table.mf-ownership-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #1d1d1d;
+}
+
+/* Apply styles to even rows in the table body */
+table.institutional-ownership-table tr:nth-child(even), table.mf-ownership-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

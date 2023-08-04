@@ -1,0 +1,145 @@
+.gpt-container {
+    height:100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-bottom:10rem;
+}
+
+.gpt-waitlist-input {
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid rgb(143, 143, 143);
+    font-size:1.2rem;
+    width:100%;
+    padding:0.75rem 1rem;
+    margin-right:1rem;
+    border-radius: 10px;
+    padding-left:3rem;
+    margin-bottom:2rem;
+}
+
+.gpt-waitlist-form {
+    /* display:flex; */
+    /* align-items: center; */
+    width:100%;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.gpt-waitlist-input:focus {
+    outline: none;
+}
+
+.gpt-waitlist-input::placeholder {
+    color:rgb(52, 52, 52);
+    font-weight:300;
+}
+
+.gpt-div-header {
+    font-size:3rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.gpt-btn-arrow {
+    margin-left:1rem;
+}
+
+.gpt-waitlist-input-btn {
+    background-color: black;
+    box-shadow: 1px 1px 12px rgba(118, 118, 118, 0.4);
+    border:none;
+    font-size:1rem;
+    padding:1rem 1.5rem;
+    border-radius: 10px;
+    /* width:100%; */
+    min-width:150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    font-weight: 100;
+    transition: 0.2s ease-in-out all;
+}
+
+.gpt-waitlist-input-btn:hover {
+    /* transform: translateY(-2px); */
+    box-shadow: 1px 1px 20px rgba(118, 118, 118, 0.4);
+    cursor:pointer;
+}
+
+.gpt-div-mail-icon {
+    position: absolute;
+    top:16px;
+    left:15px;
+    color:rgb(100, 100, 100);
+}
+
+.waitlist-color-change {
+    background: linear-gradient(
+        to right, #f32170, #fb96a2,
+         #cf23cf, #f48ac6);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+    .gpt-waitlist-input {
+        background-color: transparent;
+        border:none;
+        border-bottom: 1px solid rgb(143, 143, 143);
+        font-size:1.2rem;
+        width:90%;
+        /* padding:0.75rem 1rem; */
+        /* margin-right:1rem; */
+        border-radius: 10px;
+        padding-left:3rem;
+        margin: 0 auto;
+        margin-bottom:2rem;
+    }
+
+    .gpt-div-mail-icon {
+        position: absolute;
+        top:16px;
+        left:30px;
+        color:rgb(100, 100, 100);
+    }
+    .gpt-waitlist-input-btn {
+        background-color: black;
+        box-shadow: 1px 1px 12px rgba(118, 118, 118, 0.4);
+        border:none;
+        font-size:1rem;
+        padding:1rem 1.5rem;
+        border-radius: 10px;
+        /* width:100%; */
+        min-width:150px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width:90%;
+        margin:0 auto;
+        font-weight: 100;
+        transition: 0.2s ease-in-out all;
+        position: relative;
+    }
+
+    .gpt-div-header {
+        font-size: 2.5rem;
+        padding:0rem 1rem;
+        margin:3rem auto;
+    }
+
+    .gpt-waitlist-form {
+   
+    }
+
+    .gpt-btn-arrow {
+        position: absolute;
+        right:20px;
+        top:17px;
+    }
+}

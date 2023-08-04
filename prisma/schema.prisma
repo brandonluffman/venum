@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model company_info {
+  CIK          Int?
+  Ticker       String? @db.VarChar(10)
+  Title        String? @db.VarChar(255)
+  Short_Name   String? @db.VarChar(100)
+  Long_Name    String? @db.VarChar(255)
+  Industry     String? @db.VarChar(100)
+  Sector       String? @db.VarChar(100)
+  Country      String? @db.VarChar(50)
+  Market_Cap   String? @db.VarChar(50)
+  Exchange     String? @db.VarChar(50)
+  Summary      String? @db.Text
+  Phone        String? @db.VarChar(20)
+  Website      String? @db.VarChar(255)
+  Employees    Int?
+  CEO          String? @db.VarChar(100)
+  Full_Address String? @db.Text
+  id           Int     @id @default(autoincrement())
+}
+
+model CompanyInfo {
+  id         Int     @id @default(autoincrement())
+  CIK        Int
+  Ticker     String
+  Title      String
+  Short_Name String  @map("Short Name")
+  Long_Name  String  @map("Long Name")
+  Industry   String
+  Sector     String
+  Country    String
+  Market_Cap BigInt  @map("Market Cap")
+  Exchange   String
+  Summary    String?
+}
+
+model StockData {
+  Date     DateTime? @db.Date
+  Open     Decimal?  @db.Decimal(10, 8)
+  High     Decimal?  @db.Decimal(10, 8)
+  Low      Decimal?  @db.Decimal(10, 8)
+  Close    Decimal?  @db.Decimal(10, 8)
+  AdjClose Decimal?  @db.Decimal(10, 8)
+  Volume   Int?
+  Ticker   String?   @db.VarChar(10)
+  id       Int       @id @default(autoincrement())
+}

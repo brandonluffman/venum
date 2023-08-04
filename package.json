@@ -9,12 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^3.0.0",
+    "@prisma/client": "^5.1.1",
+    "@sendgrid/client": "^7.7.0",
+    "axios": "^1.4.0",
+    "chart.js": "^4.3.2",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^2.30.0",
+    "isomorphic-unfetch": "^4.0.2",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
     "next": "13.4.12",
+    "next-auth": "^4.22.3",
+    "plotly.js": "^2.25.1",
+    "plotly.js-basic-dist": "^2.25.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
+    "react-plotly.js": "^2.6.0"
   },
   "devDependencies": {
     "eslint": "8.45.0",
-    "eslint-config-next": "13.4.12"
+    "eslint-config-next": "13.4.12",
+    "prisma": "^5.1.1"
   }
 }

@@ -1,0 +1,20 @@
+.pricing-container {
+    padding-top:6rem;
+    height:100vh;
+}
+.pricing-grid-div {
+    display: flex;
+    grid-template-columns: repeat(1,3fr);
+    width:100%;
+    justify-content: space-around;
+}
+
+.pricing-grid-item {
+    background-color: white;
+    width:300px;
+    color:black;
+    height:500px;
+    border-radius: 20px;
+    padding:1rem;
+    text-align: center;
+}

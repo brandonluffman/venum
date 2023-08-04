@@ -1,0 +1,86 @@
+.stock-company-description-div {
+    width:70%;
+    /* justify-content: center;
+    text-align: center; */
+    border:1px solid rgb(45, 45, 45);
+    border-radius: 20px;
+    margin:0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.stock-company-description-header {
+    text-align: center;
+    /* border-bottom:1px solid white;
+    padding-bottom:1rem; */
+}
+
+.stock-company-description-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.stock-company-description-bottom > div {
+    border: 1px solid rgb(19, 19, 19);
+}
+
+.stock-company-description-bottom > div > p:nth-of-type(1) {
+    color:rgb(200, 200, 200);
+}
+
+.stock-company-description-bottom > div:last-child {
+    /* grid-column: 1 / 3; */
+    padding:0rem 2rem;
+    /* border-bottom:none; */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    grid-column: 1 / span 2; /* This will make the last item span across all 3 columns */
+
+}
+
+.stock-company-description-bottom > div:last-child > p:nth-of-type(2) {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .stock-company-description-div {
+        width:90%;
+    }
+    .stock-company-description-bottom > div:last-child > p:nth-of-type(2) {
+        font-size:0.9rem;
+    }
+
+    .stock-tabs-container {
+        font-size:0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .stock-company-description-div {
+        width:95%;
+    }
+    .stock-company-description-bottom > div:last-child > p:nth-of-type(2) {
+        font-size:0.9rem;
+    }
+    .stock-company-description-bottom > div:last-child {
+        padding:0rem 0.5rem;
+    }
+
+    .stock-tabs-container {
+        font-size:0.8rem;
+    }
+    .stock-company-description-bottom {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        text-align: left;
+    }
+    .stock-company-description-bottom > div:last-child {
+        /* grid-column: 1 / 3; */
+        /* border-bottom:none; */
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        grid-column: 1 / span 1; /* This will make the last item span across all 3 columns */
+    
+    }
+    
+}

@@ -1,0 +1,166 @@
+h1, h3 {
+    margin-top:1.25rem;
+    margin-bottom:1.25rem;
+}
+.stock-img {
+    background-color: white;
+    padding:0.6rem 0rem;
+    border-radius:50%;
+    margin-right:1rem;
+    width:50px;
+}
+.stock-outer-container {
+    padding-bottom:3rem;
+}
+.stock-container {
+    padding-top:90px;
+    min-height:100vh;
+    position: relative;
+    padding-bottom:5rem;
+    /* padding:90px 2rem 5rem 2rem; */
+}
+
+.stock-inside-container {
+    padding-left:2rem;
+}
+
+.stock-company-industry {
+    margin: 0 auto;
+    font-size:1.2rem;
+}
+
+.stock-company-industry-span {
+    font-weight:300;
+}
+
+.stock-name-div {
+    display: flex;
+    align-items: center;
+    margin-bottom:2rem;
+}
+
+.stock-ticker-name{
+    font-weight:300;
+    color:rgb(175, 175, 175);
+    margin:0;
+}
+
+.ticker-country-div {
+    margin-right:2rem;
+}
+
+.stock-company-name {
+    font-size:2.5rem;
+    margin-right:2rem;
+}
+
+.stock-company-price {
+    font-size:2.5rem;
+    font-weight:700;
+    color:rgb(173, 228, 250);
+    margin-right:2rem;
+
+}
+
+
+.stock-usd {
+    font-size:1.5rem;
+    color:white;
+    font-weight:300;
+}
+
+.stock-company-percentage {
+    font-weight:400;
+    font-size:1rem;
+    color:lightgreen;
+}
+
+
+.stock-container > div > canvas {
+    height:500px;
+    /* padding: 0rem 8rem; */
+    width:70% !important;
+    margin:0 auto;
+}
+
+@media (max-width: 768px) {
+
+    .stock-container {
+        padding:0rem 0rem;
+        padding-top:6rem;
+    }
+    .stock-name-div {
+        width:100%;
+        justify-content: center;
+    }
+    .stock-company-name {
+        font-size:1.5rem;
+    }
+    .stock-img {
+        width: 40px;
+        padding:0.45rem 0rem;
+    }
+    .stock-ticker-name {
+        font-size:1rem;
+    }
+
+    .stock-company-price {
+        font-size:1.2rem;
+        color:white;
+    }
+
+    .stock-company-industry {
+        font-size:1rem;
+        margin-bottom:1rem;
+    }
+    .stock-inside-container {
+        padding-left:0rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .stock-container {
+    padding-top:5rem;
+    min-height:100vh;
+    position: relative;
+    }
+    .stock-name-div {
+        display: block;
+        text-align: center;
+    }
+    .stock-img, .ticker-company-div, .stock-company-name , .ticker-country-div, .stock-company-price {
+        margin-right:0 !important;
+    }
+
+    .stock-company-name {
+        font-size:1.5rem;
+    }
+    .stock-company-percentage {
+        margin:0.5rem 0 1rem 0;
+    }
+    .stock-analytics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        justify-content: center;
+        padding:0rem 1rem;
+    }
+    .stock-chart-container {
+            width:100% !important;
+    }
+
+    .stock-company-industry {
+        padding-left:1rem;
+        font-size: 0.9rem;
+        margin-top:1rem;
+        font-size: 400;
+    }
+
+    .stock-img {
+        width:50px;
+    }
+
+    .stock-company-description-bottom > div {
+        padding:0rem 0.5rem;
+    }
+}

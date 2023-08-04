@@ -1,0 +1,6 @@
+.stocks-container {
+    padding-top:70px;
+    display: flex;
+    justify-content: center;
+    min-height:100vh;
+}

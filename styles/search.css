@@ -1,0 +1,197 @@
+.search-input {
+    width:700px;
+    /* min-width:700px; */
+    /* max-width:700px; */
+    background-color: white;
+    border-radius: 40px;
+    padding: 0.75rem 1rem;
+    margin:0 auto;
+    color:black !important;
+    font-size:1.2rem;
+    border: none;
+    transition: 0.05s ease-in-out all;
+    margin-top:4rem;
+    font-family: Montserrat, 'sans-serif';
+
+}
+
+.stocks-container > div {
+    width:100%;
+    text-align: center;
+}
+
+.search-input:focus {
+    outline: none;
+    border-radius:10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: inset 2px 0px 5px 4px rgba(100, 100, 100, 0.1);
+}
+
+.autosuggest-container{
+    /* background-color: var(--brand-color); */
+    background-color: white;
+    color:black;
+    border-radius:40px;
+    padding:0rem;
+    width: 700px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.05s ease-in-out all;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    overflow:hidden;
+
+}
+
+.search-input:focus ~ .autosuggest-container {
+    opacity: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.autosuggest-menu {
+    list-style-type: none;
+    display: inline-flex;
+    width:100%;
+    padding-left:0;
+    margin:0;
+    padding: 1rem 0rem;
+    border-bottom:1px solid var(--light-grey);
+    transition: 0.05s ease all;
+    position: relative;
+}
+
+.autosuggest-menu:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+
+.autosuggest-link {
+    display: flex;
+    /* border-bottom:1px solid black; */
+    width:100%;
+}
+.autosuggest-li {
+    margin:0rem 1rem;
+}
+
+.autosuggest-li:nth-of-type(1) {
+    font-weight:300;
+    text-align: left;
+    margin:0rem 1rem;
+    min-width:60px;
+    max-width:60px;
+}
+
+.autosuggest-li:nth-of-type(2) {
+    margin:0;
+}
+
+.autosuggest-li:nth-of-type(3) {
+    font-weight:600;
+    /* max-width:200px;
+    min-width:200px; */
+        max-width:50%;
+    min-width:50%;
+    text-align: left;
+}
+
+
+
+.autosuggest-li-flexer {
+    display: flex;
+    float:right;
+    /* justify-content: right; */
+    width:100%;
+}
+
+@media (max-width: 800px) {
+    .stocks-container > div {
+        width:100%;
+        padding:0rem 1rem;
+    }
+    .search-input {
+        width:inherit;
+        min-width:inherit;
+        max-width:inherit;
+        background-color: white;
+        border-radius: 40px;
+        padding: 0.75rem 1rem;
+        margin:0 auto;
+        color:black !important;
+        font-size:1.2rem;
+        border: none;
+        transition: 0.05s ease-in-out all;
+        margin-top:4rem;
+        font-family: Montserrat, 'sans-serif';
+    
+    }
+    .autosuggest-container{
+        /* background-color: var(--brand-color); */
+        background-color: white;
+        color:black;
+        border-radius:40px;
+        padding:0rem;
+        width: 100%;
+        margin: 0 auto;
+        opacity: 0;
+        transition: 0.05s ease-in-out all;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        overflow:hidden;
+    
+    }
+}
+
+@media (max-width: 500px) {
+    .search-input {
+        width:inherit;
+        min-width:inherit;
+        max-width:inherit;
+        background-color: white;
+        border-radius: 40px;
+        padding: 0.75rem 1rem;
+        margin:0 auto;
+        color:black !important;
+        font-size:1.2rem;
+        border: none;
+        transition: 0.05s ease-in-out all;
+        margin-top:4rem;
+        font-family: Montserrat, 'sans-serif';
+    
+    }
+
+    .autosuggest-li:nth-of-type(1) {
+        font-weight:300;
+        text-align: left;
+        margin:0rem 1rem;
+        min-width:50px;
+        max-width:50px;
+    }
+    .autosuggest-link {
+        display: flex;
+        /* border-bottom:1px solid black; */
+        width:100%;
+    }
+
+    .autosuggest-li:nth-of-type(1) {
+        margin:0;
+        margin-left:0.5rem;
+        font-size:0.9rem;
+    }
+    .autosuggest-menu > .autosuggest-li:nth-of-type(2) {
+        display: none;
+    }
+    .autosuggest-li:nth-of-type(3) {
+        margin:0;
+        margin-left:0.5rem;
+        font-size:0.9rem;
+    }
+
+    .autosuggest-li-flexer > .autosuggest-li:nth-of-type(1) {
+        margin-left:0;
+        max-width:45px;
+        min-width: 45px;
+    }
+}

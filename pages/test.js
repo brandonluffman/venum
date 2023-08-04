@@ -1,11 +1,11 @@
-import { PrismaClient } from '@prisma/client';
-import prisma from '../../lib/prisma'; // Import the Prisma client instance
-import Link from 'next/link';
-import Navbar from '../../components/Navbar';
-import React, { useEffect, useState } from 'react';
-import StockTabs from '../../components/StockTabs'
-import Footer from '../../components/Footer';
-import StockPriceChart from '../../components/StockPriceChart';
+// import { PrismaClient } from '@prisma/client';
+// import prisma from '../../lib/prisma'; // Import the Prisma client instance
+// import Link from 'next/link';
+// import Navbar from '../../components/Navbar';
+// import React, { useEffect, useState } from 'react';
+// import StockTabs from '../../components/StockTabs'
+// import Footer from '../../components/Footer';
+// import StockPriceChart from '../../components/StockPriceChart';
 
 // const dummyStockData = [];
 
@@ -17,65 +17,65 @@ import StockPriceChart from '../../components/StockPriceChart';
 // }
 // console.log(dummyStockData);
 
-const StockDetails = ({ stock, stockPrices }) => {
-  console.log(stock)
-  // const [data, setData] = useState(null);
+// const StockDetails = ({ stock, stockPrices }) => {
+//   console.log(stock)
+//   // const [data, setData] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(`http://localhost:8000/current_price/${stock.Ticker}`);
-  //       const jsonData = await response.json();
-  //       console.log(jsonData)
-  //       setData(jsonData);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
+//   // useEffect(() => {
+//   //   const fetchData = async () => {
+//   //     try {
+//   //       const response = await fetch(`http://localhost:8000/current_price/${stock.Ticker}`);
+//   //       const jsonData = await response.json();
+//   //       console.log(jsonData)
+//   //       setData(jsonData);
+//   //     } catch (error) {
+//   //       console.error('Error fetching data:', error);
+//   //     }
+//   //   };
 
-  //   fetchData();
-  // }, []);
+//   //   fetchData();
+//   // }, []);
 
-  // console.log(data)
-  // const marketNumber = stock.MarketCap
-  // const decimalValue = (marketNumber / 1000000000000).toFixed(2);
-          {/* {stock && <h3 className='stock-company-price'>{decimalValue} <span className='stock-usd'>USD</span></h3>} */}
-          {/* {stock && <h3 className='stock-company-price'>{data} <span className='stock-usd'>USD</span></h3>} */}
-          {/* <h6 className='stock-company-exchange'>Exchange: {stock.Exchange}</h6> */}
-          {/* <h6 className='stock-company-cik'>CIK{stock.CIK}</h6> */}
-  return (
-    <div className='stock-outer-container'>
-      <Navbar />
-      <div className='stock-container'>
-        Hello
-      {/* <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.Industry}</span> &#8226; {stock.Sector}</h6>
-        <div className='stock-name-div'>
+//   // console.log(data)
+//   // const marketNumber = stock.MarketCap
+//   // const decimalValue = (marketNumber / 1000000000000).toFixed(2);
+//           {/* {stock && <h3 className='stock-company-price'>{decimalValue} <span className='stock-usd'>USD</span></h3>} */}
+//           {/* {stock && <h3 className='stock-company-price'>{data} <span className='stock-usd'>USD</span></h3>} */}
+//           {/* <h6 className='stock-company-exchange'>Exchange: {stock.Exchange}</h6> */}
+//           {/* <h6 className='stock-company-cik'>CIK{stock.CIK}</h6> */}
+//   return (
+//     <div className='stock-outer-container'>
+//       <Navbar />
+//       <div className='stock-container'>
+//         Hello
+//       {/* <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.Industry}</span> &#8226; {stock.Sector}</h6>
+//         <div className='stock-name-div'>
 
-          <img className='stock-img' src='/appl.png'></img>
-          <div className='ticker-country-div'>
-          <h2 className='stock-ticker-name'>{stock.Ticker}</h2>  
+//           <img className='stock-img' src='/appl.png'></img>
+//           <div className='ticker-country-div'>
+//           <h2 className='stock-ticker-name'>{stock.Ticker}</h2>  
 
-          {stock.Country == 'United States' ? 
-          (
-            <img className='country-img' src='/america.jpeg' width='25'></img>
-          )
-          :(
-            <div>No Country</div>
-          )}
-          </div>
-          <h1 className='stock-company-name'>{stock.Title}</h1>
+//           {stock.Country == 'United States' ? 
+//           (
+//             <img className='country-img' src='/america.jpeg' width='25'></img>
+//           )
+//           :(
+//             <div>No Country</div>
+//           )}
+//           </div>
+//           <h1 className='stock-company-name'>{stock.Title}</h1>
 
-        </div>
-        <div>
-        <StockPriceChart stockData={stock} />
-        </div>
-        <StockTabs stock={stock}/> */}
-    </div>
+//         </div>
+//         <div>
+//         <StockPriceChart stockData={stock} />
+//         </div>
+//         <StockTabs stock={stock}/> */}
+//     </div>
 
-    <Footer />
-    </div>
-  );
-};
+//     <Footer />
+//     </div>
+//   );
+// };
 
 // export async function getServerSideProps(context) {
 //   const { id } = context.query; // 'id' will be the dynamic part of the URL
@@ -106,67 +106,67 @@ const StockDetails = ({ stock, stockPrices }) => {
 // }
 
 
-export async function getServerSideProps(context) {
-  const { ticker } = context.query; // 'ticker' will be the dynamic part of the URL
-  console.log(`TICKER: ${ticker}`)
+// export async function getServerSideProps(context) {
+//   const { ticker } = context.query; // 'ticker' will be the dynamic part of the URL
+//   console.log(`TICKER: ${ticker}`)
 
-  // if (!ticker || typeof ticker !== 'string') {
-  //   // Check if 'ticker' is missing or not a string
-  //   return {
-  //     notFound: true,
-  //   };
-  // }
+//   // if (!ticker || typeof ticker !== 'string') {
+//   //   // Check if 'ticker' is missing or not a string
+//   //   return {
+//   //     notFound: true,
+//   //   };
+//   // }
 
-  try {
-    // Fetch the stock details using the Prisma client based on the ticker (case-insensitive search)
-    const stock = await prisma.company_info.findFirst({
-      where: {
-        Ticker: {
-          equals: ticker.toString(),
-        },
-      },
-    });
+//   try {
+//     // Fetch the stock details using the Prisma client based on the ticker (case-insensitive search)
+//     const stock = await prisma.company_info.findFirst({
+//       where: {
+//         Ticker: {
+//           equals: ticker.toString(),
+//         },
+//       },
+//     });
 
-    if (!stock) {
-      return {
-        notFound: true,
-      };
-    }
+//     if (!stock) {
+//       return {
+//         notFound: true,
+//       };
+//     }
 
-    // Convert bigint values to strings in the stock data (if needed)
-    const serializedStock = {
-      ...stock,
-      MarketCap: stock.MarketCap.toString(),
-    };
+//     // Convert bigint values to strings in the stock data (if needed)
+//     const serializedStock = {
+//       ...stock,
+//       MarketCap: stock.MarketCap.toString(),
+//     };
 
-    // Fetch the stock prices based on the ticker from the stock_prices table
-    const stockPrices = await prisma.stock_prices.findMany({
-      where: {
-        ticker_symbol: ticker,
-      },
-      orderBy: {
-        date: 'asc',
-      },
-    });
+//     // Fetch the stock prices based on the ticker from the stock_prices table
+//     const stockPrices = await prisma.stock_prices.findMany({
+//       where: {
+//         ticker_symbol: ticker,
+//       },
+//       orderBy: {
+//         date: 'asc',
+//       },
+//     });
 
-    // Combine the stock data and stock prices
-    const data = {
-      stock: serializedStock,
-      prices: stockPrices,
-    };
+//     // Combine the stock data and stock prices
+//     const data = {
+//       stock: serializedStock,
+//       prices: stockPrices,
+//     };
 
-    return {
-      props: { data },
-    };
-  } catch (error) {
-    console.error('Error fetching stock details:', error);
-    return {
-      notFound: true,
-    };
-  }
-}
+//     return {
+//       props: { data },
+//     };
+//   } catch (error) {
+//     console.error('Error fetching stock details:', error);
+//     return {
+//       notFound: true,
+//     };
+//   }
+// }
 
-export default StockDetails; 
+// export default StockDetails; 
 
 
 

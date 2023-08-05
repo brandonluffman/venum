@@ -67,6 +67,7 @@ const Navbar = () => {
             <Link href='/' className='nav-link-container'><li className='nav-link'>Home</li></Link>
             <Link href='/stocks' className='nav-link-container'><li className='nav-link'>Stocks</li></Link>
             <Link href='/macro' className='nav-link-container'><li className='nav-link'>Macro</li></Link>
+            <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link>
 
             {/* <Link href='/pricing' className='nav-link-container'><li className='nav-link'>Pricing</li></Link>
             <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link> */}

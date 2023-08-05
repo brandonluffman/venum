@@ -4,7 +4,7 @@ const StockFinancials = () => {
 
   const status = 0;
 
-  const numberOfColumns = 10;
+  const numberOfColumns = 20;
 
   // Create an array with 10 '---' values
   const data = Array.from({ length: numberOfColumns }, (_, index) => '---');
@@ -12,13 +12,23 @@ const StockFinancials = () => {
   return (
     <div>
       {/* Stock Financials Coming Soon */}
-      <div>
+      <div className='stock-financials-table-div'>
       {/* <StockChart data={data} /> */}
       
       <table className='stock-financials-table'>
-        <thead>
+        <thead className=''>
           <tr>
             <th></th>
+            <th>2003</th>
+            <th>2004</th>
+            <th>2005</th>
+            <th>2006</th>
+            <th>2007</th>
+            <th>2008</th>
+            <th>2009</th>
+            <th>2010</th>
+            <th>2011</th>
+            <th>2012</th>
             <th>2013</th>
             <th>2014</th>
             <th>2015</th>
@@ -31,7 +41,7 @@ const StockFinancials = () => {
             <th>2022</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='stock-financials-tbody'>
           <tr className='stock-financial-side-header-row'>
             <th className='stock-financial-side-header'>Income Statement</th>
             {data.map((value, index) => (

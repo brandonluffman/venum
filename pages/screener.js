@@ -1,11 +1,17 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const screener = () => {
   return (
     <div>
-        <Navbar />
-    screener</div>
+      <Navbar />
+      <div className='screener-container'>
+      Screener
+
+      </div>
+    <Footer />
+    </div>
   )
 }
 

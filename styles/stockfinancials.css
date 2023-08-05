@@ -3,22 +3,36 @@
     width:70% !important;
     margin:0 auto;
     margin-bottom:4rem;
+    overflow-x: hidden;
+}
+.stock-financials-table-div {
+    padding: 0rem 2rem;
+    overflow-x: auto;
+    max-width: calc(100% - 100px); /* Set a max-width to avoid content overlapping with the side menu */
 }
 
 .stock-financials-table {
     width:80%;
+    max-width:800px !important;
     margin:0 auto;
     justify-content: center;
     text-align: left;
     padding:0rem 2rem;
+    overflow-x: scroll;
     /* border:1px solid white; */
     border-collapse: collapse; /* Merge border styles for adjacent cells */
     border-radius: 20px;
+      border-collapse: collapse;
+  width: 100%;
+}
+
+.stock-financials-tbody > tr > th {
+    min-width: 300px;
 }
 
 .stock-financials-table th,
 .stock-financials-table td {
-  border: 1px solid #787878; /* Add a border to table cells */
+  border: 1px solid #2b2b2b; /* Add a border to table cells */
   padding: 14px; /* Add padding inside table cells (you can adjust as needed) */
   /* border-radius: 20px; */
 }
@@ -32,7 +46,7 @@
 }
 
 .stock-financials-table thead {
-    background-color: rgba(0, 166, 255, 0.262);
+    background-color: rgba(0, 0, 0, 0.262);
 }
 
 .stock-financials-table th {
@@ -51,7 +65,6 @@
 .stock-financial-side-header-row {
     margin-bottom:2rem !important;
 }
-
 @media (max-width: 500px) {
         .stock-chart-container {
             width:100% !important;
@@ -59,3 +72,5 @@
             font-size:0.5rem !important;
         }
 }
+
+

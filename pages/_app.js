@@ -59,6 +59,7 @@ import '../styles/stocksentiment.css'
 import '../styles/macro.css'
 import '../styles/stockratios.css'
 import '../styles/stockownership.css'
+import '../styles/screener.css'
 
 
 

@@ -39,7 +39,7 @@
 
 .stock-tab-input:checked ~ .stock-tab-label {
     /* border-bottom:1px solid white; */
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(35, 35, 35);
     color:white;
     box-shadow: inset 1px 1px 10px rgba(0,0,0,0.8);
 }

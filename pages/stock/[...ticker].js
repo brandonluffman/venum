@@ -14,7 +14,7 @@ const StockDetails = ({ stock }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/current_price/${stock.Ticker}`);
+        const response = await fetch(`https://enigmatic-shelf-22572-e002d447b394.herokuapp.com/current_price/${stock.Ticker}`);
         const jsonData = await response.json();
         console.log(jsonData)
         setData(jsonData);

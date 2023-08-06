@@ -1,14 +1,13 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Macros from '../components/Macros'
 
 const macro = () => {
   return (
     <div>
         <Navbar />
-        <div className='macro-container'>
-        GET YO MACROS BOI. BITCH MADE BOI.
-        </div>
+        <Macros />
         <Footer />
     </div>
   )

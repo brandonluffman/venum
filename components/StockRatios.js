@@ -11,7 +11,7 @@ const StockRatios = () => {
     },
   ];
   return (
-    <div>
+    <div className='stock-ratios-container'>
     <div className='stock-analytics-grid'>
     <div className='stock-analytics-item'>
       <h3 className='stock-analytics-label'>PE</h3>

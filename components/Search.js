@@ -17,10 +17,10 @@ const Search = () => {
 
     try {
       const response = await axios.get(`/api/search?q=${value}`);
-      console.log(response.data)
+      // console.log(response.data)
       setResults(response.data);
     } catch (error) {
-      console.error('Error fetching search results:', error);
+      // console.error('Error fetching search results:', error);
       setResults([]);
     }
   };

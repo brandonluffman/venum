@@ -8,12 +8,11 @@
 .stock-financials-table-div {
     padding: 0rem 2rem;
     overflow-x: auto;
-    max-width: calc(100% - 100px); /* Set a max-width to avoid content overlapping with the side menu */
 }
 
 .stock-financials-table {
     width:80%;
-    max-width:800px !important;
+    /* max-width:800px !important; */
     margin:0 auto;
     justify-content: center;
     text-align: left;

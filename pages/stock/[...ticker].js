@@ -16,10 +16,10 @@ const StockDetails = ({ stock }) => {
       try {
         const response = await fetch(`https://enigmatic-shelf-22572-e002d447b394.herokuapp.com/current_price/${stock.Ticker}`);
         const jsonData = await response.json();
-        console.log(jsonData)
+        // console.log(jsonData)
         setData(jsonData);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        // console.error('Error fetching data:', error);
       }
     };
 
@@ -45,7 +45,7 @@ const StockDetails = ({ stock }) => {
                 )}
             </div>
             {stock && stock.Title && <h1 className='stock-company-name'>{stock.Title}</h1>}
-            {stock && <h3 className='stock-company-price'>{data.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>}
+            {stock && data && <h3 className='stock-company-price'>{data.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>}
             </div>
           <div>
           </div>

@@ -83,6 +83,28 @@ h1, h3 {
     margin:0 auto;
 }
 
+.stock-daily-change, .stock-percent-change {
+    margin:0 1rem;
+}
+
+.stock-daily-change {
+    font-size:1.5rem;
+}
+.stock-percent-change {
+    font-size:1.5rem;
+}
+.daily-change-green {
+    color:green;
+}
+.daily-change-red {
+    color:rgb(255, 122, 122);
+}
+
+.stock-company-price-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 @media (max-width: 768px) {
 
     .stock-container {

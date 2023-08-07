@@ -210,4 +210,7 @@ Link {
         padding-bottom:5px;
         overflow:hidden;
     }
+    .footer-copyright-content {
+        font-size:0.8rem;
+    }
   }

@@ -25,7 +25,12 @@ const Footer = () => {
                             <div className='footer-links-header'><p className='footer-link-header'>General</p></div>
                             <Link href='/'><div className='footer-link'>Home</div></Link>
                             <Link href='/stocks'><div className='footer-link'>Stocks</div></Link>
+                            <Link href='/macro'><div className='footer-link'>Macro</div></Link>
+
+                            <Link href='/screener'><div className='footer-link'>Screener</div></Link>
+
                             <Link href='/gpt'><div className='footer-link'>GPTFinance</div></Link>
+
 
                             {/* <Link href='/login'><div className='footer-link'>Login</div></Link> */}
                             {/* <Link href='/contact'><div className='footer-link'>Contact Us</div></Link> */}

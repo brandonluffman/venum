@@ -21,11 +21,11 @@ const StockOwnership = () => {
       </thead>
       <tbody>
       <tr>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
       </tr>
       </tbody>
     </table>
@@ -43,11 +43,11 @@ const StockOwnership = () => {
       </thead>
       <tbody>
       <tr>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
-            <td>Hello</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
+            <td>---</td>
       </tr>
       {/* {data && data.mutual_fund_holders.map((item, index) => (
             <tr key={index}>

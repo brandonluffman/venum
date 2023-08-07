@@ -1,8 +1,30 @@
 .screener-container {
     min-height: 100vh;
-    /* padding-top:80px; */
+    padding-top:80px;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     font-size: 4rem;
+    width: 100%;
+    padding: 6rem 2rem 0rem 2rem;
+}
+
+.screener-table {
+    border-collapse: collapse;
+
+    width:100%;
+}
+
+.screener-tbody > tr > td {
+    font-size: 1rem;
+    border:1px solid rgb(50, 50, 50);
+    padding:0rem 1rem;
+}
+
+.screener-thead > tr > th {
+    font-size: 1rem;
+    color:rgb(200,200,200);
+    border:1px solid rgb(50, 50, 50);
+    padding:1rem 1rem;
+    text-align: left;
 }

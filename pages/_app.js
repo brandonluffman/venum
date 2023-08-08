@@ -60,7 +60,7 @@ import '../styles/macro.css'
 import '../styles/stockratios.css'
 import '../styles/stockownership.css'
 import '../styles/screener.css'
-
+import '../styles/chat.css'
 
 
 export default function App({ Component, pageProps }) {

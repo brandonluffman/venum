@@ -5,7 +5,7 @@ import Search from '../components/Search';
 import Footer from '../components/Footer';
 import prisma from '../lib/prisma';
 
-const stocks = ({ feed }) => {
+const stocks = () => {
   return (
     <>
     <Navbar />

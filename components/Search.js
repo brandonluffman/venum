@@ -5,25 +5,54 @@ import Link from 'next/link';
 const Search = () => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
+    const [typingTimeout, setTypingTimeout] = useState(null);
 
-  const handleSearch = async (event) => {
+
+  const handleSearch = (event) => {
     const value = event.target.value;
     setQuery(value);
-
+  
+    if (typingTimeout) {
+      clearTimeout(typingTimeout);
+    }
+  
     if (!value) {
       setResults([]); // Clear the results when the input is empty
       return;
     }
-
-    try {
-      const response = await axios.get(`/api/search?q=${value}`);
-      // console.log(response.data)
-      setResults(response.data);
-    } catch (error) {
-      // console.error('Error fetching search results:', error);
-      setResults([]);
-    }
+  
+    setTypingTimeout(
+      setTimeout(async () => {
+        try {
+          const response = await axios.get(`/api/search?q=${value}`);
+          // console.log(response.data)
+          setResults(response.data);
+        } catch (error) {
+          // console.error('Error fetching search results:', error);
+          setResults([]);
+        }
+      }, 500) // Delay of 0.5 seconds (500 milliseconds)
+    );
   };
+  
+  // const handleSearch = async (event) => {
+  //   const value = event.target.value;
+  //   setQuery(value);
+
+  //   if (!value) {
+  //     setResults([]); // Clear the results when the input is empty
+  //     return;
+  //   }
+
+  //   try {
+  //     const response = await axios.get(`/api/search?q=${value}`);
+  //     // console.log(response.data)
+  //     setResults(response.data);
+  //   } catch (error) {
+  //     // console.error('Error fetching search results:', error);
+  //     setResults([]);
+  //   }
+  // };
 
   return (
     <div>

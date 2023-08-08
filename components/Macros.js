@@ -52,10 +52,10 @@ const Macros = () => {
                 <h3 className='macro-grid-label'>Construction Spending</h3>
                 <h6 className='macro-grid-number'>2.3</h6>
             </div>
-            <div className='macro-grid-item'>
+            {/* <div className='macro-grid-item'>
                 <h3 className='macro-grid-label'>Retail Sales</h3>
                 <h6 className='macro-grid-number'>2.3</h6>
-            </div>
+            </div> */}
         </div>
 
     </div>

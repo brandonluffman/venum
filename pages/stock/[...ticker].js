@@ -48,8 +48,8 @@ const StockDetails = ({ stock }) => {
             {stock && data && ( 
                     <div className='stock-company-price-div'>
                     <h3 className='stock-company-price'>{data[0].toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
-                    {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
-                    {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)}
+                    {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
+                    {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)}
                    </div>
                    )}
 

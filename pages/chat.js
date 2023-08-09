@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import {BsArrowUp} from 'react-icons/bs'
+import {BsFillArrowUpCircleFill} from 'react-icons/bs'
 import { AiOutlinePlus } from 'react-icons/ai'
 
 const chat = () => {
@@ -11,9 +11,9 @@ const chat = () => {
     <div className='chat-container'>
     <div className='chat-inbox-container'>
       <div className='new-chat-button-div'>
-      <button className='new-chat-button' type='button'>Create New Chat <AiOutlinePlus className='plus-icon' /></button>
+      <button className='new-chat-button' type='button'>New Chat <AiOutlinePlus className='plus-icon' /></button>
       </div>
-      <h2 className='chat-inbox-header'>Chat</h2>
+      <h2 className='chat-inbox-header'>Chat History</h2>
       <div className='chat-inbox'>
         <div className='chat-inbox-card'>
         <div className='chat-inbox-card-time'>
@@ -38,9 +38,13 @@ const chat = () => {
     </div>
     <div className='chat-messages-container'>
       <form className='chat-messages-form'>
-        <input className='chat-messages-input' placeholder='Type a message here...' type='text'></input>
-        <button className='chat-messages-send-button' type='submit'><BsArrowUp /></button>
+        <article>
+          <input className='chat-messages-input' placeholder='Type a message here...' type='text'></input>
+          <button className='chat-messages-send-button' type='submit'><BsFillArrowUpCircleFill /></button>
+        </article>
       </form>
+      <div className="chat-messages-wrapper">
+
       <p className='chat-messages-message-time'>Today at 3:33pm</p>
       <div className='chat-messages-message-container'>
         <div className='chat-messages-message'>What to expect from wisdom tooth surgery?</div>
@@ -65,6 +69,7 @@ const chat = () => {
         Call your doctor if you have a fever, or if your pain or swelling doesn’t improve.
         Don’ts: Don’t drink through a straw. Sucking may loosen blood clots that help your mouth heal. Don’t rinse your mouth too harshly. Your doctor may suggest rinsing gently with saltwater. Don’t eat hard, crunchy, or sticky foods that may scratch your wounds. Don’t smoke. Smoking can slow your healing.
         </div>
+      </div>
       </div>
     </div>
   </div>

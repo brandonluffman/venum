@@ -29,7 +29,9 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "react-plotly.js": "^2.6.0"
+    "react-plotly.js": "^2.6.0",
+    "redis": "^4.6.7",
+    "redis-promise": "^0.1.0"
   },
   "devDependencies": {
     "@prisma/migrate": "^5.1.1",

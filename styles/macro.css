@@ -4,12 +4,25 @@
     /* display: flex;
     align-items: center; */
     padding:100px 4rem 0rem 4rem;
+    text-align: center;
 }
 
 .macro-container > h1 {
     margin: 0;
+    margin-bottom:0.5rem;
 }
 
+.macro-container > h6 {
+    font-size:1.1rem;
+    margin:0;
+    margin-bottom:1rem;
+    font-weight: 400;
+}
+
+.macro-container-hr {
+    color: black;
+    margin-bottom:2rem;
+}
 
 .macro-grid-container {
     display: grid;

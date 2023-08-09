@@ -40,7 +40,7 @@ export default async function handler(req, res) {
         CEO: false,
         Full_Address: false,
       },
-      take: 10, // Limit the results to 10 suggestions
+      take: 5
     });
 
     // Convert bigint values to strings and handle null values
@@ -56,3 +56,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal server error.' });
   }
 }
+
+
+

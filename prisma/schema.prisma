@@ -54,3 +54,14 @@ model StockData {
   Ticker   String?   @db.VarChar(10)
   id       Int       @id @default(autoincrement())
 }
+
+model interest_rates {
+  id               Int       @id @default(autoincrement())
+  Date             DateTime? @db.Date
+  InterestRate     Decimal?  @db.Decimal(10, 8)
+} 
+
+model Email {
+  id      Int      @id @default(autoincrement())
+  address String   @unique
+}

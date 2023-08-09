@@ -14,7 +14,7 @@ const fetchYourDataFromMySQL = async () => {
       });
 
     // Custom query to fetch data from your existing MySQL database
-    const [results, _] = await connection.query('SELECT * FROM company_info');
+    const [results, _] = await connection.query('SELECT * FROM interest_rates');
 
     // Close the MySQL connection
     await connection.end();
@@ -30,17 +30,25 @@ const fetchYourDataFromMySQL = async () => {
 const load = async () => {
     try {
       // Delete existing records in the company_info table
-      await prisma.company_info.deleteMany();
-      console.log('Deleted records in company_info table');
+      await prisma.interest_rates.deleteMany();
+      console.log('Deleted records in interest_rates table');
   
       // Fetch data from the MySQL database
       const dataToSeed = await fetchYourDataFromMySQL();
       console.log('Data to seed:', dataToSeed);
   
-      // Insert data into the PlanetScale database one by one
-      for (const record of dataToSeed) {
-        await prisma.company_info.create({
-          data: record,
+      // Split the data into chunks for efficient batch insertion
+      const chunkSize = 100; // You can adjust this based on your needs
+      const chunks = [];
+
+      for (let i = 0; i < dataToSeed.length; i += chunkSize) {
+        chunks.push(dataToSeed.slice(i, i + chunkSize));
+      }
+
+      // Insert data into the PlanetScale database using createMany
+      for (const chunk of chunks) {
+        await prisma.interest_rates.createMany({
+          data: chunk,
         });
       }
   

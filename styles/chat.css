@@ -108,6 +108,7 @@
 }
 .chat-messages-response-container {
     justify-content: left;
+    width:100%;
 }
 .chat-inbox-card-profile {
     width:auto;

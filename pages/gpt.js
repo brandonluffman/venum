@@ -12,7 +12,7 @@ const gpt = () => {
         <div className='gpt-div'>
         <h1 className='gpt-div-header'>Join the waitlist for <br></br><span className='waitlist-color-change'>GPTFinance</span></h1>
         {/* <NewsLetterSignUpForm /> */}
-        <EmailForm />
+        {/* <EmailForm /> */}
         {/* <form className='gpt-waitlist-form'>
         <input type='text' placeholder='Enter your email here ...' className='gpt-waitlist-input'></input>
         <button type='submit' className='gpt-waitlist-input-btn'>Sign Up</button>

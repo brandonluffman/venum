@@ -6,7 +6,7 @@ import EmailForm from '../components/EmailForm'
 
 const gpt = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <div className='gpt-container'>
         <div className='gpt-div'>
@@ -20,7 +20,7 @@ const gpt = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

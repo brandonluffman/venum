@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const waitlist = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <div className='gpt-container'>
         <div className='gpt-div'>
@@ -14,7 +14,7 @@ const waitlist = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

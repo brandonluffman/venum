@@ -25,11 +25,6 @@ export default function Home({ onButtonClick }) {
       </div>
       </div>
     </div>
-    {/* <div className='breaker'>
-
-    </div> */}
-
-
 
 
     <div className='index-preview-container'>

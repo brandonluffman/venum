@@ -40,7 +40,7 @@
     text-align: center;
     border-radius: 10px;
     color:white;
-    box-shadow:1px 4px 8px rgba(0,0,0,0.5);
+    box-shadow:1px 1px 10px rgba(18, 18, 18, 0.6);
     padding-bottom:2rem;
     height:200px;
     width:100%;
@@ -50,6 +50,7 @@
     margin:0;
     margin-bottom:2rem;
     margin-top:1rem;
+    font-weight: 400;
 }
 .macro-grid-number {
     font-size:3rem;

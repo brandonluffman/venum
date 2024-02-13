@@ -36,12 +36,16 @@
     cursor: pointer;
 }
 
+.stock-tab-input:hover ~ .stock-tab-label {
+    background-color: rgb(35,35,35);
 
+}
 .stock-tab-input:checked ~ .stock-tab-label {
     /* border-bottom:1px solid white; */
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(75, 183, 241);
     color:white;
     box-shadow: inset 1px 1px 10px rgba(0,0,0,0.8);
+    font-weight: 700;
 }
 
 .stock-tab-label {

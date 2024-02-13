@@ -33,6 +33,18 @@ h1, h3 {
     font-weight:300;
 }
 
+.chartContainer {
+    width: 75%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 4rem !important;
+}
+
+
+
 .stock-name-div {
     display: flex;
     align-items: center;

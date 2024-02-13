@@ -6,8 +6,6 @@ import React, { useEffect, useState } from 'react';
 import StockTabs from '../../components/StockTabs';
 import Footer from '../../components/Footer';
 import StockPriceChart from '../../components/StockPriceChart';
-import { supabase } from '../../utils/supabaseClient'
-import PriceChart from '../../components/PriceChart';
 
 const StockDetails = ({ stock }) => {
 
@@ -34,22 +32,19 @@ const StockDetails = ({ stock }) => {
       <div className='stock-container'>
         <div className='stock-inside-container'>
         {/* <StockPriceChart stockData={data} /> */}
-
-        {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
+        {stock && stock.Industry && stock.Sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.Industry}</span> &#8226; {stock.Sector}</h6>}
           <div className='stock-name-div'>
 
             <img className='stock-img' src='/appl.png'></img>
             <div className='ticker-country-div'>
-              {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>  }
-              {stock && stock.country && stock.country === 'United States' ? (
+              {stock && stock.Ticker &&<h2 className='stock-ticker-name'>{stock.Ticker}</h2>  }
+              {stock && stock.Country && stock.Country === 'United States' ? (
                   <img className='country-img' src='/america.jpeg' width='25' alt='USA' />
                 ) : (
-                  <div>{stock.country}</div>
+                  <div>{stock.Country}</div>
                 )}
             </div>
-            
-            {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
-
+            {stock && stock.Title && <h1 className='stock-company-name'>{stock.Title}</h1>}
             {stock && data && ( 
                     <div className='stock-company-price-div'>
                     <h3 className='stock-company-price'>{data[0].toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
@@ -61,9 +56,7 @@ const StockDetails = ({ stock }) => {
             </div>
           <div>
           </div>
-
         </div>
-
         <StockTabs stock={stock}/>
       </div>
       <Footer />
@@ -73,26 +66,57 @@ const StockDetails = ({ stock }) => {
 
 
 export async function getServerSideProps(context) {
-  const { ticker } = context.query;
-
+  const { ticker } = context.query; // 'ticker' will be the dynamic part of the URL
+  console.log(ticker)
   try {
-    let { data: stock, error } = await supabase
-      .from('company_info')
-      .select('*')
-      .eq('ticker', ticker.toString())
-      .single();
-
-    if (error) {
-      throw error;
-    }
+    const stock = await prisma.company_info.findFirst({
+      where: {
+        Ticker: {
+          equals: ticker.toString(),
+        },
+      },
+    });
 
     if (!stock) {
-      return { notFound: true };
+      return {
+        notFound: true,
+      };
     }
 
-    // Assuming MarketCap or other numeric fields don't need serialization with Supabase
+    // Convert bigint values to strings in the stock data (if needed)
+    const serializedStock = {
+      ...stock,
+      MarketCap: stock.MarketCap !== undefined ? stock.MarketCap.toString() : null,
+    };
+
+    // Fetch the stock prices based on the ticker from the stock_prices table
+    // const stockPrices = await prisma.stock_prices.findMany({
+    //   where: {
+    //     ticker_symbol: ticker.toString(),
+    //   },
+    //   orderBy: {
+    //     date: 'asc',
+    //   },
+    //   // take: 100000, // Limit the result to the first 100 rows
+
+    // });
+
+    // // console.log(stockPrices)
+
+    // const serializedStockPrices = stockPrices.map((price) => ({
+    //   ...price,
+    //   date: price.date.toISOString(), 
+    //   close_price: price.close_price.toString(), // Convert Decimal to string
+    // }));
+
+    // // Combine the stock data and stock prices
+    // const data = {
+    //   stock: serializedStock,
+    //   // prices: stockPrices,
+    // };
+
     return {
-      props: { stock },
+      props: { stock: serializedStock },
     };
   } catch (error) {
     console.error('Error fetching stock details:', error);

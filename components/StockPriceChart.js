@@ -6,6 +6,8 @@ const StockPriceChart = ({ stockData }) => {
 
   console.log(stockData)
 
+  const newData = [10,25,75,100]
+
     // const getMonthFromDate = (date) => {
     //     return new Date(date).toLocaleString('en-us', { month: 'short' });
     //   };
@@ -24,7 +26,7 @@ const StockPriceChart = ({ stockData }) => {
     datasets: [
       {
         label: 'Stock Price',
-        data: stockData.map(item => item.close_price),
+        data: newData,
         fill: false,
         borderColor: 'rgb(104, 205, 255)', // Custom line color
         backgroundColor: 'rgba(75, 192, 192, 0.2)', // Custom background color

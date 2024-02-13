@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { useUser } from '@auth0/nextjs-auth0/client';
 import {RxHamburgerMenu} from 'react-icons/rx'
 
 const Navbar = () => {
-  const { user, error, isLoading } = useUser();
   const [isActive, setActive] = useState(false);
   const [isActivate, setActivate] = useState(false);
   const [hamburgerClass, setHamburgerClass] = useState('');

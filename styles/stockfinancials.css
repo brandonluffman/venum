@@ -64,6 +64,56 @@
 .stock-financial-side-header-row {
     margin-bottom:2rem !important;
 }
+
+/* Add this to your component's CSS or a global CSS file */
+.sec-filings-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sec-filings-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sec-filings-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4,4fr);
+}
+
+.sec-filings-list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sec-filings-list-item:last-child {
+    /* border-bottom: none; */
+}
+
+.sec-filings-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.sec-filings-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 @media (max-width: 500px) {
         .stock-chart-container {
             width:100% !important;

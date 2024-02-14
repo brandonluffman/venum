@@ -16,11 +16,26 @@ table.institutional-ownership-table, table.mf-ownership-table {
   border-collapse: collapse;
 }
 
+table.institutional-ownership-table thead th:first-of-type, table.mf-ownership-table thead th:first-of-type {
+  border-top-left-radius: 20px !important;
+  border-left: none;
+  border-top: none;
+}
+
+table.institutional-ownership-table thead th:last-of-type, table.mf-ownership-table thead th:last-of-type {
+  border-top-right-radius: 20px !important;
+  border-left: none;
+  border-top: none;
+}
+
 /* Apply styles to table header cells */
 table.institutional-ownership-table th, table.mf-ownership-table th {
   padding: 10px;
-  text-align: left;
+  text-align: center;
   border: 1px solid #1d1d1d;
+  background-color: var(--brand-color);
+  color: black;
+  border-top:none
 }
 
 /* Apply styles to table body cells */

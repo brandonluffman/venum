@@ -4,3 +4,56 @@
     justify-content: center;
     min-height:100vh;
 }
+
+
+.top-stocks-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin:0rem 2rem;
+    margin-top: 100px;
+    padding-bottom: 40px;
+
+  }
+  
+  .top-stocks-title {
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .top-stock-menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    background-color: #333333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .top-stock-li {
+    color: #ffffff;
+    margin-right: 10px;
+    list-style-type: none;
+  }
+  
+  .top-stock-link {
+    text-decoration: none;
+  }
+
+  .top-stock-li:nth-of-type(2) {
+    text-align: left;
+  }
+  
+  .top-stock-li:last-child {
+    margin-right: 0;
+  }
+  
+  .top-stock-menu:hover {
+    background-color: #444444;
+  }
+  

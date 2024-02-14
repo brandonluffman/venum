@@ -32,7 +32,7 @@ const Search = () => {
           // console.error('Error fetching search results:', error);
           setResults([]);
         }
-      }, 200) // Delay of 0.5 seconds (500 milliseconds)
+      }, 0) // Delay of 0.5 seconds (500 milliseconds)
     );
   };
   

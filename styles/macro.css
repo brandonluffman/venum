@@ -3,13 +3,13 @@
     padding-top:100px;
     /* display: flex;
     align-items: center; */
-    padding:100px 4rem 0rem 4rem;
+    padding:120px 4rem 0rem 4rem;
     text-align: center;
 }
 
 .macro-container > h1 {
     margin: 0;
-    margin-bottom:0.5rem;
+    margin-bottom:2rem;
 }
 
 .macro-container > h6 {
@@ -20,13 +20,18 @@
 }
 
 .macro-container-hr {
-    color: black;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
+    width: 70%;
+    height: 1px; /* Increase the height for a thicker line */
+    background-color: var(--brand-color); /* Change the color to a shade of green */
+    border: none; /* Remove any default border */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 .macro-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     /* height:100vh; */
     /* display: flex;
     align-items: center; */
@@ -41,24 +46,32 @@
     border-radius: 10px;
     color:white;
     box-shadow:1px 1px 10px rgba(18, 18, 18, 0.6);
+    box-shadow:1px 1px 10px inset rgba(255, 255, 255, 0.2);
+
     padding-bottom:2rem;
-    height:200px;
+    height:auto;
     width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(100, 100, 100);
 }
 
 .macro-grid-label {
-    margin:0;
-    margin-bottom:2rem;
-    margin-top:1rem;
     font-weight: 400;
 }
 .macro-grid-number {
-    font-size:3rem;
+    font-size:2rem;
     margin:0 auto;
     /* border:1px solid rgb(30,30,30); */
     border-radius: 20px;
     width:auto;
     padding:0;
+}
+
+.macro-chart-div canvas {
+    width: 200px !important;
+    height: 200px !important;
 }
 
 @media (max-width: 768px) {

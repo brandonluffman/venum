@@ -1,27 +1,41 @@
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
+import { supabase } from '../utils/supabaseClient'; // Adjust the path as needed
 
-const PriceChart = () => {
-    // Initializing with a structure that avoids 'undefined' issues
+const PriceChart = ({ ticker }) => {
     const [chartData, setChartData] = useState({
-        labels: [], // Empty labels array
-        datasets: [{ // One dataset with empty data array
-            // label: 'Stock Price',
+        labels: [],
+        datasets: [{
             data: [],
             borderColor: 'rgb(75, 192, 192)',
             tension: 0.1,
             fill: false,
+            pointRadius:0,
         }]
     });
 
-    const generateDummyData = () => {
-        const dates = ["2024-01-01", "2024-01-02", "2024-01-03", "2024-01-04", "2024-01-05"];
-        const prices = [120, 150, 130, 160, 170];
+    const fetchStockPrices = async () => {
+        const fiveYearsAgo = new Date();
+        fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5);
+    
+        let { data, error } = await supabase
+            .from('historical_stock_prices')
+            .select('date, closing_price')
+            .eq('ticker', ticker)
+            .gte('date', fiveYearsAgo.toISOString().split('T')[0]) // Filter for dates in the last 5 years
+            .order('date', { ascending: true });
+
+        if (error) {
+            console.error('Error fetching stock prices:', error);
+            return;
+        }
+
+        const dates = data.map(item => item.date);
+        const prices = data.map(item => item.closing_price);
 
         setChartData({
             labels: dates,
             datasets: [{
-                // label: none,
                 data: prices,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1,
@@ -31,26 +45,30 @@ const PriceChart = () => {
     };
 
     useEffect(() => {
-        generateDummyData();
-    }, []);
+        if (ticker) {
+            fetchStockPrices();
+        }
+    }, [ticker]);
 
     return (
         <div className="chartContainer">
-
-    <Line data={chartData} style={{ width: '400px', height: '400px' }} options={{
-        scales: {
-            y: {
-                beginAtZero: false
-            }
-        },
-        maintainAspectRatio: false, // Allows independent width and height control
-        plugins: {
-            legend: {
-              display: false, // This will hide the legend
-            },
-          },
-    }} />
-    </div>
+            <Line data={chartData} style={{ width: '400px', height: '400px' }} options={{
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    },
+                    x: {
+                        display: false // Remove the dates from the x-axis
+                    }
+                },
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                },
+            }} />
+        </div>
     );
 };
 

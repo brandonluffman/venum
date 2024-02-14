@@ -24,6 +24,10 @@ a {
   box-sizing: border-box;
 }
 
+.antiflexer {
+  display: block;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

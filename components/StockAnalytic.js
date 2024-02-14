@@ -7,7 +7,7 @@ const StockAnalytic = ({stock}) => {
 
   return (
     <div>
-                      <PriceChart />
+                  {stock.ticker &&    <PriceChart ticker={stock.ticker} />}
 
           {stock && 
 

@@ -32,7 +32,7 @@ const StockDetails = ({ stock }) => {
   return (
     <>
          <Head>
-          <title>Venum {stock?.title && stock.title}</title>
+          <title>Venum | {stock?.title && stock.title}</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />

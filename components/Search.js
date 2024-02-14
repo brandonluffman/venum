@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+// import { supabase } from './supabaseClient';
 
 const Search = () => {
   const [query, setQuery] = useState('');
@@ -34,6 +35,7 @@ const Search = () => {
       }, 200) // Delay of 0.5 seconds (500 milliseconds)
     );
   };
+  
 
   return (
     <div>

@@ -24,22 +24,22 @@ const StockFinancials = ({ stock }) => {
 }, []);
   return (
     <div className="sec-filings-container">
-    <h1 className="sec-filings-title">SEC Filings</h1>
-    <ul className="sec-filings-list">
-        {data.map((filing, index) => (
-            <li key={index} className="sec-filings-list-item">
-                <a
-                    href={filing.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="sec-filings-link"
-                >
-                    {filing.form} - {filing.filing_date}
-                </a>
-            </li>
-        ))}
-    </ul>
-</div>
+      <h1 className="sec-filings-title">SEC Filings</h1>
+      <ul className="sec-filings-list">
+          {data.map((filing, index) => (
+              <li key={index} className="sec-filings-list-item">
+                  <a
+                      href={filing.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sec-filings-link"
+                  >
+                      {filing.form} - {filing.filing_date}
+                  </a>
+              </li>
+          ))}
+      </ul>
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // import Stocks from '../components/Stocks'
 import Search from '../components/Search';
 import Navbar from '../components/Navbar';
@@ -7,9 +7,12 @@ import Link from 'next/link';
 import { BsArrowRight } from 'react-icons/bs'
 import { LuCircleDot } from 'react-icons/lu'
 import Head from 'next/head';
+import { supabase } from '../utils/supabaseClient';
 
 
 export default function Home({ onButtonClick }) {
+  const [topStocks, setTopStocks] = useState([]);
+
 
   return (
     <>
@@ -48,6 +51,22 @@ export default function Home({ onButtonClick }) {
       <div className='index-buttons'>
       <Link href='/stocks'><button className='index-btn index-search-btn' type='button'>Search for Stocks</button></Link>
       <Link href='/gpt' className='index-btn-link'><button className='index-btn' type='button'>Try the GPTFinance Beta <BsArrowRight className='index-btn-arrow' /></button></Link>
+      {/* <div className='index-chart-container'>
+      <div className='top-stocks-container'>
+        <h2 className='top-stocks-title'>Top Stocks</h2>
+        {topStocks.map((stock) => (
+          <div key={stock.ticker}>
+            <Link className='top-stock-link' href={`/stock/${stock.ticker}`}>
+              <ul className='top-stock-menu'>
+                <li className='top-stock-li'>{stock.ticker}</li>
+                <li className='top-stock-li'>{stock.title}</li>
+                <li className='top-stock-li'>{stock.exchange ? stock.exchange: exchangeDefault}</li>
+              </ul>
+            </Link>
+          </div>
+        ))}
+      </div>
+      </div> */}
       </div>
       </div>
     </div>

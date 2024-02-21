@@ -10,25 +10,26 @@ const Search = () => {
   const [typingTimeout, setTypingTimeout] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [topStocks, setTopStocks] = useState([]);
-  const exchangeDefault = 'NA'
+  // const exchangeDefault = 'NA'
   useEffect(() => {
-    const fetchTopStocks = async () => {
+    const fetchSpecificStocks = async () => {
+      const specificStocks = ['AAPL', 'AMZN', 'NVDA', 'GOOG', 'BRK-A', 'MSFT'];
+  
       const { data: fetchedData, error } = await supabase
             .from('company_info')
             .select('*')
-            .eq('exchange', 'NMS')
-            .order('market_cap', { ascending: true })
-            .limit(10);
-
-        if (error) {
-            console.error('Error fetching stocks for screener:', error);
-            return;
-        }
-
-        setTopStocks(fetchedData);
+            .in('ticker', specificStocks)
+            .order('market_cap', { ascending: true });
+  
+      if (error) {
+        console.error('Error fetching specific stocks:', error);
+        return;
+      }
+  
+      setTopStocks(fetchedData);
     };
   
-    fetchTopStocks();
+    fetchSpecificStocks();
   }, []);
 
   const handleSearch = (event) => {
@@ -94,21 +95,21 @@ const Search = () => {
             </div>
         ))}
       </div>
-      <div className='top-stocks-container'>
-  <h2 className='top-stocks-title'>Top Stocks</h2>
-  {topStocks.map((stock) => (
-    <div key={stock.ticker}>
-      <Link className='top-stock-link' href={`/stock/${stock.ticker}`}>
-        <ul className='top-stock-menu'>
-          <li className='top-stock-li'>{stock.ticker}</li>
-          {/* <li className='top-stock-li'>&#x2022;</li> */}
-          <li className='top-stock-li'>{stock.title}</li>
-          <li className='top-stock-li'>{stock.exchange ? stock.exchange: exchangeDefault}</li>
-        </ul>
-      </Link>
-    </div>
-  ))}
-</div>
+            <div className='top-stocks-container'>
+        <h2 className='top-stocks-title'>Top Stocks</h2>
+        {topStocks.map((stock) => (
+          <div key={stock.ticker}>
+            <Link className='top-stock-link' href={`/stock/${stock.ticker}`}>
+              <ul className='top-stock-menu'>
+                <li className='top-stock-li'>{stock.ticker}</li>
+                {/* <li className='top-stock-li'>&#x2022;</li> */}
+                <li className='top-stock-li'>{stock.title}</li>
+                <li className='top-stock-li'>{stock.exchange ? stock.exchange: exchangeDefault}</li>
+              </ul>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

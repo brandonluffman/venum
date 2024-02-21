@@ -1,7 +1,27 @@
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import { supabase } from '../utils/supabaseClient'; // Adjust the path as needed
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+} from 'chart.js';
 
+// Register the components
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+);
 const PriceChart = ({ ticker }) => {
     const [chartData, setChartData] = useState({
         labels: [],

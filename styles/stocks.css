@@ -7,18 +7,20 @@
 
 
 .top-stocks-container {
-    background-color: #1a1a1a;
+    background-color: #0e0e0e;
     padding: 20px;
     border-radius: 10px;
     margin:0rem 2rem;
     margin-top: 100px;
     padding-bottom: 40px;
-
+    box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(50, 50, 50);
+    margin-bottom: 4rem;
   }
   
   .top-stocks-title {
     color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
     font-size: 24px;
   }
@@ -27,12 +29,15 @@
     list-style: none;
     padding: 0;
     margin: 10px 0;
-    background-color: #333333;
+    background-color: #000000;
+    border: 1px solid rgba(20, 212, 255, 0.4);
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    transition: 0.2s ease all;
   }
   
   .top-stock-li {
@@ -54,6 +59,7 @@
   }
   
   .top-stock-menu:hover {
-    background-color: #444444;
+    /* background-color: #444444; */
+    transform: scale(1.01);
   }
   

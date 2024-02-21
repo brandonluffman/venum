@@ -5,29 +5,15 @@ import Navbar from '../../components/Navbar';
 import React, { useEffect, useState } from 'react';
 import StockTabs from '../../components/StockTabs';
 import Footer from '../../components/Footer';
-import StockPriceChart from '../../components/StockPriceChart';
+// import StockPriceChart from '../../components/StockPriceChart';
 import { supabase } from '../../utils/supabaseClient'
-import PriceChart from '../../components/PriceChart';
+// import PriceChart from '../../components/PriceChart';
 import Head from 'next/head';
 
 const StockDetails = ({ stock }) => {
 
   const [data, setData] = useState('');
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(`https://enigmatic-shelf-22572-e002d447b394.herokuapp.com/current_price/${stock.Ticker}`);
-  //       const jsonData = await response.json();
-  //       // console.log(jsonData)
-  //       setData(jsonData);
-  //     } catch (error) {
-  //       // console.error('Error fetching data:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   return (
     <>

@@ -51,8 +51,7 @@ const StockDetails = ({ stock }) => {
 
         {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
           <div className='stock-name-div'>
-
-            <img className='stock-img' src='/appl.png'></img>
+            {/* <img className='stock-img' src='/appl.png'></img> */}
             <div className='ticker-country-div'>
               {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>  }
               {stock && stock.country && stock.country === 'United States' ? (

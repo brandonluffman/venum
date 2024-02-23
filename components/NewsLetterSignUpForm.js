@@ -39,7 +39,7 @@ export default function NewsLetterSignUpForm() {
         />
         <GoMail className='gpt-div-mail-icon' />
         <button type="submit" value="" name="subscribe" className='gpt-waitlist-input-btn'>
-          Join <BsArrowRight className='gpt-btn-arrow' />
+          Join
         </button>
       </form>
 

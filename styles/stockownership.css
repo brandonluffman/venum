@@ -40,9 +40,9 @@ table.institutional-ownership-table th, table.mf-ownership-table th {
 
 /* Apply styles to table body cells */
 table.institutional-ownership-table td, table.mf-ownership-table td {
-  padding: 10px;
+  padding: 20px 10px;
   text-align: left;
-  border: 1px solid #1d1d1d;
+  border: 1px solid #4a4a4a;
 }
 
 /* Apply styles to even rows in the table body */

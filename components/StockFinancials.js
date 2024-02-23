@@ -23,23 +23,49 @@ const StockFinancials = ({ stock }) => {
     fetchData();
 }, []);
   return (
-    <div className="sec-filings-container">
-      <h1 className="sec-filings-title">SEC Filings</h1>
+<div className="sec-filings-container">
+  <h1 className="sec-filings-title">SEC Filings</h1>
+  <div className="sec-filings-categories">
+    <div className="sec-filings-category">
+      <h2 className="sec-filings-category-title">10-K Filings</h2>
       <ul className="sec-filings-list">
-          {data.map((filing, index) => (
-              <li key={index} className="sec-filings-list-item">
-                  <a
-                      href={filing.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="sec-filings-link"
-                  >
-                      {filing.form} - {filing.filing_date}
-                  </a>
-              </li>
+        {data
+          .filter((filing) => filing.form === "10-K")
+          .map((filing, index) => (
+            <li key={index} className="sec-filings-list-item">
+              <a
+                href={filing.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sec-filings-link"
+              >
+                {filing.form} - {filing.filing_date}
+              </a>
+            </li>
           ))}
       </ul>
     </div>
+    <div className="sec-filings-category">
+      <h2 className="sec-filings-category-title">10-Q Filings</h2>
+      <ul className="sec-filings-list">
+        {data
+          .filter((filing) => filing.form === "10-Q")
+          .map((filing, index) => (
+            <li key={index} className="sec-filings-list-item">
+              <a
+                href={filing.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sec-filings-link"
+              >
+                {filing.form} - {filing.filing_date}
+              </a>
+            </li>
+          ))}
+      </ul>
+    </div>
+  </div>
+</div>
   )
 }
 

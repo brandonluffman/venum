@@ -66,14 +66,15 @@
 }
 
 /* Add this to your component's CSS or a global CSS file */
+
+
 .sec-filings-container {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    /* background-color: #f9f9f9; */
     border-radius: 10px;
-    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.4);
-    border: 1px solid rgb(100, 100, 100);
+    /* box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.4); */
+    /* border: 1px solid rgb(100, 100, 100); */
 }
 
 .sec-filings-title {
@@ -92,11 +93,10 @@
 
 .sec-filings-list-item {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 .sec-filings-list-item:last-child {
-    /* border-bottom: none; */
 }
 
 .sec-filings-link {
@@ -108,6 +108,7 @@
 .sec-filings-link:hover {
     text-decoration: underline;
 }
+
 
 
 

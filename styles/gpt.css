@@ -47,27 +47,34 @@
 }
 
 .gpt-waitlist-input-btn {
-    background-color: black;
+    background: linear-gradient(
+        to right, #f32170, #fb96a2,
+         #cf23cf, #f48ac6);
     box-shadow: 1px 1px 12px rgba(118, 118, 118, 0.4);
     border:none;
-    font-size:1rem;
+    font-size:1.5rem;
     padding:1rem 1.5rem;
     border-radius: 10px;
     /* width:100%; */
-    min-width:150px;
+    min-width:100px;
     justify-content: center;
     display: flex;
     align-items: center;
     text-align: center;
     width:100%;
-    font-weight: 100;
-    transition: 0.2s ease-in-out all;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.2s ease all;
 }
 
 .gpt-waitlist-input-btn:hover {
     /* transform: translateY(-2px); */
-    box-shadow: 1px 1px 20px rgba(118, 118, 118, 0.4);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.6);
     cursor:pointer;
+    background: linear-gradient(
+        to right, #f32170, #fb96a2,
+         #cf23cf, #f48ac6);
+         font-size: 1.53rem;
 }
 
 .gpt-div-mail-icon {

@@ -50,7 +50,7 @@ export default function Home({ onButtonClick }) {
       <h3 className='index-subheader'>At <span className='index-subheader-brand'>VENUM</span>, our goal is to democratize investment information & tools for investors of all calibers. <i>Power</i> your portfolio with tools used by the largest financial institutions in the world.</h3>
       <div className='index-buttons'>
       <Link href='/stocks'><button className='index-btn index-search-btn' type='button'>Search for Stocks</button></Link>
-      <Link href='/gpt' className='index-btn-link'><button className='index-btn' type='button'>Try the GPTFinance Beta <BsArrowRight className='index-btn-arrow' /></button></Link>
+      <Link href='/gpt' className='index-btn-link'><button className='index-btn try-gpt-btn' type='button'>Try the GPTFinance Beta <BsArrowRight className='index-btn-arrow' /></button></Link>
       {/* <div className='index-chart-container'>
       <div className='top-stocks-container'>
         <h2 className='top-stocks-title'>Top Stocks</h2>

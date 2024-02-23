@@ -5,11 +5,12 @@ const StockSentiment = () => {
   const sentimentValue = 0.5;
   return (
     <div className='stock-sentiment-container'>
-      <h6>Sentiment Score</h6>
-        <SentimentGauge sentiment={sentimentValue} />
+      {/* <h6>Sentiment Score</h6> */}
+        {/* <SentimentGauge sentiment={sentimentValue} /> */}
 
       <div className='sentiment-grid-container'>
           <div className='sentiment-grid-item'>
+            <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
             <img src='/news-logo.png' className='sentiment-header-img'></img>
             <h2 className='sentiment-grid-item-header'>News</h2>
             <div className='sentiment-grid-item-div glass-effect'>
@@ -36,6 +37,7 @@ const StockSentiment = () => {
         
           </div>
         <div className='sentiment-grid-item'>
+        <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
           <img src='/x-logo.png' className='sentiment-header-img'></img>
           <h2 className='sentiment-grid-item-header'>X</h2>
           <div className='sentiment-grid-item-div glass-effect'>
@@ -61,6 +63,8 @@ const StockSentiment = () => {
           </div>
         </div>  
         <div className='sentiment-grid-item'>
+        <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
+
           <img src='/reddit-logo.png' className='sentiment-header-img'></img>
           <h2 className='sentiment-grid-item-header'>Reddit</h2>
           <div className='sentiment-grid-item-div glass-effect'>

@@ -1,9 +1,28 @@
+@import '~nprogress/nprogress.css';
+
 @import url('https://fonts.cdnfonts.com/css/gotham-6');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
   font-family: 'Gotham';
   src: url('/path/to/fonts/GothamRegular.ttf') format('truetype');
   /* Add other font variations (bold, italic, etc.) here */
+}
+
+#nprogress .bar {
+  height: 1px !important; /* Adjust the height as needed */
+  z-index:999999999999 !important;
+}
+#nprogress .bar {
+  background: rgb(75, 183, 241); /* Change the color to your preference */
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px rgb(75, 183, 241), 0 0 5px rgb(75, 183, 241); /* Adjust the shadow to match the color */
+}
+
+#nprogress .spinner-icon {
+  border-top-color: rgb(75, 183, 241); /* Match the spinner color to the bar */
+  border-left-color: rgb(75, 183, 241);
 }
 
 html,

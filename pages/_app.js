@@ -61,7 +61,21 @@ import '../styles/stockratios.css'
 import '../styles/stockownership.css'
 import '../styles/screener.css'
 import '../styles/chat.css'
+import NProgress from 'nprogress';
+import Router from 'next/router';
 
+Router.events.on('routeChangeStart', () => {
+  console.log('Route change started');
+  NProgress.start();
+});
+Router.events.on('routeChangeComplete', () => {
+  console.log('Route change complete');
+  NProgress.done();
+});
+Router.events.on('routeChangeError', () => {
+  console.log('Route change error');
+  NProgress.done();
+});
 
 export default function App({ Component, pageProps }) {
   return (

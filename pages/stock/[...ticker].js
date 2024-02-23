@@ -9,11 +9,30 @@ import Footer from '../../components/Footer';
 import { supabase } from '../../utils/supabaseClient'
 // import PriceChart from '../../components/PriceChart';
 import Head from 'next/head';
+import Loading from '../../components/Loading';
 
 const StockDetails = ({ stock }) => {
 
   const [data, setData] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    // Simulate data fetching
+    const fetchData = async () => {
+      setIsLoading(true);
+      // Fetch your data here and update the state
+      // For example:
+      // const fetchedData = await fetchSomeData();
+      // setData(fetchedData);
+      setIsLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <>

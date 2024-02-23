@@ -47,7 +47,7 @@ export default function NewsLetterSignUpForm() {
       {isLoading && <div className="loading-spinner">Loading...</div>}
 
       {/* Conditional rendering of the thank you message */}
-      {isSubscribed && <p>Thank you for subscribing!</p>}
+      {isSubscribed && <p>You&apos;ve successfully signed up for the waitlist!</p>}
       {isAlreadySubscribed && <p>You are already subscribed!</p>}
       {error && <p>{error}</p>}
     </>

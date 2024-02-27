@@ -144,6 +144,10 @@
         overflow:hidden;
     
     }
+
+    .autosuggest-container {
+        position: relative;
+    }
 }
 
 @media (max-width: 500px) {
@@ -195,5 +199,12 @@
         margin-left:0;
         max-width:45px;
         min-width: 45px;
+    }
+
+    .autosuggest-container {
+        position: relative;
+    }
+    .autosuggest-li-flexer {
+        justify-content: center;
     }
 }

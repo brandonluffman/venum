@@ -16,50 +16,63 @@
     box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(50, 50, 50);
     margin-bottom: 4rem;
-  }
+}
   
-  .top-stocks-title {
-    color: #ffffff;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 24px;
-  }
-  
-  .top-stock-menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    background-color: #000000;
-    border: 1px solid rgba(20, 212, 255, 0.4);
-    box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    transition: 0.2s ease all;
-  }
-  
-  .top-stock-li {
-    color: #ffffff;
-    margin-right: 10px;
-    list-style-type: none;
-  }
-  
-  .top-stock-link {
-    text-decoration: none;
-  }
+.top-stocks-title {
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 24px;
+}
 
-  .top-stock-li:nth-of-type(2) {
-    text-align: left;
-  }
+.top-stock-menu {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  background-color: #000000;
+  border: 1px solid rgba(20, 212, 255, 0.4);
+  box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  transition: 0.2s ease all;
+}
+
+.top-stock-li {
+  color: #ffffff;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.top-stock-link {
+  text-decoration: none;
+}
+
+.top-stock-li:nth-of-type(2) {
+  text-align: left;
+}
+
+.top-stock-li:last-child {
+  margin-right: 0;
+}
+
+.top-stock-menu:hover {
+  /* background-color: #444444; */
+  transform: scale(1.01);
+}
+
+@media (max-width: 800px) {
+    .top-stocks-container {
+      margin:-200px 0rem 4rem 0rem;
+      padding:10px;
+    }
+}
   
-  .top-stock-li:last-child {
-    margin-right: 0;
-  }
-  
-  .top-stock-menu:hover {
-    /* background-color: #444444; */
-    transform: scale(1.01);
-  }
-  
+@media (max-width: 500px) {
+    .top-stocks-container {
+      margin:-200px 0rem 4rem 0rem;
+      padding:10px;
+    }
+}

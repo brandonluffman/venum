@@ -13,7 +13,7 @@ const Search = () => {
   // const exchangeDefault = 'NA'
   useEffect(() => {
     const fetchSpecificStocks = async () => {
-      const specificStocks = ['AAPL', 'AMZN', 'NVDA', 'GOOG', 'BRK-A', 'MSFT'];
+      const specificStocks = ['AAPL', 'AMZN', 'NVDA', 'GOOG', 'MSFT', 'TSLA'];
   
       const { data: fetchedData, error } = await supabase
             .from('company_info')

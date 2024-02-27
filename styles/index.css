@@ -194,6 +194,21 @@
     .index-btn:nth-of-type(2) {
         display: block;
     }
+
+    .index-buttons {
+        display: block;
+    }
+
+    .try-gpt-btn {
+        position: relative;
+        top:0;
+        left: 0;
+    }
+
+    .index-search-btn {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
 }
 
 
@@ -514,7 +529,7 @@
 
  @media (max-width: 500px) {
     .index-banner-div {
-        width:90%;
+        width:95%;
         margin:0 auto;
         display: block;
         /* height:400px; */

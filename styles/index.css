@@ -26,7 +26,7 @@
 .index-header {
     font-size:4rem;
     width:65%;
-    line-height: 5rem;
+    line-height: 102%;
     word-spacing: -.3vw;
 }
 
@@ -149,7 +149,7 @@
     }
     .index-header {
         font-size:3rem;
-        line-height: 8vh;
+        /* line-height: 8vh; */
     }
     .index-subheader {
 
@@ -203,6 +203,7 @@
         position: relative;
         top:0;
         left: 0;
+        color: white;
     }
 
     .index-search-btn {
@@ -489,7 +490,11 @@
 .index-banner-right-btn {
     display: none;
 }
-
+@media (max-width: 900px) {
+    .index-banner-div {
+        width: 90%;
+    }
+}
 
 @media (max-width: 768px) {
     .index-banner-div {
@@ -519,6 +524,10 @@
 
     .index-banner-right-btn {
         display: flex;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        display: none;
+        /* background-color:rgb(20, 212, 255); */
     }
 
     .index-banner-right-img {

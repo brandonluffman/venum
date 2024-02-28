@@ -10,7 +10,7 @@ const Footer = () => {
             <div className='footer-brand-container'>
               <div className='footer-brand-img'>
                   {/* <img src='/logo-home.png' alt="Brand Logo" className='footer-brand-logo' loading="lazy" /> */}
-                  <h1 className='footer-brand-name'>VENUM.<span className='ai-color-change'>AI</span></h1>
+                  <h1 className='footer-brand-name'>VENUM</h1>
               </div>
               
               {/* <div className='social-icons'>
@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
               </div>   
               <div className='copyright-footer'>
-                  <p className='footer-copyright-content'>Copyright © {new Date().getFullYear()} VENUM.AI - All Rights Reserved.</p>
+                  <p className='footer-copyright-content'>Copyright © {new Date().getFullYear()} VENUM - All Rights Reserved.</p>
               </div>
               <div className='copyright-footer'>
                   <p className='footer-phantom'>Powered by <Link className='footer-phantom-brand' rel='no-referrer' target='_blank' href='https://phantomdm.com'>Phantom</Link></p>

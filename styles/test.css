@@ -3,13 +3,3 @@
     padding-top: 100px;
     text-align: center;
 }
-
-.loading {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

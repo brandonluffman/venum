@@ -21,7 +21,7 @@ const SimilaritySearch = () => {
         }
         
         // const url = 'http://localhost:8000/items/';
-        const url = '/items/';
+        const url = 'https://summarize-h2g9.onrender.com/items/';
 
         try {
             const response = await axios.post(url, { query: item }); // Change 'item' to 'query'

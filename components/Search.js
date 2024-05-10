@@ -32,6 +32,8 @@ const Search = () => {
     fetchSpecificStocks();
   }, []);
 
+
+
   const handleSearch = (event) => {
     const value = event.target.value;
     setQuery(value);
@@ -64,6 +66,7 @@ const Search = () => {
     <div>
       {isLoading && <Loading />}
 
+
       <input
         type="text"
         value={query}
@@ -95,7 +98,8 @@ const Search = () => {
             </div>
         ))}
       </div>
-            <div className='top-stocks-container'>
+
+        <div className='top-stocks-container'>
         <h2 className='top-stocks-title'>Top Stocks</h2>
         {topStocks.map((stock) => (
           <div key={stock.ticker}>

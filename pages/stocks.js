@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Search from '../components/Search';
 import Footer from '../components/Footer';
 import Head from 'next/head';
+import SimilaritySearch from '../components/SimilaritySearch';
 
 const stocks = () => {
   return (
@@ -36,6 +37,9 @@ const stocks = () => {
     <Navbar />
     <div className='stocks-container'>
       <Search />
+    </div>
+    <div className='similarity-container'>
+    <SimilaritySearch />
     </div>
     <Footer />
     </>

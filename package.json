@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn pages.api.main:app --reload",
+    "next-dev": "next dev",
+    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "@prisma/migrate": "^5.1.1",
+    "concurrently": "^8.2.2",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "prisma": "^5.1.1"

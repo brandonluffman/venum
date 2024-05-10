@@ -20,8 +20,9 @@ const SimilaritySearch = () => {
           return;
         }
         
-        const url = 'http://localhost:8000/items/';
-      
+        // const url = 'http://localhost:8000/items/';
+        const url = 'https://venum.vercel.app/items/';
+
         try {
             const response = await axios.post(url, { query: item }); // Change 'item' to 'query'
             console.log("Response data:", response.data);

@@ -21,7 +21,7 @@ const SimilaritySearch = () => {
         }
         
         // const url = 'http://localhost:8000/items/';
-        const url = 'http://venum.vercel.app/items/';
+        const url = '/items/';
 
         try {
             const response = await axios.post(url, { query: item }); // Change 'item' to 'query'

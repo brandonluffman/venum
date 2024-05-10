@@ -14,7 +14,7 @@ import os
 from summaries import summary
 import numpy as np
 
-app = FastAPI()
+app = FastAPI(docs_url="/api/docs", openapi_url="/api/openapi.json")
 
 app.add_middleware(
     CORSMiddleware,
@@ -42,7 +42,7 @@ def calculate_cosine_similarity(tfidf_matrix, query_vector):
     similarity_scores = cosine_similarity(tfidf_matrix, query_vector)
     return similarity_scores.flatten()
 
-@app.get("/main")
+@app.get("/api/main")
 async def get_root():
     return 'Hello World'
 

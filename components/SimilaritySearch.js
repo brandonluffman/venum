@@ -23,7 +23,7 @@ const SimilaritySearch = () => {
         // const url = 'http://localhost:8000/items/';
         // const url = 'https://summarize-h2g9.onrender.com/items/';
 
-        const url = 'https://summarize-332628ab34b9.herokuapp.com/docs';
+        const url = 'https://summarize-332628ab34b9.herokuapp.com/items/';
         try {
             const response = await axios.post(url, { query: item }); // Change 'item' to 'query'
             console.log("Response data:", response.data);

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 import Link from 'next/link';
+import LoadingSpinner from './LoadingSpinner';
 
 const SimilaritySearch = () => {
     const [description, setDescription] = useState('');
@@ -50,7 +51,7 @@ const truncateString = (str, max) => {
 
   return (
     <div className='similar-search-main-container'>
-        {isLoading && <div className='loading'>Loading</div>}
+        {isLoading && <LoadingSpinner />}
         <h6 className='beta-tag'>Beta</h6>
         <h4>Find Companies by Similarity using Machine Learning</h4>
         <input

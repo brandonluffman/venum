@@ -3,3 +3,36 @@
     padding-top: 100px;
     text-align: center;
 }
+
+/* LoadingSpinner.module.css */
+.spinner {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    animation: loading-spinner 2s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    animation-delay: -1s;
+  }
+  
+  @keyframes loading-spinner {
+    0%, 100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+  

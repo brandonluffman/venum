@@ -51,7 +51,6 @@ const truncateString = (str, max) => {
 
   return (
     <div className='similar-search-main-container'>
-        {isLoading && <LoadingSpinner />}
         <h6 className='beta-tag'>Beta</h6>
         <h4>Find Companies by Similarity using Machine Learning</h4>
         <input
@@ -63,6 +62,8 @@ const truncateString = (str, max) => {
         />
         <button type="button" className='similar-search-btn' onClick={handleSimilarity}>Search</button>
         <div className='similar-search-container'>
+        {isLoading && <LoadingSpinner />}
+
         {responseData && (
                 <ul className='similar-search-menu'>
                     {responseData.map((result, index) => (

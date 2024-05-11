@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     const ids = req.body.indexes; // Get the list of IDs from query parameters.
     console.log(`IDs: ${ids}`);
 
-    if (!ids || !Array.isArray(ids) || ids.length !== 5) {
+    if (!ids || !Array.isArray(ids)) {
         return res.status(400).json({ error: 'Invalid or missing IDs.' });
     }
 

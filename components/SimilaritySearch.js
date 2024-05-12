@@ -71,7 +71,7 @@ const truncateString = (str, max) => {
                             <div>
                         <li >{result.ticker}</li>
                         <li >{result.title}</li>
-                        <li>{(similarityResults[index]['Similarity Score'] * 100).toFixed(2)}%</li>
+                        {similarityResults[index] && <li>{(similarityResults[index]['Similarity Score'] * 100).toFixed(2)}%</li>}
                         </div>
                         <div>
                         <li>{truncateString(result.summary, MAX_SUMMARY_LENGTH)}</li>

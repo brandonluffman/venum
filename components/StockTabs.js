@@ -5,6 +5,7 @@ import StockSentiment from './StockSentiment';
 // import StockAnalysis from './StockAnalysis';
 import StockOwnership from './StockOwnership';
 import StockRatios from './StockRatios';
+import StockEarnings from './StockEarnings'
 // import StockSummary from './StockSummary';
 // import StockFinancials from './StockFinancials';
 // import StockSentiment from './StockSentiment';
@@ -76,6 +77,17 @@ const StockTabs = ({ stock }) => {
           />
           <label className='stock-tab-label' htmlFor="option5">Ownership</label>
         </div>
+        <div className='stock-tab'>
+          <input
+            type="radio"
+            id="option6"
+            value="option6"
+            checked={selectedOption === 'option6'}
+            onChange={handleOptionChange}
+            className='stock-tab-input'
+          />
+          <label className='stock-tab-label' htmlFor="option6">Earnings</label>
+        </div>
         </div>
         <div>
           {selectedOption === 'option1' && <StockAnalytic stock={stock} />  }
@@ -83,6 +95,8 @@ const StockTabs = ({ stock }) => {
           {selectedOption === 'option3' && <StockSentiment />  }
           {selectedOption === 'option4' && <StockRatios stock={stock} />  }
           {selectedOption === 'option5' && <StockOwnership stock={stock} />  }
+          {selectedOption === 'option6' && <StockEarnings stock={stock} />  }
+
         </div>
 
       </div>

@@ -1,0 +1,100 @@
+.earnings-container {
+    text-align: center;
+    padding: 0rem 1rem;
+}
+
+.earnings-grid {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    gap:20px;
+}
+
+.earnings-container .earnings-bubble {
+    text-align: left;
+    padding: 0rem 2rem;
+    background-color: rgb(71, 77, 80);
+    padding: 0rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgb(75, 183, 241);
+}
+
+.earnings-container h3 {
+    text-align: center;
+}
+.earnings-container div div h4 {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.2s ease all;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.earnings-container div h4:hover {
+    color: rgb(75, 183, 241);
+}
+
+
+
+.earnings-transcript-summary {
+    display: flex;
+    margin: 2rem 0rem;
+    gap: 10px;
+}
+
+.earnings-summary-container {
+    width: 50%;
+    border: 1px solid rgb(75, 183, 241);
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.earnings-summary-container p {
+    text-align: left;
+}
+.earnings-transcript {
+    width: 50%;
+    /* height:500px; */
+    height: 600px;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    /* margin: 2rem auto; */
+    padding: 0rem 1rem;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+
+}
+
+.earnings-transcript div p strong {
+    border-top: 1px solid rgb(100, 100, 100);
+    width: 100%;
+    padding: 1rem 0rem;
+    font-style: italic;
+    
+}
+
+.earnings-transcript div p strong, .earnings-transcript div p {
+    text-align: left;
+    display: flex;
+
+}
+
+.flexer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flexer div {
+    background-color: rgb(75, 183, 241);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}

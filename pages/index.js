@@ -47,27 +47,12 @@ export default function Home({ onButtonClick }) {
       <div className='index-container'>
       {/* <Search /> */}
       <h1 className='index-header'>Investment Analytics <i>Driven</i> By <span className='index-color-change'>AI</span></h1>
-      <h3 className='index-subheader'>At <span className='index-subheader-brand'>VENUM</span>, our goal is to democratize investment information & tools for investors of all calibers. <i>Power</i> your portfolio with tools used by the largest financial institutions in the world.</h3>
-      <div className='index-buttons'>
+      <Search />
+      {/* <h3 className='index-subheader'>At <span className='index-subheader-brand'>VENUM</span>, our goal is to democratize investment information & tools for investors of all calibers. <i>Power</i> your portfolio with tools used by the largest financial institutions in the world.</h3> */}
+      {/* <div className='index-buttons'>
       <Link href='/stocks'><button className='index-btn index-search-btn' type='button'>Search for Stocks</button></Link>
       <Link href='/gpt' className='index-btn-link'><button className='index-btn try-gpt-btn' type='button'>Try the GPTFinance Beta <BsArrowRight className='index-btn-arrow' /></button></Link>
-      {/* <div className='index-chart-container'>
-      <div className='top-stocks-container'>
-        <h2 className='top-stocks-title'>Top Stocks</h2>
-        {topStocks.map((stock) => (
-          <div key={stock.ticker}>
-            <Link className='top-stock-link' href={`/stock/${stock.ticker}`}>
-              <ul className='top-stock-menu'>
-                <li className='top-stock-li'>{stock.ticker}</li>
-                <li className='top-stock-li'>{stock.title}</li>
-                <li className='top-stock-li'>{stock.exchange ? stock.exchange: exchangeDefault}</li>
-              </ul>
-            </Link>
-          </div>
-        ))}
-      </div>
       </div> */}
-      </div>
       </div>
     </div>
 

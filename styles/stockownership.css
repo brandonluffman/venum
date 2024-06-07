@@ -1,3 +1,7 @@
+.main-ownership-container {
+  margin-top: -40px;
+}
+
 .institutional-ownership-table, .mf-ownership-table {
     width:100%;
     text-align: center;
@@ -11,7 +15,7 @@
 }
 
 table.institutional-ownership-table, table.mf-ownership-table {
-  width: 80%;
+  width: 100%;
   margin:0 auto;
   border-collapse: collapse;
 }
@@ -48,4 +52,23 @@ table.institutional-ownership-table td, table.mf-ownership-table td {
 /* Apply styles to even rows in the table body */
 table.institutional-ownership-table tr:nth-child(even), table.mf-ownership-table tr:nth-child(even) {
   /* background-color: #f2f2f2; */
+}
+
+.pie-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  justify-content: space-around;
+}
+
+.ownership-tables-container {
+  display: flex;
+  gap: 10px;
+  padding: 0rem 1rem;
+}
+
+.ownership-table {
+  width: 50%;
 }

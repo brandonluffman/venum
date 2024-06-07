@@ -14,26 +14,13 @@ import Loading from '../../components/Loading';
 const StockDetails = ({ stock }) => {
 
   const [data, setData] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate data fetching
-    const fetchData = async () => {
-      setIsLoading(true);
-      // Fetch your data here and update the state
-      // For example:
-      // const fetchedData = await fetchSomeData();
-      // setData(fetchedData);
-      setIsLoading(false);
-    };
-
-    fetchData();
-  }, []);
+  const [isLoading, setIsLoading] = useState(false);
 
   if (isLoading) {
     return <Loading />;
   }
 
+  
   return (
     <>
          <Head>
@@ -68,6 +55,7 @@ const StockDetails = ({ stock }) => {
         <div className='stock-inside-container'>
         {/* <StockPriceChart stockData={data} /> */}
 
+
         {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
           <div className='stock-name-div'>
             {/* <img className='stock-img' src='/appl.png'></img> */}
@@ -79,6 +67,8 @@ const StockDetails = ({ stock }) => {
                   <div>{stock.country}</div>
                 )}
             </div>
+
+
             
             {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
 

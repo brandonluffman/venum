@@ -84,9 +84,23 @@ const PriceChart = ({ ticker }) => {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        display: false,
+                      display: false,
                     },
-                },
+                    tooltip: {
+                      enabled: true,
+                      mode: 'index',
+                      intersect: false,
+                      callbacks: {
+                        label: function(context) {
+                          const label = context.dataset.label || '';
+                          if (context.parsed.y !== null) {
+                            return `${label}: ${context.parsed.y}`;
+                          }
+                          return '';
+                        }
+                      }
+                    }
+                  },
             }} />
         </div>
     );

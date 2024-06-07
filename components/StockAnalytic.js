@@ -1,18 +1,38 @@
 import React, {useState, useEffect} from 'react'
 import PriceChart from './PriceChart'
 import Link from 'next/link'
+import { supabase } from '../utils/supabaseClient';
 
 const StockAnalytic = ({stock}) => {
+  const [competitors, setCompetitors] = useState([]);
 
-
+  useEffect(() => {
+    const fetchCompetitors = async () => {
+      console.log('Found Stock', stock)
+      const { data: fetchedData, error } = await supabase
+            .from('company_info')
+            .select('*')
+            .eq('sector', stock.sector)
+            .order('market_cap', { ascending: true })
+            .limit(5);
+  
+      if (error) {
+        console.error('Error fetching specific stocks:', error);
+        return;
+      }
+      console.log(fetchedData)
+      setCompetitors(fetchedData);
+    };
+  
+    fetchCompetitors();
+  }, [stock.sector]);
   return (
     <div>
-                  {stock.ticker &&    <PriceChart ticker={stock.ticker} />}
+      {stock.ticker && <PriceChart ticker={stock.ticker} />}
 
-          {stock && 
+      {stock && 
 
-      <div className='stock-company-description-div'>
-
+        <div className='stock-company-description-div'>
           <div className='stock-company-description-top'>
           <h3 className='stock-company-description-header'>Company Description</h3>
           </div>
@@ -53,9 +73,19 @@ const StockAnalytic = ({stock}) => {
               <p>Business Overview</p>
               {stock.summary &&<p>{stock.summary}</p>}
             </div>
+          <div>
+        
+          </div>
           </div>
         </div>
-            }        
+      }    
+
+          <div className='competitors'>
+          {competitors && competitors.map((index, competitor) => {
+              <div key={index}>{competitor.ticker}</div>
+          })}
+          </div>
+  
   </div>
   )
 }

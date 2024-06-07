@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
+import Search from './Search';
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
@@ -43,45 +44,18 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${navbarClass}`}>
-        {/* <Link href='/' className='nav-brand-link'><p className='nav-brand'>VENUM.</p><p className='nav-brand-color-change'>AI</p></Link> */}
         <Link href='/'>
-        {/* <h1 className='navbar-brand-name'>venum<span className='ai-color-change'>AI</span></h1> */}
         <h1 className='navbar-brand-name'>VENUM</h1>
-
         </Link>
-        {/* <Search /> */}
-        {/* <ul className='nav-menu'>
-            <Link href='/stocks' className='nav-link-container'><li className='nav-link'>Stocks</li></Link>
-            <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link>
-            <Link href='/api' className='nav-link-container'><li className='nav-link'>API</li></Link>
-            <Link href='/api' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link>
-        </ul> */}
         <ul className='nav-menu'>
-        {/* {user ? (
-      <Link href="/api/auth/logout" className='nav-link-container'><li className='nav-link'>Logout</li></Link>
-      ) : (
-        <Link href="/api/auth/login" className='nav-link-container'><li className='nav-link'>Login</li></Link>
-        )} */}
+  
             <Link href='/' className='nav-link-container'><li className='nav-link'>Home</li></Link>
             <Link href='/stocks' className='nav-link-container'><li className='nav-link'>Stocks</li></Link>
             <Link href='/macro' className='nav-link-container'><li className='nav-link'>Macro</li></Link>
-            {/* <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link> */}
-
-            {/* <Link href='/pricing' className='nav-link-container'><li className='nav-link'>Pricing</li></Link>
-            <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link> */}
-            {/* <Link href='/docs' className='nav-link-container'><li className='nav-link'>API</li></Link>
-            <Link href='/blog' className='nav-link-container'><li className='nav-link'>Blog</li></Link> */}
-            <Link href='/gpt' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link>
-            {/* <Link href='/stocks'><li className='nav-link'>Stocks</li></Link> */}
-            {/* <Link href='/screener'><li className='nav-link'>Screener</li></Link> */}
-            {/* {user ? (
-              <div className='nav-user-div'>
-                <Link href='/'><li className='nav-link'>Hello, {user.name} &#x1F44B;</li></Link>
-                <Link href='/api/auth/logout'><li className='nav-link'>Logout</li></Link>
-                </div>
-              ):
-              (<Link href='/api/auth/login'><li className='nav-link'>Login</li></Link>)
-              }  */}
+            {/* <Link href='/gpt' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link> */}
+            <div className='nav-login-container'>
+              <Link href="/api/auth/login" className='nav-link-container'><li className='nav-link'>Login</li></Link>
+            </div>
         </ul>
 
         <div className={`nav-menu-toggle ${hamburgerClass}`}>
@@ -90,21 +64,7 @@ const Navbar = () => {
             <Link href='/' className='nav-link-container'><li className='nav-link mobile-nav-link'>Home</li></Link>
             <Link href='/stocks' className='nav-link-container'><li className='nav-link mobile-nav-link'>Stocks</li></Link>
             <Link href='/macro' className='nav-link-container'><li className='nav-link mobile-nav-link'>Macro</li></Link>
-            {/* <Link href='/pricing' className='nav-link-container'><li className='nav-link'>Pricing</li></Link>
-            <Link href='/screener' className='nav-link-container'><li className='nav-link'>Screener</li></Link>
-            <Link href='/docs' className='nav-link-container'><li className='nav-link'>API</li></Link>
-            <Link href='/blog' className='nav-link-container'><li className='nav-link'>Blog</li></Link> */}
             <Link href='/gpt' className='nav-link-container'><li className='nav-link mobile-nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link>
-            {/* <Link className='nav-link' href='/stocks'>Stocks</Link> */}
-            {/* <Link className='nav-link' href='/screener'>Screener</Link> */}
-            {/* {user ? (
-              <div className='nav-user-div'>
-                <Link href='/'><li className='nav-link'>Hello, {user.name} &#x1F44B;</li></Link>
-                <Link href='/api/auth/logout'><li className='nav-link'>Logout</li></Link>
-                </div>
-              ):
-              (<Link href='/api/auth/login'><li className='nav-link'>Login</li></Link>)
-              }  */}
             </div>
         </div>
         <div className=''>

@@ -76,6 +76,7 @@
     border-radius: 10px;
     /* box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.4); */
     /* border: 1px solid rgb(100, 100, 100); */
+    margin-top: -40px;
 }
 
 .sec-filings-title {
@@ -83,6 +84,23 @@
     font-size: 44px;
     color: white;
     margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.sec-filings-categories {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sec-filings-category {
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+     box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.4);
+
 }
 
 .sec-filings-category-title {
@@ -108,12 +126,14 @@
 
 .sec-filings-link {
     text-decoration: none;
-    color: #007bff;
     font-weight: 500;
+    transition: 0.2s ease all;
 }
 
 .sec-filings-link:hover {
     text-decoration: underline;
+    color: #007bff;
+
 }
 
 

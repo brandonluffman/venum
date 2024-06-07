@@ -53,9 +53,9 @@ const Navbar = () => {
             <Link href='/stocks' className='nav-link-container'><li className='nav-link'>Stocks</li></Link>
             <Link href='/macro' className='nav-link-container'><li className='nav-link'>Macro</li></Link>
             {/* <Link href='/gpt' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link> */}
-            <div className='nav-login-container'>
+            {/* <div className='nav-login-container'>
               <Link href="/api/auth/login" className='nav-link-container'><li className='nav-link'>Login</li></Link>
-            </div>
+            </div> */}
         </ul>
 
         <div className={`nav-menu-toggle ${hamburgerClass}`}>

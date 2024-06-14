@@ -20,7 +20,7 @@ const Search = () => {
             .from('company_info')
             .select('*')
             .in('ticker', specificStocks)
-            .order('market_cap', { ascending: true });
+            .order('market_cap', { ascending: false });
   
       if (error) {
         console.error('Error fetching specific stocks:', error);

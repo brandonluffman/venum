@@ -19,10 +19,11 @@ export default async function handler(req, res) {
           .from('company_info')
           .select('id, cik, ticker, title, country, exchange')
           .ilike('title', `${q}%`) // For ticker symbol, partial match.
+          .order('market_cap', { ascending: false })
           .limit(5);
   
       if (error) throw error;
-  
+      console.log('Search Results: ', results)
       return res.status(200).json(results);
     } catch (error) {
       console.error('Error performing search:', error);

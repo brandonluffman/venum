@@ -34,7 +34,9 @@
     "react-icons": "^4.10.1",
     "react-plotly.js": "^2.6.0",
     "redis": "^4.6.7",
-    "redis-promise": "^0.1.0"
+    "redis-promise": "^0.1.0",
+    "yahoo-finance2": "^2.11.3",
+    "yfinance": "^0.0.6"
   },
   "devDependencies": {
     "@prisma/migrate": "^5.1.1",

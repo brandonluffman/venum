@@ -1,6 +1,8 @@
 import { Line } from 'react-chartjs-2';
 import { useEffect, useState } from 'react';
 import { supabase } from '../utils/supabaseClient'; // Adjust the path as needed
+import Chart from 'chart.js/auto'; // Updated import statement
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,7 +11,7 @@ import {
     LineElement,
     Title,
     Tooltip,
-    Legend,
+    Legend
 } from 'chart.js';
 
 // Register the components
@@ -36,7 +38,7 @@ const PriceChart = ({ ticker }) => {
 
     const fetchStockPrices = async () => {
         const fiveYearsAgo = new Date();
-        fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5);
+        fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 1);
     
         let { data, error } = await supabase
             .from('historical_stock_prices')
@@ -51,15 +53,16 @@ const PriceChart = ({ ticker }) => {
         }
 
         const dates = data.map(item => item.date);
-        const prices = data.map(item => item.closing_price);
+        const prices = data.map(item => item.closing_price.toLocaleString(2));
 
         setChartData({
             labels: dates,
             datasets: [{
                 data: prices,
                 borderColor: 'rgb(75, 192, 192)',
-                tension: 0.1,
+                tension: 0.5,
                 fill: false,
+                backgroundColor: 'rgba(75, 192, 192, 0.3)',
             }]
         });
     };
@@ -72,13 +75,19 @@ const PriceChart = ({ ticker }) => {
 
     return (
         <div className="chartContainer">
+            <div>Testing</div>
             <Line data={chartData} style={{ width: '400px', height: '400px' }} options={{
                 scales: {
                     y: {
-                        beginAtZero: false
+                        beginAtZero: false,
+                        grid: {
+                            display: true,
+                            color: 'rgba(255, 255, 255, 0.1)', // Color of the grid lines
+                            lineWidth: 1, // Width of the grid lines
+                        }
                     },
                     x: {
-                        display: false // Remove the dates from the x-axis
+                        // display: false // Remove the dates from the x-axis
                     }
                 },
                 maintainAspectRatio: false,
@@ -90,6 +99,19 @@ const PriceChart = ({ ticker }) => {
                       enabled: true,
                       mode: 'index',
                       intersect: false,
+                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      titleFont: {
+                          size: 16,
+                          weight: 'bold',
+                          color: 'black'
+                      },
+                      bodyFont: {
+                          size: 14,
+                          color: 'black'
+
+                      },
+                      width:200,
+
                       callbacks: {
                         label: function(context) {
                           const label = context.dataset.label || '';

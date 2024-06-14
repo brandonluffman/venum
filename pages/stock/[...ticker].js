@@ -15,6 +15,29 @@ const StockDetails = ({ stock }) => {
 
   const [data, setData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [price, setPrice] = useState(null);
+
+  useEffect(() => {
+    const fetchPrice = async () => {
+      try {
+        const response = await fetch(`/api/stockPrice?ticker=${stock.ticker}`);
+        const data = await response.json();
+        if (response.ok) {
+          console.log(data.price)
+          setPrice(data.price);
+        } else {
+          console.error('Error fetching stock price:', data.error);
+        }
+      } catch (error) {
+        console.error('Error fetching stock price:', error);
+      }
+    };
+
+    if (stock.ticker) {
+      fetchPrice();
+    }
+  }, [stock.ticker]);
+
 
   if (isLoading) {
     return <Loading />;
@@ -24,7 +47,7 @@ const StockDetails = ({ stock }) => {
   return (
     <>
          <Head>
-          <title>Venum | {stock?.title && stock.title}</title>
+          <title>Venum | {stock?.title && stock.ticker}</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
@@ -72,16 +95,21 @@ const StockDetails = ({ stock }) => {
             
             {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
 
-            {stock && data && ( 
+            {stock && price ? ( 
                     <div className='stock-company-price-div'>
-                    <h3 className='stock-company-price'>{data[0].toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
-                    {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
-                    {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)}
+                    <h3 className='stock-company-price'>${price.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
+                    {/* {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
+                    {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)} */}
                    </div>
-                   )}
-
+                   ):(
+                    <div>
+                      PRICE
+                      </div>
+                   )
+                }
             </div>
           <div>
+            <h1>Testing</h1>
           </div>
 
         </div>

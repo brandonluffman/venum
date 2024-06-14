@@ -2,12 +2,18 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import Search from './Search';
+import { BsCaretDown, BsCaretDownFill } from 'react-icons/bs';
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
   const [isActivate, setActivate] = useState(false);
   const [hamburgerClass, setHamburgerClass] = useState('');
   const [navbarClass, setNavbarClass] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen)
+  }
 
   const toggleShow = () => {
     setActive(!isActive);
@@ -50,8 +56,17 @@ const Navbar = () => {
         <ul className='nav-menu'>
   
             <Link href='/' className='nav-link-container'><li className='nav-link'>Home</li></Link>
-            <Link href='/stocks' className='nav-link-container'><li className='nav-link'>Stocks</li></Link>
+            <div className="navbar-item has-dropdown">
+                  <a className="nav-link">Markets <BsCaretDownFill className='nav-drop-icon'/></a>
+                  <div className="navbar-dropdown">
+                  <Link href='/stocks'><li className='navbar-item'>Equities</li></Link>
+                  <Link href='/stocks'><li className='navbar-item'>Bonds</li></Link>
+                  <Link href='/stocks'><li className='navbar-item'>Commodities</li></Link>
+                  <Link href='/stocks'><li className='navbar-item'>Forex</li></Link>
+                  </div>
+            </div>
             <Link href='/macro' className='nav-link-container'><li className='nav-link'>Macro</li></Link>
+        
             {/* <Link href='/gpt' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link> */}
             {/* <div className='nav-login-container'>
               <Link href="/api/auth/login" className='nav-link-container'><li className='nav-link'>Login</li></Link>

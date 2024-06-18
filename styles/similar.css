@@ -5,6 +5,7 @@
     min-height: 50vh;
 }
 .similar-search-main-container {
+    width: 100%;
     
 }
 .similar-search-main-container h4 {
@@ -16,6 +17,10 @@ padding: 0rem 2rem;
 width: 100% !important;
 height: 100%;
     position: relative;
+}
+
+.similar-search-input {
+    border-radius: 30px;
 }
 
 .similar-search-link div:nth-of-type(1) {
@@ -69,6 +74,12 @@ height: 100%;
     font-size: 1.25rem;
     cursor: pointer;
     transition: 0.2s ease all;
+    color:black;
+    font-weight: bold;
+    position: absolute;
+    z-index:99999999 !important;
+    right: 13%;
+    top: 4px;
 }
 
 .similar-search-btn:hover {
@@ -90,6 +101,11 @@ height: 100%;
     color: black;
 }
 
+.similar-flexer {
+    display: flex;
+    position: relative;
+}
+
 /* .loading {
     position: fixed;
     height: 100vh;
@@ -100,3 +116,13 @@ height: 100%;
     align-items: center;
     z-index: 99999 !important;
 } */
+
+@media (max-width: 500px) {
+    .similar-search-input {
+        width: 95%;
+    }
+    .similar-search-btn {
+        right: 3.5%;
+        top:6%;
+    }
+}

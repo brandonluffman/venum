@@ -111,6 +111,8 @@ const Search = () => {
           <div key={stock.ticker}>
             <Link className='top-stock-link' href={`/stock/${stock.ticker}`}>
               <ul className='top-stock-menu'>
+                <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo' width={20}></img>
+
                 <li className='top-stock-li'>{stock.ticker}</li>
                 {/* <li className='top-stock-li'>{stock.title}</li> */}
                 {/* <li className='top-stock-li'>{stock.exchange ? stock.exchange: exchangeDefault}</li> */}

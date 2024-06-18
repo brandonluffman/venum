@@ -1,13 +1,14 @@
 .stock-company-description-div {
-    width:70%;
+    width:90%;
     /* justify-content: center;
     text-align: center; */
     /* border:1px solid rgb(45, 45, 45); */
     padding-top: 5px;
     border-radius: 20px;
     margin:0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    background:rgba(75, 183, 241, 0.2);
+    box-shadow: 1px 4px 20px rgba(255, 255, 255, 0.3);
+    background:rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(75, 183, 241);
       
 }
 
@@ -24,11 +25,20 @@
 }
 
 .stock-company-description-bottom > div {
-    border: 1px solid rgb(19, 19, 19);
+    border: 1px solid rgba(75, 183, 241, 0.3);
+}
+
+.stock-company-description-bottom > div p > a {
+    transition: 0.2s ease all;
+}
+
+.stock-company-description-bottom > div p > a:hover {
+    color: rgb(75, 183, 241);
 }
 
 .stock-company-description-bottom > div > p:nth-of-type(1) {
-    color:rgb(200, 200, 200);
+    font-weight: bold;
+    color:rgb(175, 175, 175);
 }
 
 .stock-company-description-bottom > div:last-child {

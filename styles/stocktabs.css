@@ -45,7 +45,7 @@
 .stock-tab-input:checked ~ .stock-tab-label {
     /* border-bottom:1px solid white; */
     background-color: rgb(75, 183, 241);
-    color:white;
+    color:black;
     box-shadow: inset 1px 1px 10px rgba(0,0,0,0.8);
     font-weight: 700;
 }

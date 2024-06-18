@@ -121,6 +121,7 @@ padding:0rem 0.2rem;
     font-weight:400;
     transition: 0.2s ease all;
     text-align: left;
+    text-align: center;
 }
 
 .footer-link:hover {
@@ -129,8 +130,11 @@ padding:0rem 0.2rem;
 
 .footer-link-header {
     margin:0rem;
-    border-bottom:1px solid grey;
+    /* border-bottom:1px solid grey; */
     padding-bottom:0;
+    color: rgb(150, 150, 150);
+    font-weight: bold;
+    letter-spacing: -0.2vw;
 }
 .footer-copyright-content {
     margin:0;

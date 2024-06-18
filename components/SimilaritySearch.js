@@ -53,14 +53,16 @@ const truncateString = (str, max) => {
     <div className='similar-search-main-container'>
         <h6 className='beta-tag'>Beta</h6>
         <h4>Find Companies by Similarity using Machine Learning</h4>
+        <div className='similar-flexer'>
         <input
             type="text"
             value={description}
             placeholder="Search by description..."
-            className='search-input'
+            className='search-input similar-search-input'
             onChange={(e) => setDescription(e.target.value)}
         />
         <button type="button" className='similar-search-btn' onClick={handleSimilarity}>Search</button>
+        </div>
         <div className='similar-search-container'>
         {isLoading && <LoadingSpinner />}
 

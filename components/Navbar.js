@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import Search from './Search';
-import { BsCaretDown, BsCaretDownFill } from 'react-icons/bs';
+import { BsCaretDown, BsCaretDownFill, BsX } from 'react-icons/bs';
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
@@ -85,7 +85,7 @@ const Navbar = () => {
         <div className=''>
 
         </div>
-        <button className='hamburger-menu' type='button' onClick={toggleShow}><RxHamburgerMenu /></button> 
+        <button className='hamburger-menu' type='button' onClick={toggleShow}>{isActive ? <BsX className='close-menu'/>:<RxHamburgerMenu />}</button> 
     </nav>
   )
 }

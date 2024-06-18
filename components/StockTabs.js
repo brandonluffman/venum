@@ -53,7 +53,7 @@ const StockTabs = ({ stock }) => {
             onChange={handleOptionChange}
             className='stock-tab-input'
           />
-          <label className='stock-tab-label' htmlFor="option3">Sentiment</label>
+          <label className='stock-tab-label' htmlFor="option3">News</label>
         </div>
         <div className='stock-tab'>
           <input

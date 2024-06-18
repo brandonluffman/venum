@@ -50,6 +50,11 @@
   justify-content: center;
   padding: 10px 0px;
   font-weight: bold;
+  gap: 10px;
+
+}
+
+.top-stock-menu img {
 }
 
 .top-stock-menu:hover {
@@ -94,11 +99,19 @@
   
 @media (max-width: 500px) {
     .top-stocks-container {
-      margin:50px 0rem 4rem 0rem;
-      padding:10px;
+      margin:50px 1rem 4rem 1rem;
+      padding:5px;
     }
 
     .top-stock-menu {
-      padding:10px;
+      padding:10px 6px;
+    }
+
+    .top-stocks-container {
+      gap: 5px;
+    }
+
+    .company-logo {
+      width: 15px;
     }
 }

@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import StockTabs from '../../components/StockTabs';
 import Footer from '../../components/Footer';
 // import StockPriceChart from '../../components/StockPriceChart';
-import { supabase } from '../../utils/supabaseClient'
+import { supabase, storage } from '../../utils/supabaseClient'
 // import PriceChart from '../../components/PriceChart';
 import Head from 'next/head';
 import Loading from '../../components/Loading';
@@ -16,6 +16,9 @@ const StockDetails = ({ stock }) => {
   const [data, setData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [price, setPrice] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
+
+
 
   useEffect(() => {
     const fetchPrice = async () => {
@@ -33,8 +36,30 @@ const StockDetails = ({ stock }) => {
       }
     };
 
+    // const fetchImage = async () => {
+    //   try {
+    //     console.log('Ticker', stock.ticker)
+    //     const { publicURL, error } = await supabase
+    //       .storage
+    //       .from('ticker_images') 
+    //       .getPublicUrl(`${stock.ticker}.png`);
+
+    //     if (error) {
+    //       console.error('Error fetching image URL:', error.message);
+    //       return;
+    //     }
+
+    //     console.log('Public URL', publicURL)
+
+    //     setImageUrl(publicURL);
+    //   } catch (error) {
+    //     console.error('Error fetching image URL:', error.message);
+    //   }
+    // };
+
     if (stock.ticker) {
       fetchPrice();
+      // fetchImage();
     }
   }, [stock.ticker]);
 
@@ -77,11 +102,21 @@ const StockDetails = ({ stock }) => {
       <div className='stock-container'>
         <div className='stock-inside-container'>
         {/* <StockPriceChart stockData={data} /> */}
-
+        {/* {imageUrl ? <img src={imageUrl} alt='Company Logo' className='company-logo' />: <div>No Image</div>} */}
 
         {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
           <div className='stock-name-div'>
             {/* <img className='stock-img' src='/appl.png'></img> */}
+            {/* <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo stock-img'></img> */}
+            <img
+                src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`}
+                className='company-logo stock-img'
+                onError={(e) => {
+                    e.target.onerror = null; // Prevent infinite loop
+                    e.target.src = '/favicon.ico'; // Use fallback image
+                }}
+                // alt='Company Logo'
+            />
             <div className='ticker-country-div'>
               {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>  }
               {stock && stock.country && stock.country === 'United States' ? (
@@ -92,7 +127,7 @@ const StockDetails = ({ stock }) => {
             </div>
 
 
-            
+
             {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
 
             {stock && price ? ( 
@@ -103,14 +138,14 @@ const StockDetails = ({ stock }) => {
                    </div>
                    ):(
                     <div>
-                      PRICE
+                      Retreiving...
                       </div>
                    )
                 }
             </div>
-          <div>
+          {/* <div>
             <h1>Testing</h1>
-          </div>
+          </div> */}
 
         </div>
 

@@ -78,7 +78,6 @@ const Search = () => {
       >
       </input>
       <BsSearch className='search-icon'/>
-      </div>
       <div className='autosuggest-container'>
         {results.map((result) => (
           <div key={result.ticker}>
@@ -103,6 +102,31 @@ const Search = () => {
             </div>
         ))}
       </div>
+      </div>
+      {/* <div className='autosuggest-container'>
+        {results.map((result) => (
+          <div key={result.ticker}>
+                <Link className='autosuggest-link' href={`/stock/${result.ticker}`}>
+                      <ul className='autosuggest-menu' onClick={() => setIsLoading(true)}>
+                                <div className='antiflexer autosuggest-li-flexer'>
+                                  <li className='autosuggest-li auto-title'>{result.title}</li>
+                                  <li className='autosuggest-li'>{result.ticker}</li>
+                                </div>
+                                <div className='autosuggest-li-flexer'>
+                                <li className='autosuggest-li'>{result.exchange}</li>
+                                    {result.country == 'United States' ? 
+                                    (
+                                      <li className='autosuggest-li'><img className='country-img' src='/america.jpeg' width='25'></img></li>
+                                    )
+                                    :(
+                                      <li className='autosuggest-li'><img className='country-img' src='/flagquestion.png' width='25'></img></li>
+                                    )}
+                                </div>
+                        </ul>
+                  </Link>
+            </div>
+        ))}
+      </div> */}
       </div>
 
         <div className='top-stocks-container'>

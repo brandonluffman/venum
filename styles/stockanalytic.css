@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    color: rgb(241, 75, 155);
+    /* color: rgb(241, 75, 155); */
 }
 
 

@@ -4,6 +4,7 @@
     padding: 2rem 0rem;
     width: 93%;
     margin: 0 auto;
+    position: relative;
 }
 .search-input {
     width:75%;
@@ -41,8 +42,8 @@ color: white;
 .search-icon {
     position: absolute;
     top: 15px;
-    right: 25%;
-    z-index: 99999999 !important;
+    right: 15%;
+    z-index: 999999999 !important;
 }
 .search-input::placeholder {
     color: white;
@@ -69,9 +70,9 @@ color: white;
     color:black;
     /* border-radius:40px; */
     padding:0rem;
-    width: 700px !important;
+    width: 100% !important;
     margin: 0 auto;
-    opacity: 1;
+    opacity: 0;
     transition: 0.05s ease-in-out all;
     border-top-left-radius: 0px !important;
     border-top-right-radius: 0px !important;
@@ -81,7 +82,7 @@ color: white;
     right: 0;
     z-index: 0 !important;
     box-shadow: inset 2px 0px 5px 4px rgba(100, 100, 100, 0.1);
-    z-index: 99999999999999 !important;
+    z-index: 999999999 !important;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
@@ -89,6 +90,8 @@ color: white;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     color: white;
+    border: 1px solid rgb(75, 183, 241);
+    border-top: none;
 
 }
 
@@ -180,22 +183,23 @@ color: white;
     }
     .autosuggest-container{
         /* background-color: var(--brand-color); */
-        background-color: white;
+        /* background-color: white;
         color:black;
         border-radius:40px;
         padding:0rem;
         width: 100%;
-        margin: 0 auto;
-        opacity: 0;
-        transition: 0.05s ease-in-out all;
+        margin: 0 auto; */
+        /* opacity: 0; */
+        /* transition: 0.05s ease-in-out all;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
-        overflow:hidden;
+        overflow:hidden; */
+        /* width:65% !important; */
     
     }
 
     .autosuggest-container {
-        position: relative;
+        /* position: relative; */
     }
 }
 
@@ -213,12 +217,16 @@ color: white;
         right:7%;
     }
 
+    .autosuggest-li {
+        margin-left: 0.5rem;
+    }
+
     .autosuggest-li:nth-of-type(1) {
         font-weight:300;
         text-align: left;
         margin:0rem 1rem;
-        min-width:50px;
-        max-width:50px;
+        /* min-width:50px;
+        max-width:50px; */
     }
     .autosuggest-link {
         display: flex;
@@ -230,6 +238,7 @@ color: white;
         margin:0;
         margin-left:0.5rem;
         font-size:0.9rem;
+        margin-bottom: 0.5rem;
     }
     .autosuggest-menu > .autosuggest-li:nth-of-type(2) {
         display: none;
@@ -241,15 +250,18 @@ color: white;
     }
 
     .autosuggest-li-flexer > .autosuggest-li:nth-of-type(1) {
-        margin-left:0;
+        /* margin-left:0;
         max-width:45px;
-        min-width: 45px;
+        min-width: 45px; */
     }
 
     .autosuggest-container {
-        position: relative;
+        /* position: relative; */
+        /* width: 85% !important; */
     }
     .autosuggest-li-flexer {
         justify-content: center;
     }
+
+
 }

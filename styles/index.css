@@ -478,11 +478,12 @@
     display: flex;
     align-items: center;
     transition: 0.2s ease-in-out all;
+    font-size: 1.2rem;
 }
 
 .index-banner-btn:hover {
     cursor: pointer;
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
     color:white;
     word-spacing: 0rem;
     letter-spacing: -.01vw;

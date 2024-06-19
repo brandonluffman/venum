@@ -101,16 +101,23 @@ export default function Home({ onButtonClick }) {
         <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
         <div className='index-data-grid'>
           <div className='index-data-grid-item'>
+            <div>
             <h2>9,045</h2>
             <h2>Equities</h2>
+            </div>
           </div>
           <div className='index-data-grid-item'>
+          <div>
+
             <h2>30+</h2>
-            <h2>Years of Financial Data</h2>
+            <h2>Years of Data</h2>
+            </div>
           </div>
           <div className='index-data-grid-item'>
+          <div>
             <h2>15</h2>
             <h2>Exchanges</h2>
+            </div>
           </div>
         </div>
     </div>

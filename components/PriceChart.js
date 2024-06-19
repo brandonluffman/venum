@@ -60,6 +60,8 @@ const PriceChart = ({ ticker }) => {
         const dates = data.map(item => item.date);
         const prices = data.map(item => item.closing_price.toLocaleString(2));
 
+        console.log('Dates', dates)
+
         setChartData({
             labels: dates,
             datasets: [{
@@ -120,11 +122,15 @@ const PriceChart = ({ ticker }) => {
                     },
                     x: {
                         type: 'time',
+                        // time: {
+                        //     unit: 'month',
+                        //     displayFormats: {
+                        //         month: 'MMM yyyy' // Display format for the months
+                        //     }
+                        // }
                         time: {
                             unit: 'month',
-                            displayFormats: {
-                                month: 'MMM yyyy' // Display format for the months
-                            }
+                            tooltipFormat: 'MMM dd yyyy' 
                         }
                         // display: false // Remove the dates from the x-axis
                     }
@@ -139,30 +145,31 @@ const PriceChart = ({ ticker }) => {
                       mode: 'nearest',
                       intersect: false,
                       border: '1px solid white',
-                      backgroundColor: 'rgba(75, 183, 241, 0.7)',
-                      titleFontColor: 'black',
-                      bodyFontColor: 'black',
-                      displayColors: false, // Remove the square legend
+                      backgroundColor: 'rgba(255, 255, 255, 0.7)',
                       titleFont: {
-                          size: 14,
-                          weight: 'bold',
-                          color: 'black'
-                      },
-                      bodyFont: {
-                          size: 18,
-                          color: 'black'
-
-                      },
-                      width:200,
+                        size: 14,
+                        weight: 'bold',
+                        color: 'black', // corrected color property placement
+                    },
+                    bodyFont: {
+                        size: 18,
+                        color: 'black', // corrected color property placement
+                        weight: 'bold'
+                    },
+                    titleColor: 'black', // added this to ensure title color
+                    bodyColor: 'black', // added this to ensure body color
+                    displayColors: false, // Remove the square legend
+                    width:200,
                       callbacks: {
                         label: function(context) {
                           const label = context.dataset.label || '';
                           if (context.parsed.y !== null) {
-                            return `${label}: ${context.parsed.y}`;
+                            return `${label} $${context.parsed.y}`;
                           }
                           return '';
                         }
                       }
+                
                     }
                   },
                 hover: {

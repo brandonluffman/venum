@@ -106,6 +106,8 @@ const StockDetails = ({ stock }) => {
 
         {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
           <div className='stock-name-div'>
+            <div className='stock-name-inner'>
+              <div className='stock-name-inner-div'>
             {/* <img className='stock-img' src='/appl.png'></img> */}
             {/* <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo stock-img'></img> */}
             <img
@@ -125,11 +127,13 @@ const StockDetails = ({ stock }) => {
                   <div>{stock.country}</div>
                 )}
             </div>
-
+            </div>
+            <div className='stock-name-inner-div'>
 
 
             {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
-
+            </div>
+            </div>
             {stock && price ? ( 
                     <div className='stock-company-price-div'>
                     <h3 className='stock-company-price'>${price.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>

@@ -99,7 +99,7 @@
   
 @media (max-width: 500px) {
     .top-stocks-container {
-      margin:50px 1rem 4rem 1rem;
+      /* margin:50px 1rem 4rem 1rem; */
       padding:5px;
     }
 

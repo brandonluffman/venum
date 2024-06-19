@@ -199,7 +199,7 @@
 }
 .no-flexer {
     display: grid;
-    margin-top:-25rem;
+    margin-top:-24rem;
     padding:0rem 1rem;
 
 }
@@ -252,7 +252,7 @@
 }
 
 .mobile-nav-link {
-    margin: 1rem 2rem;
+    margin: 0rem 2rem;
     text-align: left !important;
 
 }
@@ -276,9 +276,9 @@
     transition: 0.2s ease all;
   }
 
-  .mobile-nav-link:hover {
+  /* .mobile-nav-link:hover {
     color:rgb(100, 100, 100);
-  }
+  } */
 @media (max-width: 1000px) {
 
     .nav-menu {

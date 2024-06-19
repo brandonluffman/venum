@@ -11,7 +11,7 @@
 }
 
 .index-container {
-    
+    overflow: hidden;
 }
 
 .breaker {
@@ -166,6 +166,7 @@
 @media (max-width: 500px) {
     .index-outer-container {
         padding:0rem 1rem;
+        padding-top: 150px;
     }
 
     .index-buttons {
@@ -301,7 +302,7 @@
 
 @media (max-width: 500px) {
     .index-preview-container {
-         padding:0rem 1rem;
+         padding:2rem 1rem;
     }
 
     .index-preview-right-img {

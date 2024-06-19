@@ -64,7 +64,7 @@ const Search = () => {
   
 
   return (
-    <div className=''>
+    <div className='search-div'>
       {isLoading && <Loading />}
 
     <div className='search-outer-container'>

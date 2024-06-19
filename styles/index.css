@@ -404,9 +404,15 @@
         justify-content: center;
         align-items: center;
     }
+    
+    .index-data-grid-item {
+        margin: 1rem auto;
+    }
 
     .index-data-grid {
         padding: 0.5rem 1rem;
+        display: block;
+
     }
     .index-data-header {
         font-size:2rem;
@@ -421,7 +427,7 @@
 
 .index-banner-container {
     background-color: rgb(0, 0, 0);
-    height:100vh;
+    height:80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,7 +506,7 @@
     display: flex;
     align-items: center;
     transition: 0.2s ease-in-out all;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .index-banner-btn:hover {
@@ -563,26 +569,49 @@
 
     .index-banner-right-img {
         margin-bottom:2rem;
+        width: 65%;
+        margin: 0rem auto 0rem auto;
+        display: flex;
+    }
+    .index-banner-container {
+        height: auto;
+        padding: 2rem 0rem;
     }
  }
 
 
  @media (max-width: 500px) {
+
+    .index-banner-container {
+        height: auto;
+        padding: 4rem 0rem;
+    }
+
+
     .index-banner-div {
-        width:95%;
+        width:90%;
         margin:0 auto;
         display: block;
         /* height:400px; */
         background-color: rgb(0, 0, 0);
-        border-radius: 40px;
+        border-radius: 20px;
         /* animation: shadowAnimation 2s infinite alternate;  */
-        padding: 2rem;
+        padding:1rem;
         box-shadow: 1px 1px 10px rgba(100, 100, 100, 0.8);
     }
 
     .index-banner-subheader {
         width:100%;
         margin-bottom:2rem;
+    }
+
+    .index-banner-supheader {
+        margin-bottom: 1rem;
+    }
+
+    .index-banner-header {
+        margin-top: 0rem;
+
     }
 
     .index-banner-right-img {

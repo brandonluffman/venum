@@ -166,19 +166,36 @@ export async function getServerSideProps(context) {
   const { ticker } = context.query;
 
   try {
+    // First check in the 'company_info' table
     let { data: stock, error } = await supabase
       .from('company_info')
       .select('*')
       .eq('ticker', ticker.toString())
       .single();
 
-    if (error) {
+    // If there is an error, throw it
+    if (error && error.code !== 'PGRST116') {
+      // PGRST116 is the code for "No rows returned", we ignore this to check the next table
       throw error;
     }
 
+    // If stock is not found in 'company_info', check in 'etfs'
+    if (!stock) {
+      ({ data: stock, error } = await supabase
+        .from('etfs')
+        .select('*')
+        .eq('ticker', ticker.toString())
+        .single());
+
+      // If there is an error, throw it
+    if (error && error.code !== 'PGRST116') {
+      // PGRST116 is the code for "No rows returned", we ignore this to handle 'notFound'
+      throw error;
+    }
     if (!stock) {
       return { notFound: true };
     }
+  }
 
     // Assuming MarketCap or other numeric fields don't need serialization with Supabase
     return {

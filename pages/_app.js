@@ -24,6 +24,9 @@ import '../styles/chat.css'
 import '../styles/test.css'
 import '../styles/similar.css'
 import '../styles/earnings.css'
+import '../styles/navsearch.css'
+import '../styles/etfs.css'
+
 
 // import NProgress from 'nprogress';
 // import Router from 'next/router';

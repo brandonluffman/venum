@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import {RxHamburgerMenu} from 'react-icons/rx'
+import {RxHamburgerMenu, RxLockClosed} from 'react-icons/rx'
 import Search from './Search';
-import { BsCaretDown, BsCaretDownFill, BsX } from 'react-icons/bs';
+import { BsCaretDown, BsCaretDownFill, BsLock, BsX } from 'react-icons/bs';
+import NavSearch from './NavSearch';
 
 const Navbar = () => {
   const [isActive, setActive] = useState(false);
@@ -50,22 +51,56 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${navbarClass}`}>
+     
         <Link href='/'>
+        <div className='nav-brand-container'>
+        <img className='nav-img' src='/favicon.jpeg'></img>
         <h1 className='navbar-brand-name'>VENUM</h1>
+        </div>
         </Link>
         <ul className='nav-menu'>
   
-            <Link href='/' className='nav-link-container'><li className='nav-link'>Home</li></Link>
+            {/* <Link href='/' className='nav-link-container'><li className='nav-link'>Home</li></Link> */}
+            <div className="navbar-item has-dropdown">
+                  <a className="nav-link">Company <BsCaretDownFill className='nav-drop-icon'/></a>
+                  <div className="navbar-dropdown">
+                    <h2>Come take a look at what we&apos;re about at Venum</h2>
+                  <Link href='/stocks'><li className='navbar-item'>About Us</li></Link>
+                  <Link href='/stocks'><li className='navbar-item'>Our Mission</li></Link>
+                  </div>
+            </div>
+            <div className="navbar-item has-dropdown">
+                  <a className="nav-link">Products <BsCaretDownFill className='nav-drop-icon'/></a>
+                  <div className="navbar-dropdown">
+                  <h2>Products</h2>
+                  <Link href='/stocks'><li className='navbar-item nav-item-glass'>Screeners <RxLockClosed /></li></Link>
+                  <Link href='/bonds'><li className='navbar-item nav-item-glass'>Heatmaps <RxLockClosed /></li></Link>
+                  <Link href='/pricing'><li className='navbar-item'>Pricing</li></Link>
+                  </div>
+            </div>
+            <div className="navbar-item has-dropdown">
+                  <a className="nav-link">Tools <BsCaretDownFill className='nav-drop-icon'/></a>
+                  <div className="navbar-dropdown">
+                  <h2>Tools</h2>
+                  <Link href='/stocks'><li className='navbar-item nav-item-glass'>DCF Calculator <RxLockClosed /></li></Link>
+                  <Link href='/bonds'><li className='navbar-item nav-item-glass'>Equity Research Reports <RxLockClosed /></li></Link>
+                  </div>
+            </div>
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Markets <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
-                  <Link href='/stocks'><li className='navbar-item'>Equities</li></Link>
-                  <Link href='/stocks'><li className='navbar-item'>Bonds</li></Link>
-                  <Link href='/stocks'><li className='navbar-item'>Commodities</li></Link>
-                  <Link href='/stocks'><li className='navbar-item'>Forex</li></Link>
+                  <h2>Markets</h2>
+                  <Link href='/stocks'><li className='navbar-item'>Stocks</li></Link>
+                  <Link href='/bonds'><li className='navbar-item'>Bonds</li></Link>
+                  <Link href='/etfs'><li className='navbar-item'>ETFs</li></Link>
+                  <Link href=''><li className='navbar-item nav-item-glass'>Futures <RxLockClosed /></li></Link>
+                  <Link href=''><li className='navbar-item nav-item-glass'>Forex <RxLockClosed /></li></Link>
+                  <Link href='/macro'><li className='navbar-item'>Economy</li></Link>
                   </div>
             </div>
-            <Link href='/macro' className='nav-link-container'><li className='nav-link'>Macro</li></Link>
+            <NavSearch />
+
+            {/* <button className='nav-start-btn'>Get Started</button> */}
         
             {/* <Link href='/gpt' className='nav-link-container'><li className='nav-link'>GPTFinance<span className='beta-badge'>Beta</span></li></Link> */}
             {/* <div className='nav-login-container'>
@@ -75,7 +110,7 @@ const Navbar = () => {
 
         <div className={`nav-menu-toggle ${hamburgerClass}`}>
           <div className='no-flexer'>
-            <h2 className='hamburger-header'>VENUM<span className='ai-color-change'>AI</span></h2>
+            <h2 className='hamburger-header'>VENUM<span className='ai-color-change'></span></h2>
             <Link href='/' className='nav-link-container'><li className='nav-link mobile-nav-link'>Home</li></Link>
             <Link href='/stocks' className='nav-link-container'><li className='nav-link mobile-nav-link'>Stocks</li></Link>
             <Link href='/macro' className='nav-link-container'><li className='nav-link mobile-nav-link'>Macro</li></Link>

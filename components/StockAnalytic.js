@@ -68,6 +68,7 @@ const StockAnalytic = ({stock}) => {
               <p>Market Cap</p>
               {stock.market_cap && <p>{parseInt(stock.market_cap, 10).toLocaleString()}</p>}
             </div>
+
             <div>
               <p>Business Overview</p>
               {stock.summary && <p>{stock.summary}</p>}

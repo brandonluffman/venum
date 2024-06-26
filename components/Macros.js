@@ -52,9 +52,11 @@ const Macros = () => {
 
     return (
         <div className='macro-container'>
-            <h1>Macro Economic Indicators</h1>
+            <div className='macro-top-container'>
+            <h1>Economy</h1>
+            </div>
             {/* <h6>Get a glimpse of the economy from a birds eye view.</h6> */}
-            <hr className='macro-container-hr'></hr>
+            {/* <hr className='macro-container-hr'></hr> */}
             <div className='macro-grid-container'>
                 <div className='macro-grid-item'>
                     <div className='antiflexer'>

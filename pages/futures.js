@@ -7,11 +7,11 @@ import Head from 'next/head';
 import SimilaritySearch from '../components/SimilaritySearch';
 import Screener from '../components/Screener';
 
-const stocks = () => {
+const futures = () => {
   return (
     <>
          <Head>
-          <title>Venum | Stocks</title>
+          <title>Venum | ETFs</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
@@ -37,17 +37,14 @@ const stocks = () => {
         </Head>
     <Navbar />
     <div className='stocks-container'>
-      <Search />
+        <h1>Futures</h1>
     </div>
     <div>
-      <Screener /> 
+     <Screener />   
     </div>
-    {/* <div className='similarity-container'>
-    <SimilaritySearch />
-    </div> */}
     <Footer />
     </>
   )
 }
 
-export default stocks
+export default futures

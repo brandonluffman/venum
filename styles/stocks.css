@@ -14,7 +14,7 @@
     margin-top: 20px;
     /* padding-bottom: 40px; */
     box-shadow: 1px 1px 12px rgba(100, 100, 100, 0.1);
-    border: 1px solid rgb(50, 50, 50);
+    /* border: 1px solid rgb(50, 50, 50); */
     margin-bottom: 4rem;
     display:grid;
     grid-template-columns: repeat(3,3fr);
@@ -37,7 +37,7 @@
   list-style: none;
   padding: 0;
   margin: 10px 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(20, 212, 255, 0.4);
   box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
   border-radius: 20px;
@@ -55,6 +55,10 @@
 }
 
 .top-stock-menu img {
+  background-color: rgb(30, 30, 30);
+  padding: 0.2rem;
+  border-radius: 50%;
+  width: 25px;
 }
 
 .top-stock-menu:hover {
@@ -66,7 +70,7 @@
 }
 
 .top-stock-li {
-  /* color: #ffffff; */
+  color: black;
   /* margin-right: 10px; */
   list-style-type: none;
   /* text-align: center; */
@@ -109,6 +113,10 @@
 
     .top-stocks-container {
       gap: 5px;
+      /* margin-left: 0.2rem;
+      margin-right: 0.2rem; */
+      width: 95%;
+      margin: 0 auto;
     }
 
     .company-logo {

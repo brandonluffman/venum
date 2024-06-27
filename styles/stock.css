@@ -37,6 +37,7 @@ h1, h3 {
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px); */
     -webkit-backdrop-filter: blur(5px);
+    margin-bottom: 4rem;
 }
 
 .stock-name-div {
@@ -83,12 +84,79 @@ h1, h3 {
 .stock-name-div {
     display: flex;
     align-items: center;
-    /* margin-bottom:2rem; */
+
+  }
+  
+  .stock-scroll {
+    display: flex;
+    align-items: center;
+    transition: 0.2s ease-in-out all;
+    position: fixed; /* Initially absolute to scroll with the page */
+    top: 90px;
+    width: 90%;
+    z-index: 1000; 
+    background-color: rgb(255, 255, 255);
+    left: 0%; /* Center horizontally */
+    right: 0%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgb(75, 183, 241);
+    opacity: 1;
+  }
+
+  .no-stock-scroll {
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    position: fixed; /* Initially absolute to scroll with the page */
+    top: 90px;
+    width: 90%;
+    z-index: 1000; 
+    background-color: black;
+    left: 0%; /* Center horizontally */
+    right: 0%;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    border: 1px solid rgb(75, 183, 241);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 0.2s ease-in-out all;
+
+  }
+
+  .stock-name-inner-div {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+.stock-scroll .stock-company-name, .stock-scroll .stock-company-price, .no-stock-scroll .stock-company-name, .no-stock-scroll .stock-company-price {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    /* align-items: center; */
+    align-items: baseline;
+}
+
+.stock-scroll .stock-ticker-name, .no-stock-scroll .stock-ticker-name {
+    font-size: 1rem;
+}
+
+.stock-scroll .stock-img, .no-stock-scroll .stock-img {
+    width: 50px;
+}
+
+.stock-scroll .stock-usd, .no-stock-scroll .stock-usd {
+    font-size: 1rem;
+    margin-left: 0.2rem;
 }
 
 .stock-ticker-name{
     font-weight:300;
-    color:rgb(175, 175, 175);
+    color:rgb(60, 60, 60);
     margin:0;
 }
 
@@ -101,12 +169,14 @@ h1, h3 {
     font-size:2.5rem;
     /* margin-right:3rem; */
     /* width: 75%; */
+    letter-spacing:-0.1rem;
+
 }
 
 .stock-company-price {
     font-size:2rem;
     font-weight:700;
-    color:rgb(255, 255, 255);
+    color:rgb(30, 30, 30);
     margin-right:1rem;
 
 }
@@ -114,7 +184,7 @@ h1, h3 {
 
 .stock-usd {
     font-size:1.5rem;
-    color:white;
+    color:rgb(30, 30, 30);
     font-weight:300;
 }
 
@@ -158,11 +228,15 @@ h1, h3 {
     width: 30%;
     justify-content: right;
 }
+
+
+
 @media (max-width: 768px) {
 
     .stock-container {
         padding:0rem 0rem;
         padding-top:6rem;
+        padding-bottom: 2rem;
     }
     .stock-name-div {
         width:100%;
@@ -181,7 +255,7 @@ h1, h3 {
 
     .stock-company-price {
         font-size:1.2rem;
-        color:white;
+        color:rgb(30, 30, 30);
     }
 
     .stock-usd {
@@ -212,14 +286,21 @@ h1, h3 {
     }
 
     .stock-name-inner {
-        display: block;
-        padding: 1rem 0rem;
+        /* display: block;
+        padding: 1rem 0rem; */
+        display: flex;
+        align-items: center;
+        width: 100%;
     }
 
-    .stock-name-inner-div:first-of-type {
-        margin-bottom: 1rem;
+    .stock-company-price-div {
+        /* margin-bottom: 1rem; */
+        display: none;
     }
 
+    .stock-name-inner-div:nth-of-type(2) {
+        width: 100%;
+    }
     .stock-container {
     padding-top:5rem;
     min-height:100vh;
@@ -227,7 +308,8 @@ h1, h3 {
     }
     .stock-company-price {
         font-size:1.5rem;
-        color:white;
+        color:rgb(30, 30, 30);
+
     }
 
     .stock-usd {

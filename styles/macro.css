@@ -39,6 +39,10 @@
     width:100%;
 }
 
+.macro-top-container {
+    margin-bottom: 12rem;
+}
+
 .macro-grid-item {
     background-color: rgb(10, 10, 10);
     padding:1rem 2rem !important;

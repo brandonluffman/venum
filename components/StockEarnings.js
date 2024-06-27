@@ -97,7 +97,7 @@ const StockEarnings = ({stock}) => {
                         </div>
                         )} */}
               <div className='earnings-grid'>
-              {earningsCalls && Object.keys(earningsCalls)
+              {earningsCalls.length > 0 ? Object.keys(earningsCalls)
                 .sort((a, b) => b - a) // Sort the years in descending order
                 .map(year => (
                   <div key={year} className='earnings-bubble'>
@@ -109,7 +109,11 @@ const StockEarnings = ({stock}) => {
                       </div>
                     ))}
                   </div>
-                ))}
+                )):(
+                  <div>
+                    <h2>Sorry, no earnings call data to show for {stock.title}</h2>
+                  </div>
+                )}
 
                 </div>
               </div>    

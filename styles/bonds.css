@@ -5,7 +5,7 @@
 
 .asset-top-container h1 {
     font-size: 3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: -0.1vw;
 }
 
@@ -73,7 +73,7 @@
 
 .radio-buttons h3:hover {
     cursor: pointer;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(230, 230, 230);
     /* border-bottom-left-radius:0px;
     border-bottom-right-radius:0px; */
 
@@ -86,7 +86,7 @@
 }
 
 .radio-drop:hover ~ .radio-buttons h3 {
-    background-color: rgb(50,50,50);
+    background-color: rgb(230, 230, 230);
     border-bottom-left-radius:0px;
     border-bottom-right-radius:0px;
 
@@ -115,5 +115,5 @@
 
 .country-dropdown:hover {
     /* cursor: pointer; */
-    background-color: rgb(200,200,200);
+    background-color: rgb(230, 230, 230);
 }

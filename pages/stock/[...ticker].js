@@ -17,8 +17,17 @@ const StockDetails = ({ stock }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [price, setPrice] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
+  const [navbarClass, setNavbarClass] = useState('no-stock-scroll');
 
 
+  const handleScroll = () => {
+    if (window.scrollY > 100) {
+      setNavbarClass('stock-scroll');
+
+    } else {
+      setNavbarClass('no-stock-scroll');
+    }
+  };
 
   useEffect(() => {
     const fetchPrice = async () => {
@@ -36,37 +45,24 @@ const StockDetails = ({ stock }) => {
       }
     };
 
-    // const fetchImage = async () => {
-    //   try {
-    //     console.log('Ticker', stock.ticker)
-    //     const { publicURL, error } = await supabase
-    //       .storage
-    //       .from('ticker_images') 
-    //       .getPublicUrl(`${stock.ticker}.png`);
-
-    //     if (error) {
-    //       console.error('Error fetching image URL:', error.message);
-    //       return;
-    //     }
-
-    //     console.log('Public URL', publicURL)
-
-    //     setImageUrl(publicURL);
-    //   } catch (error) {
-    //     console.error('Error fetching image URL:', error.message);
-    //   }
-    // };
-
     if (stock.ticker) {
       fetchPrice();
-      // fetchImage();
+
     }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, [stock.ticker]);
 
 
   if (isLoading) {
     return <Loading />;
   }
+
+
 
   
   return (
@@ -97,61 +93,65 @@ const StockDetails = ({ stock }) => {
          /> */}
         </Head>
     <div className='stock-outer-container'>
-      
       <Navbar />
       <div className='stock-container'>
         <div className='stock-inside-container'>
-        {/* <StockPriceChart stockData={data} /> */}
-        {/* {imageUrl ? <img src={imageUrl} alt='Company Logo' className='company-logo' />: <div>No Image</div>} */}
 
-        {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
-          <div className='stock-name-div'>
-            <div className='stock-name-inner'>
-              <div className='stock-name-inner-div'>
-            {/* <img className='stock-img' src='/appl.png'></img> */}
-            {/* <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo stock-img'></img> */}
-            <img
-                src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`}
-                className='company-logo stock-img'
-                onError={(e) => {
-                    e.target.onerror = null; // Prevent infinite loop
-                    e.target.src = '/favicon.ico'; // Use fallback image
-                }}
-                // alt='Company Logo'
-            />
-            <div className='ticker-country-div'>
-              {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>  }
-              {stock && stock.country && 
-                                    <img src={`/countries/${stock.country.toLowerCase().replace(' ', "_")}.png`} width='20' />
+                    {stock && stock.industry && stock.sector && <h6 className='stock-company-industry'><span className='stock-company-industry-span'>{stock.industry}</span> &#8226; {stock.sector}</h6>}
+                    
+                    <div className={`stock-name-div`}>
+                                <div className='stock-name-inner'>
+                                        <div className='stock-name-inner-div'>
+                                                  <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo stock-img' onError={(e) => {e.target.onerror = null; e.target.src = '/favicon.ico'; }}/>
+                                                  <div className='ticker-country-div'>
+                                                              {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>}
+                                                              {stock && stock.country && <img src={`/countries/${stock.country.toLowerCase().replace(' ', "_")}.png`} width='20' />}
+                                                  </div>
+                                          </div>
 
-              }
-            </div>
-            </div>
-            <div className='stock-name-inner-div'>
+                                          <div className='stock-name-inner-div'>
+                                                  {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
+                                          </div>
 
-
-            {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
-            </div>
-            </div>
-            {stock && price ? ( 
-                    <div className='stock-company-price-div'>
-                    <h3 className='stock-company-price'>${price.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
-                    {/* {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
-                    {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)} */}
-                   </div>
-                   ):(
-                    <div>
-                      Retreiving...
+                                  </div>
+                                  {stock && price ? ( 
+                                          <div className='stock-company-price-div'>
+                                                <h3 className='stock-company-price'>${price.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
+                                                {/* {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
+                                                {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)} */}
+                                          </div>
+                                        ):(
+                                          <div>Retreiving...</div>
+                                        )
+                                    }
                       </div>
-                   )
-                }
-            </div>
-          {/* <div>
-            <h1>Testing</h1>
-          </div> */}
+                      <div className={`${navbarClass}`}>
+                                <div className='stock-name-inner'>
+                                        <div className='stock-name-inner-div'>
+                                                  <img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='company-logo stock-img' onError={(e) => {e.target.onerror = null; e.target.src = '/favicon.ico'; }}/>
+                                                  <div className='ticker-country-div'>
+                                                              {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>}
+                                                              {stock && stock.country && <img src={`/countries/${stock.country.toLowerCase().replace(' ', "_")}.png`} width='20' />}
+                                                  </div>
+                                          </div>
 
-        </div>
+                                          <div className='stock-name-inner-div'>
+                                                  {stock && stock.title && <h1 className='stock-company-name'>{stock.title}</h1>}
+                                          </div>
 
+                                  </div>
+                                  {stock && price ? ( 
+                                          <div className='stock-company-price-div'>
+                                                <h3 className='stock-company-price'>${price.toLocaleString(2)} <span className='stock-usd'>USD</span></h3>
+                                                {/* {data[1] > 0 ? (<h3 className='stock-daily-change daily-change-green'>+{data[1].toLocaleString(2)}</h3>):(<h3 className='stock-daily-change daily-change-red'>{data[1].toLocaleString(2)}</h3>)}
+                                                {data[1] > 0 ? (<h3 className='stock-percent-change daily-change-green'>+{data[2].toLocaleString(2)}%</h3>):(<h3 className='stock-percent-change daily-change-red'>{data[2].toLocaleString(2)}%</h3>)} */}
+                                          </div>
+                                        ):(
+                                          <div>Retreiving...</div>
+                                        )
+                                    }
+                      </div>
+          </div>
         <StockTabs stock={stock}/>
       </div>
       <Footer />

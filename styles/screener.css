@@ -12,7 +12,7 @@
 .screener-table {
     border-collapse: collapse;
     width:100%;
-    background-color: rgba(12, 12, 12, 0.065);
+    background-color: rgba(255, 255, 255, 0.065);
     border-radius: 20px;
     /* overflow: hidden; */
 }
@@ -29,10 +29,10 @@
 
 .screener-table > tbody > tr td {
     /* padding: 1rem; */
-    padding: 0.5rem 0.5rem;
+    padding: 1rem 0.5rem;
 }
 .screener-table > tbody > tr:hover {
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(230, 230, 230);
     cursor: pointer;
 }
 
@@ -83,14 +83,14 @@
 }
 
 .screener-row td:nth-of-type(2), .screener-row td:nth-of-type(4), .screener-row td:nth-of-type(5), .screener-row td:nth-of-type(6) {
-    border-right: 1px solid rgb(60, 60, 60);
+    border-right: 1px solid rgb(230, 230, 230);
 }
 
 .screener-row td:nth-of-type(3) {
     font-size: 1rem;
     font-weight: bold;
     color: rgb(245,245,245);
-    border-right: 1px solid rgb(60, 60, 60);
+    border-right: 1px solid rgb(230, 230, 230);
 }
 
 
@@ -107,7 +107,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    /* border-radius: 50%; */
+    border-radius: 10px;
     /* border: 1px solid white; */
 }
 
@@ -140,11 +140,10 @@
 }
 
 .pagination li {
-    background-color: rgb(10, 10, 10);
-    color: black;
-    border: 1px solid rgb(50, 50, 50);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /* border: 1px solid rgb(50, 50, 50); */
     width: 50px;
-    color: white;
     transition: 0.2s ease all;
     box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
     border-radius: 6px;
@@ -156,7 +155,7 @@
     width: 100%;
     padding: 0.4rem;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 20px;
 }

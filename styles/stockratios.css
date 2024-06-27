@@ -7,6 +7,11 @@
     align-items: center;
     background-color: rgb(57, 57, 57); */
 }
+
+.stock-ratios-container h2 {
+    background-color: rgb(240, 238, 127);
+    padding: 1rem;
+}
 .stock-analytics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -20,8 +25,9 @@
     text-align: center;
     /* display: flex;
     align-items: center; */
-    border: 1px solid #292929;
-    border-radius:40px;
+    border: 1px solid #dbdbdb;
+    /* border-radius:40px; */
+    border-radius: 20px;
     position: relative;
 }
 

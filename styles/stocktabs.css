@@ -1,12 +1,12 @@
 .stock-tabs-container {
-    background-color:rgb(0, 0, 0);
-    border-top:1px solid rgb(50, 50, 50);
+    background-color:rgb(230, 230, 230);
+    border-top:1px solid rgb(230, 230, 230);
     box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.3);
     position: fixed;
     bottom:0;
     display: flex;
     width:100%;
-    color:white;
+    color:rgb(30, 30, 30);
     /* padding:1rem 0rem; */
     justify-content: space-around;
     height:60px;
@@ -24,7 +24,7 @@
     align-items: center;
     width:100%;
     justify-content: center;
-    border-right:1px solid rgb(100, 100, 100);
+    border-right:1px solid rgb(255, 255, 255);
 }
 
 .stock-tab-input {
@@ -39,20 +39,20 @@
 }
 
 .stock-tab-input:hover ~ .stock-tab-label {
-    background-color: rgb(35,35,35);
+    background-color: rgb(245, 245, 245);
 
 }
 .stock-tab-input:checked ~ .stock-tab-label {
     /* border-bottom:1px solid white; */
     background-color: rgb(75, 183, 241);
     color:black;
-    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.8);
+    box-shadow: inset 1px 1px 10px rgba(230, 230, 230, 0.8);
     font-weight: 700;
 }
 
 .stock-tab-label {
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
     height: 100%;
     display: flex;
     align-items: center;
@@ -65,5 +65,19 @@
 @media (max-width: 500px) {
     .stock-tab-label {
         font-size:0.8rem;
+    }
+
+    .stock-tabs-container {
+        background-color:rgb(230, 230, 230);
+        border-top:1px solid rgb(230, 230, 230);
+        box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.3);
+        position: fixed;
+        bottom:0;
+        display: flex;
+        width:100%;
+        color:rgb(30, 30, 30);
+        /* padding:1rem 0rem; */
+        justify-content: space-around;
+        height:60px;
     }
 }

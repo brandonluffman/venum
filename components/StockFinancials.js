@@ -26,7 +26,7 @@ const StockFinancials = ({ stock }) => {
 
   return (
 <div className="sec-filings-container">
-  <h1 className="sec-filings-title">SEC Filings</h1>
+  {/* <h1 className="sec-filings-title">SEC Filings</h1> */}
   <div className="sec-filings-categories">
     <div className="sec-filings-category">
             <h2 className="sec-filings-category-title">10-K Filings</h2>

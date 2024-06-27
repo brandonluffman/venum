@@ -32,8 +32,8 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 /* border: 1px solid rgb(255, 255, 255); */
-color: white;
-border: 1px solid rgba(255, 255, 255, 0.2);
+color: rgb(0, 0, 0);
+border: 1px solid rgba(100, 100, 100, 0.2);
 
 }
 
@@ -65,7 +65,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
     color: black;
 }
 .search-input::placeholder {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 300;
 }
 .stocks-container > div {
@@ -191,7 +191,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
     font-weight: bold;
     cursor: pointer;
     border-bottom: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(85, 85, 85, 0.1);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
@@ -201,7 +201,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
-    border-right: 1px solid rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(200, 200, 200, 0.4);
 }
 
 .search-buttons-container label:nth-of-type(2) input[type="radio"] + span {
@@ -211,7 +211,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-buttons-container label input[type="radio"] + span:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(101, 101, 101, 0.2);
     /* color: black; */
 }
 
@@ -329,17 +329,19 @@ input[type="radio"] {
     }
 
     .search-icon {
-        right:7%;
+        right:5%;
+        padding: 0.5rem 2rem;
     }
 
     .autosuggest-li {
-        margin-left: 0.5rem;
+        /* margin-left: 0.5rem; */
     }
 
     .autosuggest-li:nth-of-type(1) {
         font-weight:300;
-        text-align: left;
+        /* text-align: left; */
         margin:0rem 1rem;
+        /* padding-right: 1rem; */
         /* min-width:50px;
         max-width:50px; */
     }
@@ -351,9 +353,10 @@ input[type="radio"] {
 
     .autosuggest-li:nth-of-type(1) {
         margin:0;
-        margin-left:0.5rem;
+        /* margin-left:0.5rem; */
         font-size:0.9rem;
-        margin-bottom: 0.5rem;
+        /* margin-bottom: 0.5rem; */
+        margin-right: 1rem;
     }
     .autosuggest-menu > .autosuggest-li:nth-of-type(2) {
         display: none;
@@ -378,5 +381,41 @@ input[type="radio"] {
         justify-content: center;
     }
 
+    input[type="radio"] + span {
+        padding: 1rem 0.5rem !important;
+        font-size: 0.9rem;
+        width: 100%;
+        /* border: 1px solid rgba(255, 255, 255, 0.8); */
+      }
+    
+      input[type="radio"]:checked + span {
+        background-color: rgba(75, 183, 241, 1) !important;
+        width: 100%;
+        padding: 0rem 0rem;
+        /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    
+    
+        color: black; /* Optional: if you want to change text color when checked */
+    }
+
+    .autosuggest-menu {
+        padding: 1rem;
+    }
+
+    .autosuggest-li {
+        margin: 0;
+    }
+    
+
+
+}
+
+@media (max-width: 350px) {
+    input[type="radio"] + span {
+        padding: 1rem 0.2rem !important;
+        font-size: 0.9rem;
+        width: 100%;
+        /* border: 1px solid rgba(255, 255, 255, 0.8); */
+      }
 
 }

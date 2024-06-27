@@ -10,9 +10,9 @@ const StockSentiment = () => {
 
       <div className='sentiment-grid-container'>
           <div className='sentiment-grid-item'>
-            <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
+            {/* <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div> */}
             <img src='/news-logo.png' className='sentiment-header-img'></img>
-            <h2 className='sentiment-grid-item-header'>News</h2>
+            {/* <h2 className='sentiment-grid-item-header'>News</h2> */}
             <div className='sentiment-grid-item-div glass-effect'>
               <div className='sentiment-grid-flexer'>
                 <h2 className='sentiment-grid-item-div-header'>SOURCE</h2>
@@ -37,9 +37,9 @@ const StockSentiment = () => {
         
           </div>
         <div className='sentiment-grid-item'>
-        <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
+        {/* <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div> */}
           <img src='/x-logo.png' className='sentiment-header-img'></img>
-          <h2 className='sentiment-grid-item-header'>X</h2>
+          {/* <h2 className='sentiment-grid-item-header'>X</h2> */}
           <div className='sentiment-grid-item-div glass-effect'>
           <p className='sentiment-grid-item-time'>2 hrs ago</p>
             <div className='sentiment-grid-flexer'>
@@ -63,10 +63,10 @@ const StockSentiment = () => {
           </div>
         </div>  
         <div className='sentiment-grid-item'>
-        <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div>
+        {/* <div className='glass'><p>Digital Market News Is Reserved for Premium Members</p></div> */}
 
           <img src='/reddit-logo.png' className='sentiment-header-img'></img>
-          <h2 className='sentiment-grid-item-header'>Reddit</h2>
+          {/* <h2 className='sentiment-grid-item-header'>Reddit</h2> */}
           <div className='sentiment-grid-item-div glass-effect'>
           <p className='sentiment-grid-item-time'>2 days ago</p>
           <div className='sentiment-grid-flexer'>

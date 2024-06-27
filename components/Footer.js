@@ -47,7 +47,7 @@ const Footer = () => {
                 </div>
               </div>   
               <div className='copyright-footer'>
-                  <p className='footer-copyright-content'>Copyright © {new Date().getFullYear()} VENUM - All Rights Reserved.</p>
+                  <p className='footer-copyright-content'>Copyright © {new Date().getFullYear()} Venum - All Rights Reserved.</p>
               </div>
               <div className='copyright-footer'>
                   <p className='footer-phantom'>Powered by <Link className='footer-phantom-brand' rel='no-referrer' target='_blank' href='https://phantomdm.com'>Phantom</Link></p>

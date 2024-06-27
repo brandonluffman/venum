@@ -114,26 +114,35 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4,4fr);
+    gap: 10px;
+    padding:0rem 1rem;
 }
 
 .sec-filings-list-item {
     padding: 10px;
+    background-color: rgb(75, 183, 241);
+    color: black;
+    border-radius: 20px;
+    border: 1px solid rgb(75, 183, 241);
     /* border-bottom: 1px solid #ddd; */
+    transition: 0.1s ease all;
+    font-weight: bold;
 }
 
 .sec-filings-list-item:last-child {
 }
 
-.sec-filings-link {
+/* .sec-filings-link {
     text-decoration: none;
     font-weight: 500;
     transition: 0.2s ease all;
-}
+} */
 
-.sec-filings-link:hover {
-    text-decoration: underline;
+.sec-filings-list-item:hover {
+    /* text-decoration: underline; */
+    background-color: black;
     color: rgb(75, 183, 241);
-
+    cursor: pointer;
 }
 
 
@@ -177,7 +186,7 @@
 
         .sec-filings-category {
             width: 100%;
-            padding: 1rem 0rem;
+            padding: 1rem 0.5rem;
             margin-bottom: 1rem;
         }
 

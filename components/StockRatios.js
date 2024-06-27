@@ -17,10 +17,11 @@ const StockRatios = () => {
 
   return (
     <div className='stock-ratios-container'>
+      <h2>** This data is not accurate. This page is currently in development.</h2>
       <div className='stock-analytics-grid'>
         {ratios.map((ratio, index) => (
           <div key={index} className='stock-analytics-item'>
-            <div className='glass'><p className='ratio-glass-p'>Stock Ratios are Reserved for Premium Members</p></div>
+            {/* <div className='glass'><p className='ratio-glass-p'>Stock Ratios are Reserved for Premium Members</p></div> */}
             <h3 className='stock-analytics-label'>{ratio.label}</h3>
             <h6 className='stock-analytics-number'>{ratio.value}</h6>
             <RatioChart />

@@ -176,7 +176,7 @@ const Screener = () => {
                   ))}
                   </div>
                 </div>
-
+                  {pathname == '/bonds' && 
                 <div className='radio-buttons'>
                   <h3>Select type <BsCaretDownFill /></h3>
                   <div className='radio-drop'>
@@ -204,6 +204,7 @@ const Screener = () => {
                     </div>
                   </div>
                 </div>
+                  }
                 </div>
       
             <ul className='pagination'>
@@ -296,7 +297,7 @@ const Screener = () => {
                     </>
                   ): pathname == '/etfs' ? (
                     <>
-                    <td><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${stock.ticker}.png`} className='screener-img' width={30}></img></td>
+                    <td><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/etf_images/${stock.ticker}.svg`} className='screener-img' width={30}></img></td>
                     <td><li className='top-stock-li'>{stock.ticker}</li></td>
                     <td><li className='top-stock-li'>{stock.title}</li></td>
                     <td><li className='top-stock-li'>{stock.volume && parseInt(stock.volume).toLocaleString()}</li></td> 
@@ -304,9 +305,15 @@ const Screener = () => {
                     <td><li className='top-stock-li'>{stock.category}</li></td>
                     <td><li className='top-stock-li'>{stock.fundfamily}</li></td>
                   </>
+                  ): pathname == '/futures' ? (
+                    <>
+                    <td><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/futures_images/${stock.ticker.replace('!', '')}_.svg`} className='screener-img' width={20}></img></td>
+                    <td><li className='top-stock-li'>{stock.ticker}</li></td>
+                    <td><li className='top-stock-li'>{stock.name}</li></td>
+                  </>
                   ):(
                     <>
-                    <td><img src='/countries/united_states.png' className='screener-img' width={20}></img></td>
+                    <td><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/index_images/${stock.ticker.replace('!', '')}.svg`} className='screener-img' width={20}></img></td>
                     <td><li className='top-stock-li'>{stock.ticker}</li></td>
                     <td><li className='top-stock-li'>{stock.name}</li></td>
                   </>

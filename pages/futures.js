@@ -39,7 +39,7 @@ const futures = () => {
     <div className='asset-top-container'>
       <div>
         <h1>Futures</h1>
-        <h6>Exchange Traded Funds</h6>
+        {/* <h6>Exchange Traded Funds</h6> */}
         </div>
     </div>
     <div>

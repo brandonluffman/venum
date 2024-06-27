@@ -11,7 +11,7 @@ const futures = () => {
   return (
     <>
          <Head>
-          <title>Venum | ETFs</title>
+          <title>Venum | Futures</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
@@ -36,8 +36,11 @@ const futures = () => {
          /> */}
         </Head>
     <Navbar />
-    <div className='stocks-container'>
+    <div className='asset-top-container'>
+      <div>
         <h1>Futures</h1>
+        <h6>Exchange Traded Funds</h6>
+        </div>
     </div>
     <div>
      <Screener />   

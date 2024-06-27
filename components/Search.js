@@ -192,15 +192,16 @@ const Search = () => {
               <BsSearch  />
             </button>
           )}
-
-{responseData && (
+              
+                      {responseData && (
                               <ul className='similar-search-menu'>
                                   {responseData.map((result, index) => (
                                     <div className='similar-search-container' key={index}>
+                                     
                                       <Link className='similar-search-link' target="_blank" rel="noreferrer" href={`/stock/${result.ticker}`}>
                                           <div className=''>
                                                         <div>
-                                                              <li><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${result.ticker}.png`} className='' width={20}></img></li>
+                                                              <li><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${result.ticker.replace('-', '')}.png`} className='' width={20}></img></li>
                                                               <li >{result.ticker}</li>
                                                           </div>
                                                       <li >{result.title}</li>
@@ -223,7 +224,7 @@ const Search = () => {
                                         <Link className='autosuggest-link' href={`/stock/${result.ticker}`}>
                                               <ul className='autosuggest-menu' onClick={() => setIsLoading(true)}>
                                                         <div className='autosuggest-li-container'>
-                                                          <li className='autosuggest-li'><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${result.ticker}.png`} className='screener-img' width={20}></img></li>
+                                                          <li className='autosuggest-li'><img src={`https://kuiqsgbpmuyoefnrmqvp.supabase.co/storage/v1/object/public/ticker_images/${result.ticker.replace('-', '')}.png`} className='screener-img' width={20}></img></li>
                                                         </div>
                                                         <div className='antiflexer autosuggest-li-flexer'>
                                                           <li className='autosuggest-li auto-title'>{result.title}</li>
@@ -231,13 +232,11 @@ const Search = () => {
                                                         </div>
                                                         <div className='autosuggest-li-flexer'>
                                                         <li className='autosuggest-li'>{result.exchange}</li>
-                                                            {result.country == 'United States' ? 
+                                                            {result.country &&
                                                             (
-                                                              <li className='autosuggest-li'><img className='country-img' src='/america.jpeg' width='25'></img></li>
+                                                              <li className='autosuggest-li'><img src={`/countries/${result.country.toLowerCase().replace(' ', "_")}.png`} width='20' className='country-img' /></li>
                                                             )
-                                                            :(
-                                                              <li className='autosuggest-li'><img className='country-img' src='/flagquestion.png' width='25'></img></li>
-                                                            )}
+                                                          }
                                                         </div>
                                                 </ul>
                                           </Link>

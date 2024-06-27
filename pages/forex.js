@@ -11,7 +11,7 @@ const forex = () => {
   return (
     <>
          <Head>
-          <title>Venum | ETFs</title>
+          <title>Venum | Forex</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
@@ -36,8 +36,11 @@ const forex = () => {
          /> */}
         </Head>
     <Navbar />
-    <div className='stocks-container'>
+    <div className='asset-top-container'>
         <h1>Forex</h1>
+        <div>
+        <h3>All Foreign Exchange Rates</h3>
+        </div>
     </div>
     <div>
      <Screener />   

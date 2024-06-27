@@ -121,11 +121,10 @@ const StockDetails = ({ stock }) => {
             />
             <div className='ticker-country-div'>
               {stock && stock.ticker &&<h2 className='stock-ticker-name'>{stock.ticker}</h2>  }
-              {stock && stock.country && stock.country === 'United States' ? (
-                  <img className='country-img' src='/america.jpeg' width='25' alt='USA' />
-                ) : (
-                  <div>{stock.country}</div>
-                )}
+              {stock && stock.country && 
+                                    <img src={`/countries/${stock.country.toLowerCase().replace(' ', "_")}.png`} width='20' />
+
+              }
             </div>
             </div>
             <div className='stock-name-inner-div'>

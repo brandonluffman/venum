@@ -28,7 +28,8 @@
 }
 
 .screener-table > tbody > tr td {
-    padding: 1rem;
+    /* padding: 1rem; */
+    padding: 0.5rem 0.5rem;
 }
 .screener-table > tbody > tr:hover {
     background-color: rgb(30, 30, 30);
@@ -40,15 +41,15 @@
     /* border: 1px solid grey; */
     padding: 1rem;
     text-align: left;
-    border:1px solid rgb(50, 50, 50);
+    border:1px solid rgb(74, 174, 255);
+    border-top-left-radius: 10px;
     /* border: 1px solid white; */
-
 }
 
 .screener-table thead tr th {
-    padding:1rem 0.5rem;
-
+    padding:1rem;
 }
+
 
 .screener-row {
     width: 100%;
@@ -58,16 +59,21 @@
 .screener-table tbody {
     /* border: 1px solid white; */
     border-radius: 20px !important;
-    padding: 0rem 1rem;
-    border:1px solid rgb(50, 50, 50);
+    padding: 1rem 1rem;
+    border:1px solid rgb(74, 174, 255);
 
+}
+
+.screener-row td a li {
+    display: flex;
+    align-items: center;
 }
 
 .screener-row td {
     list-style-type: none;
     font-size: 1rem;
     /* border:1px solid rgb(50, 50, 50); */
-    padding:0rem 0.5rem;
+    padding:0.5rem 0.5rem;
     text-align: left;
     border-top: 0;
 }
@@ -77,14 +83,14 @@
 }
 
 .screener-row td:nth-of-type(2), .screener-row td:nth-of-type(4), .screener-row td:nth-of-type(5), .screener-row td:nth-of-type(6) {
-    border-right: 1px solid rgb(30, 30, 30);
+    border-right: 1px solid rgb(60, 60, 60);
 }
 
 .screener-row td:nth-of-type(3) {
     font-size: 1rem;
     font-weight: bold;
     color: rgb(245,245,245);
-    border-right: 1px solid rgb(30, 30, 30);
+    border-right: 1px solid rgb(60, 60, 60);
 }
 
 
@@ -101,6 +107,8 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    /* border-radius: 50%; */
+    /* border: 1px solid white; */
 }
 
 .screener-thead > tr > th {
@@ -111,6 +119,13 @@
     text-align: left;
 }
 
+
+.top-stock-country-div {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /* Pagination */
 
@@ -131,7 +146,8 @@
     width: 50px;
     color: white;
     transition: 0.2s ease all;
-    box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.236);
+    box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
 }
 
 .pagination li button {

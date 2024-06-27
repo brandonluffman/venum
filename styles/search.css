@@ -54,12 +54,14 @@ border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
     outline: none;
     border: none;
+    background-color: rgb(75, 183, 241);
+    color: black;
 }
 
 .search-icon:hover {
     cursor: pointer;
     transform: scale(1.02);
-    background-color: rgb(75, 234, 243);
+    background-color: rgb(75, 183, 241);
     color: black;
 }
 .search-input::placeholder {
@@ -191,7 +193,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: none;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
 }
 
@@ -209,7 +211,7 @@ border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-buttons-container label input[type="radio"] + span:hover {
-    background-color: rgba(230, 230, 230, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     /* color: black; */
 }
 
@@ -220,14 +222,14 @@ input[type="radio"] {
   input[type="radio"] + span {
     padding: 1rem 4rem;
     width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
   }
 
   input[type="radio"]:checked + span {
-    background-color: rgba(75, 183, 241, 0.8) !important;
+    background-color: rgba(75, 183, 241, 1) !important;
     width: 100%;
     padding: 1rem 4rem;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
 
 
     color: black; /* Optional: if you want to change text color when checked */

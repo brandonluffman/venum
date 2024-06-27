@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import {RxHamburgerMenu, RxLockClosed} from 'react-icons/rx'
 import Search from './Search';
-import { BsCaretDown, BsCaretDownFill, BsLock, BsX } from 'react-icons/bs';
+import { BsCaretDown, BsCaretDownFill, BsFillLockFill, BsHouseLockFill, BsLock, BsLockFill, BsX } from 'react-icons/bs';
 import NavSearch from './NavSearch';
 
 const Navbar = () => {
@@ -64,41 +64,45 @@ const Navbar = () => {
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Company <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
-                    <h2>Come take a look at what we&apos;re about at Venum</h2>
-                  <Link href='/stocks'><li className='navbar-item'>About Us</li></Link>
-                  <Link href='/stocks'><li className='navbar-item'>Our Mission</li></Link>
+                    <h2>Company</h2>
+                  <Link href='/'><li className='navbar-item dropdown-nav-item'>About Us</li></Link>
+                  <Link href='/'><li className='navbar-item dropdown-nav-item'>Our Mission</li></Link>
                   </div>
             </div>
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Products <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Products</h2>
-                  <Link href='/stocks'><li className='navbar-item nav-item-glass'>Screeners <RxLockClosed /></li></Link>
-                  <Link href='/bonds'><li className='navbar-item nav-item-glass'>Heatmaps <RxLockClosed /></li></Link>
-                  <Link href='/pricing'><li className='navbar-item'>Pricing</li></Link>
+                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Screeners <RxLockClosed /></li></Link>
+                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Heatmaps <RxLockClosed /></li></Link>
+                  <Link href='/'><li className='navbar-item dropdown-nav-item'>Pricing</li></Link>
                   </div>
             </div>
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Tools <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Tools</h2>
-                  <Link href='/stocks'><li className='navbar-item nav-item-glass'>DCF Calculator <RxLockClosed /></li></Link>
-                  <Link href='/bonds'><li className='navbar-item nav-item-glass'>Equity Research Reports <RxLockClosed /></li></Link>
+                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>DCF Calculator <RxLockClosed /></li></Link>
+                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Equity Research Reports <RxLockClosed /></li></Link>
                   </div>
             </div>
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Markets <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Markets</h2>
-                  <Link href='/stocks'><li className='navbar-item'>Stocks</li></Link>
-                  <Link href='/bonds'><li className='navbar-item'>Bonds</li></Link>
-                  <Link href='/etfs'><li className='navbar-item'>ETFs</li></Link>
-                  <Link href=''><li className='navbar-item nav-item-glass'>Futures <RxLockClosed /></li></Link>
-                  <Link href=''><li className='navbar-item nav-item-glass'>Forex <RxLockClosed /></li></Link>
-                  <Link href='/macro'><li className='navbar-item'>Economy</li></Link>
+                  <Link href='/stocks'><li className='navbar-item dropdown-nav-item'>Stocks</li></Link>
+                  <Link href='/bonds'><li className='navbar-item dropdown-nav-item'>Bonds</li></Link>
+                  <Link href='/etfs'><li className='navbar-item dropdown-nav-item'>ETFs</li></Link>
+                  <Link href='/futures'><li className='navbar-item nav-item-glass dropdown-nav-item'>Futures</li></Link>
+                  <Link href='/forex'><li className='navbar-item nav-item-glass dropdown-nav-item'>Forex</li></Link>
+                  <Link href='/indices'><li className='navbar-item nav-item-glass dropdown-nav-item'>Indices</li></Link>
+
+                  <Link href=''><li className='navbar-item nav-item-glass dropdown-nav-item'>Crypto <RxLockClosed /></li></Link>
+
+                  <Link href='/macro'><li className='navbar-item dropdown-nav-item'>Economy</li></Link>
                   </div>
             </div>
-            <NavSearch />
+            <div className='nav-search-container'><NavSearch /></div>
 
             {/* <button className='nav-start-btn'>Get Started</button> */}
         

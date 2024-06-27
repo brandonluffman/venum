@@ -7,11 +7,11 @@ import Head from 'next/head';
 import SimilaritySearch from '../components/SimilaritySearch';
 import Screener from '../components/Screener';
 
-const etfs = () => {
+const bonds = () => {
   return (
     <>
          <Head>
-          <title>Venum | ETFs</title>
+          <title>Venum | Indices</title>
           <meta name="description" content="Investment analytics driven by AI." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
@@ -37,9 +37,9 @@ const etfs = () => {
         </Head>
     <Navbar />
     <div className='asset-top-container'>
-      <div>
-        <h1>ETFs</h1>
-        <h3>Exchange Traded Funds</h3>
+        <h1>Indexes</h1>
+        <div>
+          <h3>All global indexes.</h3>
         </div>
     </div>
     <div>
@@ -50,4 +50,4 @@ const etfs = () => {
   )
 }
 
-export default etfs
+export default bonds

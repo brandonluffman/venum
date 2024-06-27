@@ -44,15 +44,15 @@
     overflow: hidden;
     text-align: center;
     z-index: 9999999 !important;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
+    background: rgba(75, 183, 241, 0.6);
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(5px);
     /* border: 1px solid rgb(100, 100, 100); */
     text-align: left;
-    transition: 0.3s ease-in-out all;
+    transition: 0.2s ease all;
     transform: translateY(-5px);
     width: 100vw;
-    color: black;
+    color: white !important;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 2rem;
@@ -65,9 +65,14 @@
   .navbar-item:hover .navbar-dropdown {
     display: block;
     opacity: 1;
-    transform: translateY(5px);
-    transition: 0.2s ease-in-out all;
+    transform: translateY(0px);
+    transition: 0.1s ease all;
     visibility: visible;
+  }
+
+  .navbar-dropdown:hover ~ .nav-drop-icon {
+    transform: rotateY('90');
+    color: red !important;
   }
 
   .navbar-dropdown .navbar-item {
@@ -87,7 +92,7 @@
   .nav-img {
     width: 30px;
     border-radius: 50%;
-    border: 1px solid rgb(100, 100, 100);
+    /* border: 1px solid rgb(100, 100, 100); */
   }
 
   .navbar-item {
@@ -99,7 +104,7 @@
 
 
   .navbar-item .nav-link {
-    height: 50px;
+    height: 61px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +119,7 @@
 
   
   .navbar-dropdown .navbar-item {
-    color: black;
+    /* color: black; */
     padding: 0.5rem 1rem;
     /* display: block; */
     /* border-bottom: 1px solid rgb(240, 240, 240); */
@@ -133,7 +138,7 @@
 }
   
   .navbar-dropdown .navbar-item:hover {
-    background-color: rgba(125, 125, 125, 0.464);
+    /* background-color: rgba(125, 125, 125, 0.464); */
 
   }
 
@@ -148,10 +153,20 @@
     padding: 0; */
   }
 
-  .navbar-item:hover, .nav-link:hover {
-    background-color: rgb(30, 30, 30);
-    background-color: rgba(255, 255, 255, 0.506);
-    color: black;
+  .navbar-item:hover .nav-link:hover {
+    /* background-color: rgb(30, 30, 30); */
+    background-color: rgba(75, 183, 241, 0.782);
+    /* color: black; */
+  }
+
+  .dropdown-nav-item {
+    font-weight: 600;
+    color: white;
+}
+
+
+  .dropdown-nav-item:hover {
+    background-color: rgba(255, 255, 255, .4);
   }
 
 
@@ -167,6 +182,14 @@
     color:white;
     font-weight: 300;
 }
+
+.navbar-dropdown h2 {
+    text-transform: normal;
+    letter-spacing: -0.2vw;
+    font-size: 3rem;
+    margin-top: 0rem;
+}
+
 
 .beta-badge {
     background-color: white;
@@ -201,11 +224,32 @@
     width:100%;
     z-index:9999;
     background-color: black;
-    transition: 0.3s ease-in-out all;
+    transition: 0.3s ease all;
     padding:0.5rem 0rem;
     z-index: 9999999999999999999999999999999 !important;
+    border:3px solid transparent;
+
+    border-bottom:3px solid rgba(75, 183, 241, 1);
     /* border-bottom: 1px solid rgb(75, 183, 241); */
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
+
+.scrolled {
+    transform: translateX(20%);
+    transform: translateY(10%);
+    /* width: 95%; */
+    margin: 0rem auto;
+    background-color: black; /* Example background color */
+    color: white; /* Example text color */
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3); /* Example box shadow */
+    z-index: 9999; /* Ensure it's above other content */
+    border:3px solid rgba(75, 183, 241, 1);
+
+}
+
 
 .nav-menu {
     display: flex;
@@ -218,6 +262,7 @@
     padding-right:1rem;
     margin: 0;
     padding-right: 1rem;
+    align-items: center;
 }
 
 .nav-link {
@@ -232,10 +277,6 @@
     letter-spacing: -.1vw;
     margin: 1rem 0;
     box-shadow:1px 3px 10px rgba(0,0,0,0.75);
-}
-
-.scrolled {
-    padding:0rem 0rem;
 }
 
 .hamburger-menu {

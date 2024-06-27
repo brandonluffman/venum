@@ -1,0 +1,119 @@
+.asset-top-container {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.asset-top-container h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.1vw;
+}
+
+
+
+/* Countries */
+
+
+/* Container for the radio buttons */
+
+.radio-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.radio-buttons {
+    width: 100%;
+    position: relative;
+}
+.radio-drop {
+    background-color: rgba(255, 255, 255, 0.919);
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    margin-top:-20px;
+    max-height: 300px;
+    overflow-y:scroll;
+    /* width: 50%; */
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    transition: 0.2s ease all;
+
+    /* border: 1px solid rgb(200,200,200); */
+}
+
+.radio-buttons h3 {
+    padding: 1rem;
+    transition: 0.2s ease all;
+    border: 2px solid rgba(75, 183, 241, 1);
+    border-radius: 10px;
+    /* border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px; */
+    display: flex;
+    align-items: center;
+
+}
+
+.radio-buttons h3 div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.radio-drop:hover {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+.radio-buttons h3:hover {
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+    /* border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px; */
+
+    /* padding: 1rem; */
+}
+
+.radio-buttons h3:hover ~ .radio-drop {
+    opacity: 1;
+    visibility: visible;
+}
+
+.radio-drop:hover ~ .radio-buttons h3 {
+    background-color: rgb(50,50,50);
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+
+} 
+
+.country-dropdown {
+    color: black;
+    height: 50px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: left;
+    /* padding: 1rem; */
+    /* transition: 0.2s ease all; */
+    width: 100%;
+    padding: 0rem 1rem;
+}
+
+.country-dropdown label {
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.country-dropdown:hover {
+    /* cursor: pointer; */
+    background-color: rgb(200,200,200);
+}

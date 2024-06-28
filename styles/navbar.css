@@ -371,6 +371,10 @@ color: black !important;
     margin-bottom:0rem;
    font-size:3rem; 
    margin-bottom:2rem;
+   color:black;
+   letter-spacing: -0.1vw;
+   top: 50px;
+   position: fixed;
 }
 .nav-icon {
     color: #ffffff !important;
@@ -385,24 +389,57 @@ color: black !important;
 .mobile-nav-link {
 
     transition: 0.2s ease all;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .mobile-nav-link:hover {
+    background-color: rgb(230, 230, 230);
+    /* padding:0.5rem 0rem; */
   }
 
   .dropdown {
-    /* visibility: hidden; */
-    /* display: none; */
+
     opacity: 0;
-    transition: 0.2s ease all;
+    transition: 0.2s ease-in-out all;
     margin: 0;
-    text-align: left;
-    /* height: 20px; */
     padding-bottom: 0;
+    height: 0px;
+    list-style-type: none;
+    background-color: rgb(200, 255, 246);
+    width: 200px;
+    right: -30px;
+    border-radius: 20px;
+    margin-left:50px;
+    position: absolute;
+    top: 0px;
   }
 
-  .nav-link-container:hover > .dropdown {
-    /* display: flex; */
+  .dropdown li {
+    padding: 1rem 1rem;
+    border-radius: 20px;
+  }
+
+  .dropdown li:hover {
+    background-color: rgb(230,230,230);
+  }
+
+  .mobile-nav-link:hover > .dropdown {
     opacity:1;
-    /* visibility: visible; */
-    margin-bottom: 200px;
+    position: absolute;
+    display: block;
+    height: auto;
+    z-index:99999;
+    padding: 0.5rem;
+    right: -10px;
+    top: 0px;
+
+  }
+
+  .nav-link-container {
+    position: relative;
   }
 
   /* .mobile-nav-link:hover {
@@ -464,12 +501,12 @@ color: black !important;
     .hamburger-header {
         font-size:3rem;
         position: fixed;
-        top: 100px;
+        top: 50px;
         left: 30;
     }
     .no-flexer {
-        display: grid;
-        margin-top: -10rem;
+        display: block;
+        margin-top: -18rem;
         padding: 0rem 0rem;
     }
 
@@ -515,10 +552,12 @@ color: black !important;
     margin: 1rem 0rem;
     font-size: 1rem;
     transition: 0.2s ease all;
+    width: 70vw;
+    justify-content: left;
   }
 
   .mobile-nav-link:hover {
     /* color:rgb(100, 100, 100); */
-    color: white !important;
+    color: rgb(29, 29, 29) !important;
   }
 }

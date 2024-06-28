@@ -115,12 +115,44 @@ const Navbar = () => {
 
         <div className={`nav-menu-toggle ${hamburgerClass}`}>
           <div className='no-flexer'>
-            <h2 className='hamburger-header'><span className='ai-color-change'>VENUM</span></h2>
-            <Link href='/' className='nav-link-container'><li className='nav-link mobile-nav-link'>Company</li> <div className='dropdown'>Show ME</div></Link>
+            <h2 className='hamburger-header'>VENUM<span className='ai-color-change'></span></h2>
+            <Link href='/' className='nav-link-container'>
+            <li className='nav-link mobile-nav-link'>Company <BsCaretDownFill />
+              <ul className='dropdown'>
+                <li>About us</li>
+                <li>Our Mission</li>
+              </ul>
+              </li>
+            </Link>
            
-            <Link href='/stocks' className='nav-link-container'><li className='nav-link mobile-nav-link'>Products</li></Link>
-            <Link href='/macro' className='nav-link-container'><li className='nav-link mobile-nav-link'>Tools</li></Link>
-            <Link href='/gpt' className='nav-link-container'><li className='nav-link mobile-nav-link'>Markets</li></Link>
+            <Link href='/stocks' className='nav-link-container'><li className='nav-link mobile-nav-link'>Products <BsCaretDownFill />
+            <ul className='dropdown'>
+                <li>Screeners</li>
+                <li>Heatmaps</li>
+                <li>Pricing</li>
+              </ul>
+              
+              </li></Link>
+            <Link href='/macro' className='nav-link-container'><li className='nav-link mobile-nav-link'>Tools <BsCaretDownFill />
+              <ul className='dropdown'>
+                  <li>DCF Calculator</li>
+                  <li>Equity Research Reports</li>
+              </ul>
+
+              </li></Link>
+            <Link href='/gpt' className='nav-link-container'><li className='nav-link mobile-nav-link'>Markets <BsCaretDownFill />
+            <ul className='dropdown'>
+                <li>Stocks</li>
+                <li>Bonds</li>
+                <li>ETFs</li>
+                <li>Futures</li>
+                <li>Forex</li>
+                <li>Indices</li>
+                <li>Crypto</li>
+                <li>Economy</li>
+              </ul>
+
+              </li></Link>
             {/* <span className='beta-badge'>Beta</span> */}
             </div>
         </div>

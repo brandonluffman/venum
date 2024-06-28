@@ -65,7 +65,8 @@ const Screener = () => {
       }  else if (pathname === '/forex') {
         const { data, error: fetchError } = await supabase
           .from('forex')
-          .select('*');
+          .select('*')
+          .limit(1000);
         fetchedData = data;
         error = fetchError;
       } else if (pathname === '/futures') {

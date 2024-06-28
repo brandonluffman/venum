@@ -125,6 +125,8 @@ const StockDetails = ({ stock }) => {
                                         )
                                     }
                       </div>
+                      <StockTabs stock={stock}/>
+
                       <div className={`${navbarClass}`}>
                                 <div className='stock-name-inner'>
                                         <div className='stock-name-inner-div'>
@@ -151,8 +153,9 @@ const StockDetails = ({ stock }) => {
                                         )
                                     }
                       </div>
+
           </div>
-        <StockTabs stock={stock}/>
+        {/* <StockTabs stock={stock}/> */}
       </div>
       <Footer />
     </div>

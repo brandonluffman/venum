@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from '../utils/supabaseClient'; // Adjust the path as needed
 import RatioChart from './RatioChart';
 import MacroChart from './MacroChart';
+import { BsCaretDownFill } from 'react-icons/bs';
 
 const Macros = () => {
     const [data, setData] = useState({});
     const [chartData, setChartData] = useState({});
+    const [countries, setCountries] = useState(['United States', 'Japan']);
+    const [selectedCountry, setSelectedCountry] = useState('United States');
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -50,10 +54,41 @@ const Macros = () => {
         fetchData();
     }, []);
 
+       // Handle country change
+        const handleCountryChange = (e) => {
+            setSelectedCountry(e.target.value);
+            setCurrentPage(1); // Reset to the first page
+        };
+
+
     return (
         <div className='macro-container'>
             <div className='macro-top-container'>
+        
             <h1>Economy</h1>
+
+            <div className='radio-buttons'>
+              <h3>{selectedCountry ? <div><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry}<BsCaretDownFill /></div> : <div>Select a country <BsCaretDownFill /></div>}</h3>
+                <div className='radio-drop'>
+                  {countries.length > 0 && countries.map((country, index) => (
+
+                    <div key={index} className='country-dropdown'>
+                      <img src={`/countries/${country.toLowerCase().replace(' ', "_")}.png`} width='20' />
+                      <input
+                        type="radio"
+                        id={`country-${index}`}
+                        name="country"
+                        value={country}
+                        checked={selectedCountry === country}
+                        onChange={handleCountryChange}
+                      />
+                      <label htmlFor={`country-${index}`}>{country}</label>
+                    </div>
+                  ))}
+                  </div>
+                </div>
+
+                
             </div>
             {/* <h6>Get a glimpse of the economy from a birds eye view.</h6> */}
             {/* <hr className='macro-container-hr'></hr> */}
@@ -68,7 +103,7 @@ const Macros = () => {
                 <div className='macro-grid-item'>
                     <div className='antiflexer'>
                         <h3 className='macro-grid-label'>GDP</h3>
-                        <h6 className='macro-grid-number'>{data.gdp && data.gdp}</h6>
+                        <h6 className='macro-grid-number'>{data.gdp ? data.gdp: 0}</h6>
                         <MacroChart data={chartData.gdp} />
                     </div>
                 </div>
@@ -96,7 +131,7 @@ const Macros = () => {
                 <div className='macro-grid-item'>
                     <div className='antiflexer'>
                         <h3 className='macro-grid-label'>Consumer Spending</h3>
-                        <h6 className='macro-grid-number'>{data.consumer_spending && data.consumer_spending}</h6>
+                        <h6 className='macro-grid-number'>{data.consumer_spending ? data.consumer_spending: 0}</h6>
                         <MacroChart data={chartData.consumer_spending} />
                     </div>
                 </div>
@@ -110,7 +145,7 @@ const Macros = () => {
                 <div className='macro-grid-item'>
                     <div className='antiflexer'>
                         <h3 className='macro-grid-label'>Construction Spend</h3>
-                        <h6 className='macro-grid-number'>{data.construction_demand && data.construction_demand}</h6>
+                        <h6 className='macro-grid-number'>{data.construction_demand ? data.construction_demand: 0}</h6>
                         <MacroChart data={chartData.construction_demand} />
                     </div>
                 </div>

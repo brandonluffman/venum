@@ -383,9 +383,19 @@ input[type="radio"] {
 
     input[type="radio"] + span {
         padding: 1rem 0.5rem !important;
+        display: flex;
+        width: 100%;
         font-size: 0.9rem;
         width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         /* border: 1px solid rgba(255, 255, 255, 0.8); */
+      }
+      
+      .custom-radio {
+        width: 90%;
+        height: 100%;
       }
     
       input[type="radio"]:checked + span {
@@ -393,8 +403,6 @@ input[type="radio"] {
         width: 100%;
         padding: 0rem 0rem;
         /* border: 1px solid rgba(255, 255, 255, 0.8); */
-    
-    
         color: black; /* Optional: if you want to change text color when checked */
     }
 
@@ -404,6 +412,13 @@ input[type="radio"] {
 
     .autosuggest-li {
         margin: 0;
+    }
+    
+    .search-buttons-container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 0rem 0.8rem;
     }
     
 

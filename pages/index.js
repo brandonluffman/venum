@@ -96,6 +96,59 @@ export default function Home({ onButtonClick }) {
 
 
     <div className='index-data-container'>
+        <h6 className='index-data-supheader'>Comprehensive suite of investments.</h6>
+        <h3 className='index-data-header'>All Investment Classes</h3>
+        <h6 className='index-data-subheader'>Get access to every class of assets globally.</h6>
+
+
+        <div className='index-classes-grid'>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Stocks</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Bonds</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Cash Equivalents</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>ETFs</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Mututal Funds</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Commodoties</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Futures</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Forex</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Real Estate</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Private Equity</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Hedge Funds</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Collectibles</h2></div>
+                </div>
+                {/* <div className='index-classes-grid-item'>
+                  <div><h2>Indices</h2></div>
+                </div>
+                <div className='index-classes-grid-item'>
+                  <div><h2>Economy</h2></div>
+                </div> */}
+          </div>
+    </div>
+
+
+    <div className='index-data-container'>
         <h6 className='index-data-supheader'>Intuitive and simple to use</h6>
         <h3 className='index-data-header'>Powerful Data, Simple Access.</h3>
         <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
@@ -108,7 +161,6 @@ export default function Home({ onButtonClick }) {
           </div>
           <div className='index-data-grid-item'>
           <div>
-
             <h2>30+</h2>
             <h2>Years of Data</h2>
             </div>

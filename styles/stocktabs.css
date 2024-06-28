@@ -1,10 +1,12 @@
 .stock-tabs-container {
-    background-color:rgb(230, 230, 230);
-    border-top:1px solid rgb(230, 230, 230);
-    box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.3);
-    position: fixed;
+    background-color:rgb(255, 255, 255);
+    /* border-top:1px solid rgb(230, 230, 230); */
+    box-shadow: 1px 1px 25px rgba(170, 170, 170, 0.3);
+    /* position: fixed; */
     bottom:0;
     display: flex;
+    border-radius: 10px;
+    overflow: hidden;
     width:100%;
     color:rgb(30, 30, 30);
     /* padding:1rem 0rem; */
@@ -12,10 +14,11 @@
     height:60px;
     align-items: center;
     z-index:9999 !important;
+    margin-bottom: 4rem;
 }
 
 .stock-tab-clicked {
-    border-bottom:1px solid white;
+    /* border-bottom:1px solid rgb(0, 0, 0); */
 }
 
 .stock-tab {
@@ -24,7 +27,11 @@
     align-items: center;
     width:100%;
     justify-content: center;
-    border-right:1px solid rgb(255, 255, 255);
+    border-right:1px solid rgb(230, 230, 230);
+}
+
+.stock-tab:last-child {
+    border-right: none;
 }
 
 .stock-tab-input {
@@ -39,14 +46,14 @@
 }
 
 .stock-tab-input:hover ~ .stock-tab-label {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(220, 220, 220);
 
 }
 .stock-tab-input:checked ~ .stock-tab-label {
     /* border-bottom:1px solid white; */
     background-color: rgb(75, 183, 241);
-    color:black;
-    box-shadow: inset 1px 1px 10px rgba(230, 230, 230, 0.8);
+    color:rgb(232, 230, 230);
+    box-shadow: inset 1px 1px 10px rgba(200, 200, 200, 0.8);
     font-weight: 700;
 }
 

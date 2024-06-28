@@ -137,6 +137,8 @@ const Navbar = () => {
               <ul className='dropdown'>
                   <li>DCF Calculator</li>
                   <li>Equity Research Reports</li>
+                  <li>IPO Listings</li>
+
               </ul>
 
               </li></Link>

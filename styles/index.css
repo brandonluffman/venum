@@ -313,6 +313,37 @@
     }
  }
 
+
+
+
+
+
+
+
+
+
+
+/* */
+
+
+.index-classes-grid {
+    display: grid;
+    grid-template-columns: repeat(4,4fr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* INDEX DATA */
 
 .index-data-container {

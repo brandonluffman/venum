@@ -14,7 +14,7 @@ h1, h3 {
     justify-content: center;
 }
 .stock-outer-container {
-    padding-bottom:3rem;
+    /* padding-bottom:3rem; */
 }
 .stock-container {
     padding-top:90px;

@@ -165,7 +165,7 @@ const Search = () => {
                 checked={searchType === 'name'}
                 onChange={handleSearchTypeChange}
               />
-            <span>Search By Name</span>
+            <span>By Name</span>
             </label>
             <label className='custom-radio'>
               <input
@@ -174,7 +174,7 @@ const Search = () => {
                 checked={searchType === 'description'}
                 onChange={handleSearchTypeChange}
               />
-          <span>Search By Description</span>
+          <span>By Description</span>
           </label>
             {/* <p>Selected Search Type: {searchType}</p> */}
           </div>

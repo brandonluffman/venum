@@ -147,4 +147,7 @@
         text-align: center;
         gap:30px;
     }
+    .stock-sentiment-container {
+        padding: 0;
+    }
 }

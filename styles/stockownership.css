@@ -64,6 +64,12 @@ table.institutional-ownership-table tr:nth-child(even), table.mf-ownership-table
   /* background-color: #f2f2f2; */
 }
 
+table.institutional-ownership-table tbody, table.mf-ownership-table tbody {
+  border-left: 1px solid rgb(230, 230, 230);
+  border-right: 1px solid rgb(230, 230, 230);
+
+}
+
 .pie-chart-container {
   display: flex;
   align-items: center;
@@ -112,5 +118,11 @@ table.institutional-ownership-table tr:nth-child(even), table.mf-ownership-table
 
   table.institutional-ownership-table td, table.mf-ownership-table td {
     padding: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ownership-tables-container {
+    padding: 0;
   }
 }

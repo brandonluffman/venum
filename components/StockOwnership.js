@@ -142,10 +142,10 @@ const preparePieChartData2 = (mfdata) => {
         {data.map((item, index) => (
           <tr className='h' key={index}>
             <td>{item.holder}</td>
-            <td>{(parseInt(item.shares).toFixed(0)).toLocaleString()}</td>
+            <td>{(parseInt(item.shares)).toLocaleString()}</td>
             {/* <td>{item.date_reported}</td> */}
             <td>{(item.pctheld*100).toFixed(2)}%</td>
-            <td>{parseInt(item.value).toFixed(0).toLocaleString()}</td>
+            <td>{parseInt(item.value).toLocaleString()}</td>
 
             </tr>
         ))}
@@ -169,10 +169,10 @@ const preparePieChartData2 = (mfdata) => {
       {mfdata.map((item, index) => (
           <tr className='h' key={index}>
             <td>{item.holder}</td>
-            <td>{parseInt(item.shares).toFixed(0).toLocaleString()}</td>
+            <td>{Number(item.shares).toLocaleString()}</td>
             {/* <td>{item.date_reported}</td> */}
             <td>{(item.pctheld*100).toFixed(2)}%</td>
-            <td>{parseInt(item.value).toFixed(0).toLocaleString()}</td>
+            <td>{Number(item.value).toLocaleString()}</td>
 
             </tr>
         ))}

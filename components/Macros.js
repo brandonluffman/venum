@@ -64,7 +64,7 @@ const Macros = () => {
     return (
         <div className='macro-container'>
             <div className='macro-top-container'>
-        
+            <h2><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry && selectedCountry}</h2>
             <h1>Economy</h1>
 
             <div className='radio-buttons'>

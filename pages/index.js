@@ -8,6 +8,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import { LuCircleDot } from 'react-icons/lu'
 import Head from 'next/head';
 import { supabase } from '../utils/supabaseClient';
+import MultiLineChart from '../components/MultiLineChart';
 
 
 export default function Home({ onButtonClick }) {
@@ -97,36 +98,42 @@ export default function Home({ onButtonClick }) {
 
     <div className='index-data-container'>
         <h6 className='index-data-supheader'>Comprehensive suite of investments.</h6>
-        <h3 className='index-data-header'>All Investment Classes</h3>
+        <h3 className='index-data-header'>All Investment Classes & Vehicles</h3>
         <h6 className='index-data-subheader'>Get access to every class of assets globally.</h6>
 
 
         <div className='index-classes-grid'>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Stocks</h2></div>
+                  <div><img src='equities.png' width={30}></img><h2>Stocks</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Bonds</h2></div>
+                  <div><img src='bonds.png' width={30}></img><h2>Bonds</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Cash Equivalents</h2></div>
+                  <div><img src='cash.webp' width={40}></img><h2>Cash Equivalents</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>ETFs</h2></div>
+                  <div><img src='etf.png' width={40}></img><h2>ETFs</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Mututal Funds</h2></div>
+                  <div><img src='mutual.webp' width={40}></img><h2>Mutual Funds</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Commodoties</h2></div>
+                  <div><img src='commodities.webp' width={40}></img><h2>Commodities</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Futures</h2></div>
+                  <div><img src='futures.webp' width={40}></img><h2>Futures</h2></div>
+                  <div className='index-classes-dropdown'>
+                    Hello Test
+                  </div>
                 </div>
                 <div className='index-classes-grid-item'>
-                  <div><h2>Forex</h2></div>
+                  <div><img src='forex.webp' width={40}></img><h2>Forex</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
+                  <div><img src='crypto.webp' width={40}></img><h2>Cryptocurrency</h2></div>
+                </div>
+                {/* <div className='index-classes-grid-item'>
                   <div><h2>Real Estate</h2></div>
                 </div>
                 <div className='index-classes-grid-item'>
@@ -134,10 +141,10 @@ export default function Home({ onButtonClick }) {
                 </div>
                 <div className='index-classes-grid-item'>
                   <div><h2>Hedge Funds</h2></div>
-                </div>
-                <div className='index-classes-grid-item'>
+                </div> */}
+                {/* <div className='index-classes-grid-item'>
                   <div><h2>Collectibles</h2></div>
-                </div>
+                </div> */}
                 {/* <div className='index-classes-grid-item'>
                   <div><h2>Indices</h2></div>
                 </div>
@@ -147,9 +154,83 @@ export default function Home({ onButtonClick }) {
           </div>
     </div>
 
+    <div className='index-data-container index-why-container'>
+        <h6 className='index-data-supheader'>Intuitive and simple to use</h6>
+        <h3 className='index-data-header'>Why Invest?</h3>
+        <h6 className='index-data-subheader index-why-subheader'>See how a $100,000 investment in each asset class 30 years ago compares to holding dollars today.</h6>
+        <div className='index-why-grid'>
+         <div className='index-why-legend'>
+          <div className='index-why-legend-item'>
+                        <div className='legend-item-name'><div className='legend-dot'></div><h3>Stocks</h3></div>
+                        <div className='legend-change-container'><h3>$100,000</h3><BsArrowRight /><h3>$1,022,471</h3></div>
+                        {/* <div className='index-why-returns'>
+                        <div className='index-why-return'><h3>Average Return</h3> <h3>9.84%</h3></div>
+                        <div className='index-why-return'><h3>Cumulative Return</h3> <h3>305.09%</h3></div>
+                        </div> */}
+
+          </div>
+          <div className='index-why-legend-item'>
+                      <div className='legend-item-name'><div className='legend-dot'></div><h3>Bonds</h3></div>
+                      <div className='legend-change-container'><h3>$100,000</h3><BsArrowRight /><h3>$333,615</h3></div>
+                      {/* <div className='index-why-returns'>
+                      <div className='index-why-return'><h3>Average Return</h3> <h3>4.88%</h3></div>
+                      <div className='index-why-return'><h3>Cumulative Return</h3> <h3>151.32%</h3></div>
+                      </div> */}
+
+          </div>
+          <div className='index-why-legend-item'>
+                  <div className='legend-item-name'><div className='legend-dot'></div><h3>Real Estate</h3></div>
+                  <div className='legend-change-container'><h3>$100,000</h3><BsArrowRight /><h3>$400,578</h3></div>
+                  {/* <div className='index-why-returns'>
+                  <div className='index-why-return'><h3>Average Return</h3> <h3>4.92%</h3></div>
+                  <div className='index-why-return'><h3>Cumulative Return</h3> <h3>147.68%</h3></div>
+                  </div> */}
+          </div>
+          <div className='index-why-legend-item'>
+                  <div className='legend-item-name'><div className='legend-dot'></div><h3>Gold</h3></div>
+                  <div className='legend-change-container'><h3>$100,000</h3><BsArrowRight /><h3>$529,096</h3></div>
+                  {/* <div className='index-why-returns'>
+                  <div className='index-why-return'><h3>Average Return</h3> <h3>6.70%</h3></div>
+                  <div className='index-why-return'><h3>Cumulative Return</h3> <h3>200.98%</h3></div>
+                  </div> */}
+
+          </div>
+          <div className='index-why-legend-item'>
+                  <div className='legend-item-name'><div className='legend-dot'></div><h3>U.S. Dollar</h3></div>
+                  <div className='legend-change-container'><h3>$100,000</h3><BsArrowRight /><h3 className='red'>$46,245</h3></div>
+                  {/* <div className='index-why-returns'>
+                  <div className='index-why-return'><h3>Average Return</h3><h3 className='red'>-2.52%</h3></div>
+                  <div className='index-why-return'><h3>Cumulative Return</h3> <h3 className='red'>-75.8%</h3></div>
+                  </div> */}
+          </div>
+          </div>
+          <div className='index-why-grid-container'>
+         <MultiLineChart />
+         </div>
+        </div>
+        {/* <div>
+          <div>
+            Stocks
+
+          </div>
+        </div> */}
+    </div>
+
 
     <div className='index-data-container'>
-        <h6 className='index-data-supheader'>Intuitive and simple to use</h6>
+        <h6 className='index-data-supheader'>As inflation rises, the value of a dollar decreases.</h6>
+        <h3 className='index-data-header'>Put your money to work.</h3>
+        <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
+        <div className='index-data-grid'>
+          <h2> *** ADD INVESTMENT CALCULATOR</h2>
+          <h2> *** ADD Portfolio Allocation Tool</h2>
+
+       </div>
+    </div>
+
+
+    <div className='index-data-container'>
+        {/* <h6 className='index-data-supheader'>Intuitive and simple to use</h6> */}
         <h3 className='index-data-header'>Powerful Data, Simple Access.</h3>
         <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
         <div className='index-data-grid'>

@@ -241,8 +241,8 @@ color: black !important;
 }
 
 .scrolled {
-    transform: translateX(20%);
-    transform: translateY(10%);
+    /* transform: translateX(20%);
+    transform: translateY(10%); */
     /* width: 95%; */
     margin: 0rem auto;
     background-color: rgb(255, 255, 255); /* Example background color */

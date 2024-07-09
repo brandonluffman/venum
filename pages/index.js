@@ -123,9 +123,9 @@ export default function Home({ onButtonClick }) {
                 </div>
                 <div className='index-classes-grid-item'>
                   <div><img src='futures.webp' width={40}></img><h2>Futures</h2></div>
-                  <div className='index-classes-dropdown'>
+                  {/* <div className='index-classes-dropdown'>
                     Hello Test
-                  </div>
+                  </div> */}
                 </div>
                 <div className='index-classes-grid-item'>
                   <div><img src='forex.webp' width={40}></img><h2>Forex</h2></div>
@@ -217,7 +217,7 @@ export default function Home({ onButtonClick }) {
     </div>
 
 
-    <div className='index-data-container'>
+    {/* <div className='index-data-container'>
         <h6 className='index-data-supheader'>As inflation rises, the value of a dollar decreases.</h6>
         <h3 className='index-data-header'>Put your money to work.</h3>
         <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
@@ -226,7 +226,7 @@ export default function Home({ onButtonClick }) {
           <h2> *** ADD Portfolio Allocation Tool</h2>
 
        </div>
-    </div>
+    </div> */}
 
 
     <div className='index-data-container'>

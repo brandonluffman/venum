@@ -117,9 +117,16 @@
       margin-right: 0.2rem; */
       width: 95%;
       margin: 0 auto;
+      /* grid-template-columns: repeat(2,2fr); */
+
     }
 
     .company-logo {
       /* width: 15px; */
     }
+
+    .stocks-container {
+      padding-top: 130px;
+    }
+
 }

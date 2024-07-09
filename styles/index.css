@@ -7,7 +7,7 @@
     padding-top:80px;
     padding: 150px 2rem 0rem 2rem;
     position: relative;
-    background: linear-gradient(195deg, rgba(84,206,255,1) 6%, rgb(255, 255, 255) 54%, rgb(164, 207, 224) 100%);
+    background: linear-gradient(195deg, rgba(84,206,255,1) 6%, rgb(255, 255, 255) 30%, rgb(164, 207, 224) 100%);
 }
 
 .index-container {
@@ -448,7 +448,6 @@
     width:60%;
     height: 400px;
     margin: 0 auto;
-
 }
 
 .index-why-legend >  div {
@@ -560,6 +559,23 @@
     color: red;
 }
 
+@media (max-width: 500px) {
+    .index-why-grid-container {
+        width: 100%;
+    }
+
+    .index-why-legend {
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        width: 100%;
+    }
+
+    .legend-change-container  h3 {
+        font-size: 1rem;
+    }
+
+}
+
 /* INDEX DATA */
 
 .index-data-container {
@@ -646,6 +662,7 @@
  @media (max-width: 500px) {
     .index-data-container {
         padding-bottom:0rem;
+        padding-bottom: 4rem;
     }
     .index-data-grid-item > h2:nth-of-type(1) {
         font-size:1.5rem;

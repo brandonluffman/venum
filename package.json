@@ -21,6 +21,7 @@
     "date-fns": "^2.30.0",
     "isomorphic-unfetch": "^4.0.2",
     "lodash": "^4.17.21",
+    "luxon": "^3.5.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.0",
     "next": "13.4.12",
@@ -35,6 +36,7 @@
     "react-plotly.js": "^2.6.0",
     "redis": "^4.6.7",
     "redis-promise": "^0.1.0",
+    "rss-parser": "^3.13.0",
     "yahoo-finance2": "^2.11.3",
     "yfinance": "^0.0.6"
   },

@@ -83,6 +83,7 @@ const Navbar = () => {
                   <a className="nav-link">Tools <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Tools</h2>
+                  <Link href='/news'><li className='navbar-item dropdown-nav-item'>News Screener</li></Link>
                   <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>DCF Calculator <RxLockClosed /></li></Link>
                   <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Equity Research Reports <RxLockClosed /></li></Link>
                   </div>

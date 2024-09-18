@@ -27,6 +27,7 @@ import '../styles/earnings.css'
 import '../styles/navsearch.css'
 import '../styles/etfs.css'
 import '../styles/bonds.css'
+import '../styles/news.css'
 
 
 // import NProgress from 'nprogress';

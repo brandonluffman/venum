@@ -38,7 +38,7 @@
 
 .news-p {
     display: flex;
-    align-items: space-between;
+    justify-content: space-between;
     width: 100%;
     align-items: center;
 }
@@ -50,5 +50,9 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+  }
+
+  .search-input:focus {
+    
   }
   

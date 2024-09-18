@@ -11,16 +11,6 @@
     padding: 0; /* Remove any default padding */
 }
 
-@media (max-width: 768px) {
-
-    .news-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); /* Create 3 equal-width columns */
-        margin: 0; /* Remove any default margin */
-        padding: 0; /* Remove any default padding */
-    }
-}
-
 .news-grid-item {
     border: 1px solid rgb(200, 200, 200);
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
@@ -104,3 +94,20 @@
     font-weight: 700 !important;
     color: red;
   }
+
+
+  @media (max-width: 768px) {
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Create 3 equal-width columns */
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+    }
+
+
+  .reload-button {
+    right: -2px;
+    top: -16px;
+  }
+}

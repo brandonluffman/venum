@@ -11,6 +11,16 @@
     padding: 0; /* Remove any default padding */
 }
 
+@media (max-width: 768px) {
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Create 3 equal-width columns */
+        margin: 0; /* Remove any default margin */
+        padding: 0; /* Remove any default padding */
+    }
+}
+
 .news-grid-item {
     border: 1px solid rgb(200, 200, 200);
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
@@ -51,6 +61,13 @@
     align-items: center;
 }
 
+.news-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
 .search-input {
     width: 100%;
     padding: 8px;
@@ -64,6 +81,23 @@
     background-color: transparent;
     color: black;
     border: none;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 50px;
+    border-radius: 10px;
+    transition: 0.2s ease all;
+  }
+
+  .reload-button:hover {
+    background-color: rgb(178, 194, 255);
+    cursor: pointer;
   }
 
   .news-company {

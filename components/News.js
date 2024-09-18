@@ -49,10 +49,10 @@ export default function News() {
     <>
     <Navbar />
     <div className='news-container'>
+        <div className='news-flex'>
       <h1>Latest Articles</h1>
-      <button onClick={fetchArticles} className='reload-button'>
-                    <RxReload />
-                </button>
+      <button onClick={fetchArticles} className='reload-button'><RxReload /></button>
+      </div>
       <input
           type="text"
           placeholder="Search titles..."

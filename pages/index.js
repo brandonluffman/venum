@@ -229,8 +229,7 @@ export default function Home({ onButtonClick }) {
     </div> */}
 
 
-    <div className='index-data-container'>
-        {/* <h6 className='index-data-supheader'>Intuitive and simple to use</h6> */}
+    {/* <div className='index-data-container'>
         <h3 className='index-data-header'>Powerful Data, Simple Access.</h3>
         <h6 className='index-data-subheader'>Choose the data access method that suits your needs and get started today.</h6>
         <div className='index-data-grid'>
@@ -253,7 +252,7 @@ export default function Home({ onButtonClick }) {
             </div>
           </div>
         </div>
-    </div>
+    </div> */}
 
 
 

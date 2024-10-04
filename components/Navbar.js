@@ -11,6 +11,7 @@ const Navbar = () => {
   const [hamburgerClass, setHamburgerClass] = useState('');
   const [navbarClass, setNavbarClass] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [loggedIn, setLoggedIn]= useState(true);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
@@ -70,7 +71,7 @@ const Navbar = () => {
                   <Link href='/'><li className='navbar-item dropdown-nav-item'>Our Mission</li></Link>
                   </div>
             </div>
-            <div className="navbar-item has-dropdown">
+            {/* <div className="navbar-item has-dropdown">
                   <a className="nav-link">Products <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Products</h2>
@@ -78,14 +79,14 @@ const Navbar = () => {
                   <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Heatmaps <RxLockClosed /></li></Link>
                   <Link href='/'><li className='navbar-item dropdown-nav-item'>Pricing</li></Link>
                   </div>
-            </div>
+            </div> */}
             <div className="navbar-item has-dropdown">
                   <a className="nav-link">Tools <BsCaretDownFill className='nav-drop-icon'/></a>
                   <div className="navbar-dropdown">
                   <h2>Tools</h2>
                   <Link href='/news'><li className='navbar-item dropdown-nav-item'>News Screener</li></Link>
-                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>DCF Calculator <RxLockClosed /></li></Link>
-                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Equity Research Reports <RxLockClosed /></li></Link>
+                  {/* <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>DCF Calculator <RxLockClosed /></li></Link>
+                  <Link href='/'><li className='navbar-item nav-item-glass dropdown-nav-item'>Equity Research Reports <RxLockClosed /></li></Link> */}
                   </div>
             </div>
             <div className="navbar-item has-dropdown">
@@ -98,10 +99,9 @@ const Navbar = () => {
                   <Link href='/futures'><li className='navbar-item nav-item-glass dropdown-nav-item'>Futures</li></Link>
                   <Link href='/forex'><li className='navbar-item nav-item-glass dropdown-nav-item'>Forex</li></Link>
                   <Link href='/indices'><li className='navbar-item nav-item-glass dropdown-nav-item'>Indices</li></Link>
-
                   <Link href=''><li className='navbar-item nav-item-glass dropdown-nav-item'>Crypto <RxLockClosed /></li></Link>
-
                   <Link href='/macro'><li className='navbar-item dropdown-nav-item'>Economy</li></Link>
+                  <Link href='/realestate'><li className='navbar-item dropdown-nav-item'>Real Estate</li></Link>
                   </div>
             </div>
             <div className='nav-search-container'><NavSearch /></div>
@@ -163,6 +163,12 @@ const Navbar = () => {
 
         </div>
         <button className='hamburger-menu' type='button' onClick={toggleShow}>{isActive ? <BsX className='close-menu'/>:<RxHamburgerMenu />}</button> 
+        <Link href='/account'>        {loggedIn && (
+          <div className='log-avatar'>
+            <img src='/avatar.png'></img>
+          </div>
+        )}</Link>               
+
     </nav>
   )
 }

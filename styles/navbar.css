@@ -93,7 +93,7 @@
   .nav-img {
     width: 30px;
     border-radius: 50%;
-    /* border: 1px solid rgb(100, 100, 100); */
+    border: 1px solid rgb(255, 255, 255);
   }
 
   .navbar-item {
@@ -229,6 +229,7 @@
     /* background-color: rgb(255, 255, 255); */
     transition: 0.3s ease all;
     padding:0.5rem 0rem;
+    padding-right: 2rem;
     z-index: 9999999999999999999999999999999 !important;
     border:3px solid transparent;
 color: black !important;
@@ -563,4 +564,28 @@ color: black !important;
     /* color:rgb(100, 100, 100); */
     color: rgb(29, 29, 29) !important;
   }
+}
+
+
+.log-avatar {
+  border-radius: 50%;
+  min-width: 40px;
+  height: 40px;
+  background-color: rgb(200, 219, 237);
+  /* border: 1px solid white; */
+  margin: 0;
+  padding: 0;
+  margin-right: 5px;
+  transition: 0.2s ease all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-avatar:hover {
+  background-color: rgb(116, 179, 238);
+  cursor: pointer;
+}
+.log-avatar > img {
+  width: 30px;
 }

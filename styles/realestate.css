@@ -1,0 +1,15 @@
+.real-estate-container {
+    padding-top:100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.regions-menu {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}

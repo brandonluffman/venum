@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 
 const RatioChart = () => {
   const data = {
@@ -36,7 +36,7 @@ const RatioChart = () => {
 
   return (
     <div className='ratio-chart-div'>
-      <Line data={data} options={options} />
+      <Bar data={data} options={options} />
     </div>
   );
 };

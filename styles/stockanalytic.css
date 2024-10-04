@@ -123,3 +123,36 @@
     }
     
 }
+
+
+
+.toggle-buttons {
+    margin-bottom: 10px;
+    border: 1px solid rgb(220, 220, 220);
+    height: 200px;
+  }
+  
+  .toggle-button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    color: black;
+    border: none;
+    /* border: 1px solid #ccc; */
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    /* border-radius: 5px; */
+    transition: background-color 0.3s;
+    width: 50px;
+    font-weight: 700;
+    color: black;
+    /* border: 1px solid rgb(220, 220, 220); */
+  }
+  
+  .toggle-button:hover {
+    background-color: #95ccff;
+  }
+  
+  .toggle-button.active {
+    background-color: #95ccff; 
+    color: black; 
+  }

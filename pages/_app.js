@@ -28,6 +28,7 @@ import '../styles/navsearch.css'
 import '../styles/etfs.css'
 import '../styles/bonds.css'
 import '../styles/news.css'
+import '../styles/realestate.css'
 
 
 // import NProgress from 'nprogress';

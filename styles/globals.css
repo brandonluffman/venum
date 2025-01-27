@@ -25,6 +25,10 @@
   border-left-color: rgb(75, 183, 241);
 }
 
+h1, h2, h3, h5 {
+  letter-spacing: -0.15vw !important;
+}
+
 html,
 body {
   padding: 0;

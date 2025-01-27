@@ -94,6 +94,7 @@
     width: 30px;
     border-radius: 50%;
     border: 1px solid rgb(255, 255, 255);
+    display: none;
   }
 
   .navbar-item {
@@ -222,12 +223,12 @@
     color:white;
     display: flex;
     align-items: center;
-    box-shadow:1px 1px 15px rgba(255, 255, 255, 0.3);
+    /* box-shadow:1px 1px 15px rgba(255, 255, 255, 0.3); */
     position:fixed;
     width:100%;
     z-index:9999;
     /* background-color: rgb(255, 255, 255); */
-    transition: 0.3s ease all;
+    transition: 0.3s ease-in-out all;
     padding:0.5rem 0rem;
     padding-right: 2rem;
     z-index: 9999999999999999999999999999999 !important;
@@ -239,22 +240,29 @@ color: black !important;
     /* border-radius: 20px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px; */
+
 }
 
 .scrolled {
-    /* transform: translateX(20%);
-    transform: translateY(10%); */
-    /* width: 95%; */
-    margin: 0rem auto;
-    background-color: rgb(255, 255, 255); /* Example background color */
-    color: black; /* Example text color */
-    border-radius: 20px;
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3); /* Example box shadow */
-    z-index: 9999; /* Ensure it's above other content */
-    border:3px solid rgba(75, 183, 241, 1);
-
+  transform: translateX(100%);
+  transform: translateY(5%);
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  border: 3px solid rgba(75, 183, 241, 1);
+  /* margin:0 100px; */
+  /* width:90%;
+  margin: 0 5%; */
 }
 
+
+.scrolled .nav-search-outer {
+  top:-6px;
+}
 
 .nav-menu {
     display: flex;
@@ -268,7 +276,7 @@ color: black !important;
     margin: 0;
     padding-right: 1rem;
     align-items: center;
-}
+}c
 
 .nav-link {
     text-decoration: none;
@@ -277,10 +285,11 @@ color: black !important;
     /* margin:0 2rem; */
 }
 .navbar-brand-name {
-    padding-left:1rem;
+    padding-left:0rem;
     font-family: Montserrat;
-    letter-spacing: -.1vw;
-    margin: 1rem 0;
+    letter-spacing: -.15vw;
+    margin: 0.5rem 0;
+    font-size: 2rem;
     /* box-shadow:1px 3px 10px rgba(0,0,0,0.75); */
 }
 

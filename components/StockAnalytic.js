@@ -6,29 +6,29 @@ import { supabase } from '../utils/supabaseClient';
 const StockAnalytic = ({stock}) => {
   const [competitors, setCompetitors] = useState([]);
 
-  useEffect(() => {
-    const fetchCompetitors = async () => {
-      console.log('Found Stock', stock)
-      const { data: fetchedData, error } = await supabase
-            .from('company_info')
-            .select('*')
-            .eq('sector', stock.sector)
-            .order('market_cap', { ascending: true })
-            .limit(5);
+  // useEffect(() => {
+  //   const fetchCompetitors = async () => {
+  //     console.log('Found Stock', stock)
+  //     const { data: fetchedData, error } = await supabase
+  //           .from('company_info')
+  //           .select('*')
+  //           .eq('sector', stock.sector)
+  //           .order('market_cap', { ascending: true })
+  //           .limit(5);
   
-      if (error) {
-        console.error('Error fetching specific stocks:', error);
-        return;
-      }
-      console.log(fetchedData)
-      setCompetitors(fetchedData);
-    };
+  //     if (error) {
+  //       console.error('Error fetching specific stocks:', error);
+  //       return;
+  //     }
+  //     console.log(fetchedData)
+  //     setCompetitors(fetchedData);
+  //   };
   
-    fetchCompetitors();
-  }, [stock.sector]);
+  //   fetchCompetitors();
+  // }, [stock.sector]);
   return (
     <div>
-      {stock.ticker && <PriceChart ticker={stock.ticker} />}
+      {/* {stock.ticker && <PriceChart ticker={stock.ticker} />} */}
   
       {stock && 
         <div className='stock-company-description-div'>

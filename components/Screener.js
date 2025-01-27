@@ -42,7 +42,7 @@ const Screener = () => {
         .limit(200);
         fetchedData = data;
         error = fetchError;
-        const uniqueCountries = [...new Set(fetchedData.map(stock => stock.country))];
+        const uniqueCountries = fetchedData && [...new Set(fetchedData.map(stock => stock.country))];
         console.log('Countries', uniqueCountries)
         setCountries(uniqueCountries);
 
@@ -160,7 +160,7 @@ const Screener = () => {
               <div className='radio-buttons'>
               <h3>{selectedCountry ? <div><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry}<BsCaretDownFill /></div> : <div>Select a country <BsCaretDownFill /></div>}</h3>
                 <div className='radio-drop'>
-                  {countries.length > 0 && countries.map((country, index) => (
+                  {countries?.length > 0 && countries.map((country, index) => (
 
                     <div key={index} className='country-dropdown'>
                       <img src={`/countries/${country.toLowerCase().replace(' ', "_")}.png`} width='20' />

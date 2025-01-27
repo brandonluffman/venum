@@ -99,9 +99,9 @@ const Navbar = () => {
                   <Link href='/futures'><li className='navbar-item nav-item-glass dropdown-nav-item'>Futures</li></Link>
                   <Link href='/forex'><li className='navbar-item nav-item-glass dropdown-nav-item'>Forex</li></Link>
                   <Link href='/indices'><li className='navbar-item nav-item-glass dropdown-nav-item'>Indices</li></Link>
-                  <Link href=''><li className='navbar-item nav-item-glass dropdown-nav-item'>Crypto <RxLockClosed /></li></Link>
+                  {/* <Link href=''><li className='navbar-item nav-item-glass dropdown-nav-item'>Crypto</li></Link> */}
                   <Link href='/macro'><li className='navbar-item dropdown-nav-item'>Economy</li></Link>
-                  <Link href='/realestate'><li className='navbar-item dropdown-nav-item'>Real Estate</li></Link>
+                  {/* <Link href='/realestate'><li className='navbar-item dropdown-nav-item'>Real Estate</li></Link> */}
                   </div>
             </div>
             <div className='nav-search-container'><NavSearch /></div>

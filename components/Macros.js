@@ -64,10 +64,10 @@ const Macros = () => {
     return (
         <div className='macro-container'>
             <div className='macro-top-container'>
-            <h2><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry && selectedCountry}</h2>
+            {/* <h2 className=''><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry && selectedCountry}</h2> */}
             <h1>Economy</h1>
 
-            <div className='radio-buttons'>
+            {/* <div className='radio-buttons'>
               <h3>{selectedCountry ? <div><img src={`/countries/${selectedCountry.toLowerCase().replace(' ', "_")}.png`} width='20' /> {selectedCountry}<BsCaretDownFill /></div> : <div>Select a country <BsCaretDownFill /></div>}</h3>
                 <div className='radio-drop'>
                   {countries.length > 0 && countries.map((country, index) => (
@@ -86,7 +86,7 @@ const Macros = () => {
                     </div>
                   ))}
                   </div>
-                </div>
+                </div> */}
 
                 
             </div>

@@ -98,7 +98,7 @@ export default function Home({ onButtonClick }) {
 
     <div className='index-data-container'>
         <h6 className='index-data-supheader'>Comprehensive suite of investments.</h6>
-        <h3 className='index-data-header'>All Investment Classes & Vehicles</h3>
+        <h3 className='index-data-header'>All Investment Classes</h3>
         <h6 className='index-data-subheader'>Get access to every class of assets globally.</h6>
 
 
@@ -256,7 +256,7 @@ export default function Home({ onButtonClick }) {
 
 
 
-    <div className='index-banner-container'>
+    {/* <div className='index-banner-container'>
         <div className='index-banner-div'>
           <div className='index-banner-div-left'>
             <h6 className='index-banner-supheader'>Powered by GPT-4 <img src='/gpt.png' width='20' className='index-banner-gpt-img'></img></h6>
@@ -270,7 +270,7 @@ export default function Home({ onButtonClick }) {
 
           </div>
         </div>
-    </div>
+    </div> */}
     <Footer />
     </>
   )
